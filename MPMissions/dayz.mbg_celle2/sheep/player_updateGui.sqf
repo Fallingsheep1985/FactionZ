@@ -158,13 +158,13 @@ if (r_player_injured) then {
 	_ctrlBleed call player_guiControlFlash;
 };
 
-
+/*
 // update gui if changed
 if (dayz_humanitytarget != _string) then {
 	_targetControl = _display displayCtrl 1199;
 	_targetControl ctrlSetStructuredText (parseText _string);
 	dayz_humanitytarget = _string;
 };
-
+*/
 _array = [_foodVal,_thirstVal];
 _array
