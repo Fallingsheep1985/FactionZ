@@ -75,13 +75,14 @@ FactionLoadout4 =["","","",""];
 	DefaultPerk8 = true; // DeployBike
 
 //Spawn Fix
-if(NotNewPlayer)then {
+if(_myModel != "Survivor2_DZ")then {
 	systemChat ("Custom Loadout - Already Geared!");
  //Do nothing player is not new spawn
 }else{
-	systemChat ("Custom Loadout - Loading...in 20 seconds.");
-	//wait for player to be in game
-	sleep 10;
+	//clear gear
+		removeAllWeapons player;	
+		removeAllItems player;
+		removeBackpack player;
 	systemChat ("Custom Loadout - Loading...in 10 seconds.");
 	sleep 10;
 	//play intro music for new spawn / respawn
