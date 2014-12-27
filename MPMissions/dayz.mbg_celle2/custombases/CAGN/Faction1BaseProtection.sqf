@@ -77,7 +77,8 @@ systemChat ("[AGN] Exiting Base Area");
 		};
 	_inSafezoneFinished = true;
 	} else {
-		while(!(canbuild) && !(_playerUID in FactionLoadout1)) do{
+		waitUntil { !canBuild };
+		if !(_playerUID in FactionLoadout1)) then {
 		titleText ["You are entering a restricted zone.", "PLAIN DOWN", 3];
 		titleText ["You have less than 30 seconds to leave", "PLAIN DOWN", 3];
 		sleep 15;
