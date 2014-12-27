@@ -20,7 +20,7 @@ if (_button == 1) then {
 	
 	_item = gearSlotData _control;
 	
-	_conf = missionConfigFile >> "cfgMagazines" >> _item;
+	_conf = configFile >> "cfgMagazines" >> _item;
 	if (!isClass _conf) then {
 		_conf = configFile >> "cfgWeapons" >> _item;
 	};
