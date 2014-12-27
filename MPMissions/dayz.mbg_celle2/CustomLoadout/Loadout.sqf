@@ -75,7 +75,7 @@ FactionLoadout4 =["","","",""];
 	DefaultPerk8 = true; // DeployBike
 
 //Spawn Fix
-if(_myModel != "Survivor2_DZ")then {
+if((_myModel != "Survivor2_DZ") ||(_myModel != "Survivor1_DZ"))then {
 	systemChat ("Custom Loadout - Already Geared!");
  //Do nothing player is not new spawn
 }else{
