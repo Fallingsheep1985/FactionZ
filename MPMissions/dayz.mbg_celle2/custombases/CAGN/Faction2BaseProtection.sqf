@@ -3,8 +3,6 @@
  * www.opendayz.net
  * Thanks to everyone who has provided other scripts of the same format, without you I would not have been able to make this.
  */
-
-diag_log ( "[AGN] Starting Base Protection!" );
  
 Private ["_EH_Fired", "_ehID", "_fix","_inVehicle","_inVehicleLast","_EH_Fired_Vehicle","_inVehicleDamage","_antiBackpackThread","_antiBackpackThread2"];
 
@@ -78,7 +76,7 @@ systemChat ("[AGN] Exiting Base Area");
 	_inSafezoneFinished = true;
 	} else {
 		waitUntil { !canBuild };
-		if !(_playerUID in FactionLoadout2)) then {
+		if !(_playerUID in FactionLoadout2) then {
 		titleText ["You are entering a restricted zone.", "PLAIN DOWN", 3];
 		titleText ["You have less than 30 seconds to leave", "PLAIN DOWN", 3];
 		sleep 15;
