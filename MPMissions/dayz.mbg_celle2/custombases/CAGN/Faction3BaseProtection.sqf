@@ -1,0 +1,95 @@
+/*
+ * Safezone Commander Script by AlienX
+ * www.opendayz.net
+ * Thanks to everyone who has provided other scripts of the same format, without you I would not have been able to make this.
+ */
+
+diag_log ( "[AGN] Starting Base Protection!" );
+ 
+Private ["_EH_Fired", "_ehID", "_fix","_inVehicle","_inVehicleLast","_EH_Fired_Vehicle","_inVehicleDamage","_antiBackpackThread","_antiBackpackThread2"];
+
+//ANTI SPAM GODMODE
+AGN_safeZoneAntispam = true;								// puts a time limit on God mode when trying to leave and enter a safe zone rapidly
+AGN_safeZone_Players_RemoveZombies = true;                	// delete zombies near  safe zone			
+AGN_safeZoneGodmode = true; 								//Should safezone God mode be enabled?
+
+disableSerialization;
+
+waitUntil {!isNil "dayz_animalCheck"};
+
+
+AGN_enteredSafezone = false; //default value
+
+_inVehicle = objNull;
+_inVehicleLast = objNull;
+_thePlayer = player;
+_playerUID = getPlayerUID player;
+
+while {true} do {
+	if (_playerUID in FactionLoadout3) then{
+		waitUntil { !canBuild };
+		_inSafezoneFinished = false;
+		if ( AGN_safeZoneGodmode ) then{
+			if (AGN_safeZoneAntispam )then{
+				if (AGN_enteredSafezone) then{
+systemChat ("[AGN] Antispam - Please wait before re-entering!"); 
+				}else{
+					AGN_enteredSafezone = true;//player has entered safezone
+systemChat ("[AGN] Entering Base Area - God Mode Enabled");
+systemChat ("[AGN] Antispam - You must wait 2 minutes for god mode to become active once you leave!");
+					player_zombieCheck = {};
+					fnc_usec_damageHandler = {};
+					_thePlayer removeAllEventHandlers "handleDamage";
+					_thePlayer addEventHandler ["handleDamage", {false}];
+					_thePlayer allowDamage false;
+				};
+			};		
+		};
+		//Remove Zombies
+		if ( AGN_safeZone_Players_RemoveZombies ) then{
+			_anti_zombie = [] spawn {
+			private ["_entity_array"];
+				while {!canBuild} do
+				{
+					_entity_array = (getPos player) nearEntities ["CAManBase",110];
+					{
+						if (_x isKindof "zZombie_Base") then {
+							deletevehicle _x;
+						};
+					} forEach _entity_array;
+					sleep 4;
+				};
+			};
+		};	
+		waitUntil { canBuild };
+systemChat ("[AGN] Exiting Base Area");
+		if ( AGN_safeZoneGodmode ) then{
+			player_zombieCheck = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_zombieCheck.sqf";
+			fnc_usec_damageHandler = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageHandler.sqf";
+			_thePlayer addEventHandler ["handleDamage", {true}];
+			_thePlayer removeAllEventHandlers "handleDamage";
+			_thePlayer allowDamage true;
+			if (AGN_safeZoneAntispam )then{
+				if (AGN_enteredSafezone) then{
+					[] execVM "custombases\CAGN\agn_timer.sqf";
+				};
+			};
+		};
+	_inSafezoneFinished = true;
+	} else {
+		while (!(canbuild) && !(_playerUID in FactionLoadout3)) do{
+		titleText ["You are entering a restricted zone.", "PLAIN DOWN", 3];
+		titleText ["You have less than 30 seconds to leave", "PLAIN DOWN", 3];
+		sleep 15;
+		titleText ["You have less than 15 seconds to leave", "PLAIN DOWN", 3];
+		sleep 10;
+		titleText ["You have less than 5 seconds to leave or you will die!", "PLAIN DOWN", 3];
+		sleep 5;
+		titleText ["You were warned..!", "PLAIN DOWN", 3];
+		sleep 1;
+		player setDamage 1;
+		_inSafezoneFinished = true;
+		};
+	};
+};
+
