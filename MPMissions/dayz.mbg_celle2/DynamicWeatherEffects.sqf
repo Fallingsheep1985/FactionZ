@@ -301,7 +301,8 @@ if (isServer) then {
         _maximumWind = _this select 9;
         _windChangeProbability = _this select 10;
         _debug = _this select 11;
-        
+        //RPT Fix
+		_weathertype = "OVERCAST";
         // Set initial fog level
         _fogLevel = 2;
         _overcastLevel = 2;
