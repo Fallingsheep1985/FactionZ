@@ -22,10 +22,12 @@ while {true} do {
 	_vel = 		velocity player;
 	_speed = 	round((_vel distance [0,0,0]) * 3.5);
 	_saveTime = (playersNumber west * 2) + 10;
-		
+	
+/*	
 	//reset position
 	_randomSpot = true;
 	_tempPos = getPosATL player;
+
 	_distance = _debug distance _tempPos;
 	if (_distance < 2000) then {
 		_randomSpot = false;
@@ -50,7 +52,7 @@ while {true} do {
 	if (_speed > 0.1) then {
 		_timeOut = _timeOut + 1;
 	};
-/*	
+	
 	_humanity = player getVariable ["humanity",0];
 	if (_timeOut > 150) then {
 		_timeOut = 0;
@@ -295,7 +297,7 @@ while {true} do {
 	"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [1, 1, 1, 0.0]];
 	"colorCorrections" ppEffectCommit 0;
 	sleep 2;
-	
+	/*
 	_myPos = player getVariable["lastPos",[]];
 	if (count _myPos > 0) then {
 		player setVariable["lastPos",_mylastPos, true];
@@ -316,7 +318,7 @@ while {true} do {
 			};
 		};
 	};
-	
+	*/
 	//Hatchet ammo fix	
 	//"MeleeHatchet" call dayz_meleeMagazineCheck;
 	
