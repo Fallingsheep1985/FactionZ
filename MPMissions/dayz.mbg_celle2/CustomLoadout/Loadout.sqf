@@ -79,14 +79,15 @@ if((_myModel != "Survivor2_DZ") ||(_myModel != "Survivor1_DZ"))then {
 	systemChat ("Custom Loadout - Already Geared!");
  //Do nothing player is not new spawn
 }else{
+	//play intro music for new spawn / respawn
+	[] execVM "sheep\sheepintro.sqf";
 	//clear gear
 		removeAllWeapons player;	
 		removeAllItems player;
 		removeBackpack player;
 	systemChat ("Custom Loadout - Loading...in 10 seconds.");
 	sleep 10;
-	//play intro music for new spawn / respawn
-	[] execVM "sheep\sheepintro.sqf";
+
 	
 	if (_playerUID in AdminUidLoadout) then {
 
