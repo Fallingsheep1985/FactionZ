@@ -23,8 +23,8 @@ AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","
 	AdminPerk6 = true; //backpack
 	AdminPerk7 = true; //Toolbox
 	AdminPerk8 = true; //Deploy Bike
-//FACTION 1 - NAME OF FACTION HERE
-FactionLoadout1 =["","","",""];
+//FACTION 1 - [MTG] Me and the guys
+FactionLoadout1 = ["","","",""];
 	Faction1Perk1 = true; //Binocs
 	Faction1Perk2 = false; //Rangefinder
 	Faction1Perk3 = true; //Pistol
@@ -33,8 +33,8 @@ FactionLoadout1 =["","","",""];
 	Faction1Perk6 = true; //backpack
 	Faction1Perk7 = true; // Toolbox
 	Faction1Perk8 = false; //Deploy Bike
-//FACTION 2 - NAME OF FACTION HERE
-FactionLoadout2 =["","","",""];
+//FACTION 2 - [DZZ] D'zz Nutzz
+FactionLoadout2 = ["","","",""];
 	Faction2Perk1 = true; //Binocs
 	Faction2Perk2 = false; //Rangefinder
 	Faction2Perk3 = true; //Pistol
@@ -43,8 +43,8 @@ FactionLoadout2 =["","","",""];
 	Faction2Perk6 = true; //backpack
 	Faction2Perk7 = true; // Toolbox
 	Faction2Perk8 = false; //Deploy Bike
-//FACTION 3 - NAME OF FACTION HERE
-FactionLoadout3 =["","","",""];
+//FACTION 3 - [GH] Gewekt Heren
+FactionLoadout3 = ["","","",""];
 	Faction3Perk1 = true; //Binocs
 	Faction3Perk2 = false; //Rangefinder
 	Faction3Perk3 = true; //Pistol
@@ -54,7 +54,7 @@ FactionLoadout3 =["","","",""];
 	Faction3Perk7 = true; // Toolbox
 	Faction3Perk8 = false; //Deploybike
 //FACTION 4 - NAME OF FACTION HERE
-FactionLoadout4 =["","","",""];
+FactionLoadout4 = ["","","",""];
 	Faction4Perk1 = true; //Binocs
 	Faction4Perk2 = false; //Rangefinder
 	Faction4Perk3 = true; //Pistol
@@ -73,7 +73,12 @@ FactionLoadout4 =["","","",""];
 	DefaultPerk6 = false; //backpack
 	DefaultPerk7 = true; // Toolbox
 	DefaultPerk8 = true; // DeployBike
-
+	
+	publicVariable "FactionLoadout1";
+	publicVariable "FactionLoadout2";
+	publicVariable "FactionLoadout3";
+	publicVariable "FactionLoadout4";
+	
 //Spawn Fix
 if((_myModel != "Survivor2_DZ") ||(_myModel != "Survivor1_DZ"))then {
 	systemChat ("Custom Loadout - Already Geared!");

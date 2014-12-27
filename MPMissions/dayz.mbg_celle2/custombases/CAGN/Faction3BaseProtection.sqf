@@ -75,19 +75,20 @@ systemChat ("[AGN] Exiting Base Area");
 		};
 	_inSafezoneFinished = true;
 	} else {
-		waitUntil { !canBuild };
-		if !(_playerUID in FactionLoadout3) then {
-		titleText ["You are entering a restricted zone.", "PLAIN DOWN", 3];
-		titleText ["You have less than 30 seconds to leave", "PLAIN DOWN", 3];
-		sleep 15;
-		titleText ["You have less than 15 seconds to leave", "PLAIN DOWN", 3];
-		sleep 10;
-		titleText ["You have less than 5 seconds to leave or you will die!", "PLAIN DOWN", 3];
-		sleep 5;
-		titleText ["You were warned..!", "PLAIN DOWN", 3];
-		sleep 1;
-		player setDamage 1;
-		_inSafezoneFinished = true;
+		while {!canBuild} do {
+			if !(_playerUID in FactionLoadout3) then {
+				titleText ["You are entering a restricted zone.", "PLAIN DOWN", 3];
+				titleText ["You have less than 30 seconds to leave", "PLAIN DOWN", 3];
+				sleep 15;
+				titleText ["You have less than 15 seconds to leave", "PLAIN DOWN", 3];
+				sleep 10;
+				titleText ["You have less than 5 seconds to leave or you will die!", "PLAIN DOWN", 3];
+				sleep 5;
+				titleText ["You were warned..!", "PLAIN DOWN", 3];
+				sleep 1;
+				player setDamage 1;
+				_inSafezoneFinished = true;
+			};
 		};
 	};
 };
