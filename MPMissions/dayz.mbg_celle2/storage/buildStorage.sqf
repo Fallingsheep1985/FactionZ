@@ -13,7 +13,7 @@ _isOk = [(vehicle player),_building] call fnc_isInsideBuilding;
 
 //diag_log ("Pitch Tent: " + str(_isok) );
 
-_config = missionConfigFile >> "CfgMagazines" >> _item;
+_config = configFile >> "CfgMagazines" >> _item;
 _text = getText (_config >> "displayName");
 
 if (!_hastentitem) exitWith {cutText [format[(localize "str_player_31"),_text,"pitch"] , "PLAIN DOWN"]};
