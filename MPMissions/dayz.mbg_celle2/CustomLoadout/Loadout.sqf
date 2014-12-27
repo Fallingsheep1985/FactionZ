@@ -1,5 +1,5 @@
 systemChat ("Custom Loadout - Started");
-sleep 10;
+
 _playerUID = getPlayerUID player;
 _myModel = typeOf player;
 
@@ -73,18 +73,12 @@ FactionLoadout4 = ["","","",""];
 	DefaultPerk6 = false; //backpack
 	DefaultPerk7 = true; // Toolbox
 	DefaultPerk8 = true; // DeployBike
-	
-	publicVariable "FactionLoadout1";
-	publicVariable "FactionLoadout2";
-	publicVariable "FactionLoadout3";
-	publicVariable "FactionLoadout4";
+//wait for load in
+sleep 20;
 	
 //Spawn Fix
-if((_myModel != "Survivor2_DZ") ||(_myModel != "Survivor1_DZ"))then {
-	systemChat ("Custom Loadout - Already Geared!");
- //Do nothing player is not new spawn
-}else{
-	//play intro music for new spawn / respawn
+if((_myModel == "Survivor1_DZ") ||(_myModel == "Survivor2_DZ"))then {
+//play intro music for new spawn / respawn
 	[] execVM "sheep\sheepintro.sqf";
 	//clear gear
 		removeAllWeapons player;	
@@ -326,7 +320,7 @@ if((_myModel != "Survivor2_DZ") ||(_myModel != "Survivor1_DZ"))then {
 	/////////////////////////////////////////////////////////////////////////////
 	//					FACTION 3 - NAME OF FACTION HERE
 	/////////////////////////////////////////////////////////////////////////////
-	if (_playerUID in FactionLoadout1) then {
+	if (_playerUID in FactionLoadout3) then {
 
 		//Loadout
 		_primAdmin = "";
@@ -402,7 +396,7 @@ if((_myModel != "Survivor2_DZ") ||(_myModel != "Survivor1_DZ"))then {
 	/////////////////////////////////////////////////////////////////////////////
 	//					FACTION 4 - NAME OF FACTION HERE
 	/////////////////////////////////////////////////////////////////////////////
-	if (_playerUID in FactionLoadout1) then {
+	if (_playerUID in FactionLoadout4) then {
 
 		//Loadout
 		_primAdmin = "";
@@ -552,4 +546,7 @@ if((_myModel != "Survivor2_DZ") ||(_myModel != "Survivor1_DZ"))then {
 		
 		systemChat ("Custom Loadout - Done loading!");
 	};
+}else{
+	systemChat ("Custom Loadout - Already Geared!");
+	//Do nothing player is not new spawn
 };
