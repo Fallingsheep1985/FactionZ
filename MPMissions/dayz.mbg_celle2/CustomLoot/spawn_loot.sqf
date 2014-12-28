@@ -31,7 +31,7 @@ switch (_iClass) do {
 		//Item is a weapon, add it and a random quantity of magazines
 		_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
 		_item addWeaponCargoGlobal [_iItem,1];
-		_mags = [] + getArray (missionConfigFile  >> "cfgWeapons" >> _iItem >> "magazines");
+		_mags = [] + getArray (ConfigFile  >> "cfgWeapons" >> _iItem >> "magazines");
 		if ((count _mags) > 0) then {
 			if (_mags select 0 == "Quiver") then { _mags set [0, "WoodenArrow"] }; // Prevent spawning a Quiver
 			_item addMagazineCargoGlobal [(_mags select 0), (round(random 2))];
