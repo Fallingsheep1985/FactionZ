@@ -140,7 +140,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_deleteBuild;
 		s_player_deleteBuild = -1;
 	};
-	_isnewstorage = "StorageShed_DZ";
+	_isnewstorage = cursorTarget isKindOf "StorageShed_DZ";
 	
 	if((_isVehicle || _isTent || _isnewstorage) && _isAlive && !_isMan) then {
 			if (s_player_checkGear < 0) then {
