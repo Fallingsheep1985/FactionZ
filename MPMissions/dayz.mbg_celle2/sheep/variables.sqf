@@ -242,7 +242,6 @@ dayz_resetSelfActions = {
 	s_player_deploybike2 = 	-1;
 	s_player_deploybike3 = 	-1;
 	s_player_deploybike4 = 	-1;
-	s_player_removeactions = -1;
 	s_player_drinkWater = -1;
 	s_player_checkGear = -1;
 	s_givemoney_dialog = -1;

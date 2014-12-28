@@ -111,6 +111,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	_isZombie = cursorTarget isKindOf "zZombie_base";
 	_isDestructable = cursorTarget isKindOf "BuiltItems";
 	_isTent = cursorTarget isKindOf "TentStorage";
+	_isnewstorage = cursorTarget isKindOf "StorageShed_DZ";
 	_isFuel = false;
 	_isAlive = alive cursorTarget;
 	_canmove = canmove cursorTarget;
@@ -140,16 +141,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_deleteBuild;
 		s_player_deleteBuild = -1;
 	};
-	_isnewstorage = cursorTarget isKindOf "StorageShed_DZ";
-	
-	if((_isVehicle || _isTent || _isnewstorage) && _isAlive && !_isMan) then {
-			if (s_player_checkGear < 0) then {
-				s_player_checkGear = player addAction [("<t color=""#007ab7"">" + ("Cargo Check") +"</t>"), "sheep\cargocheck.sqf",_cursorTarget, 1, true, true, "", ""];
-			};
-		} else {	
-			player removeAction s_player_checkGear;
-			s_player_checkGear = -1;
-		};
+
 	
 	/*
 	//Allow player to force save
@@ -172,6 +164,14 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		s_player_flipveh = -1;
 	};
 	
+	if((_isVehicle || _isTent || _isnewstorage) && _isAlive && !_isMan) then {
+		if (s_player_checkGear < 0) then {
+			s_player_checkGear = player addAction [("<t color=""#007ab7"">" + ("Cargo Check") +"</t>"), "sheep\cargocheck.sqf",_cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_checkGear;
+		s_player_checkGear = -1;
+	};
 	//Allow player to fill jerrycan
 	if(_hasFuelE and _isFuel and _canDo) then {
 		if (s_player_fillfuel < 0) then {
@@ -289,7 +289,8 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != cursorTarget) and _isVehicle and !_isMan and _hasToolbox and (damage cursorTarget < 1)) then {
 		_vehicle = cursorTarget;
-		{dayz_myCursorTarget removeAction _x} forEach s_player_repairActions;s_player_repairActions = [];
+		{dayz_myCursorTarget removeAction _x} forEach s_player_repairActions;
+		s_player_repairActions = [];
 		dayz_myCursorTarget = _vehicle;
 
 		_allFixed = true;
@@ -501,8 +502,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_player_warndog = -1;
 	player removeAction s_player_followdog;
 	s_player_followdog = -1;
-	player removeAction s_player_removeactions;
-	s_player_removeactions = -1;
+
 		//Misc
 	player removeAction s_player_deploybike1;
 	s_player_deploybike1 = 	-1;
