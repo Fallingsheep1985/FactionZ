@@ -139,6 +139,7 @@ if (!isDedicated) then {
 			player enableSimulation false;
 		} else { diag_log "DEBUG: loadscreen guard ended."; };
 	};
+	
 	dayz_losChance = {
 		private["_agent","_maxDis","_dis","_val","_maxExp","_myExp"];
 		_agent = 	_this select 0;
@@ -204,14 +205,6 @@ if (!isDedicated) then {
 		//_id = [_pos,_unit] execFSM "\z\AddOns\dayz_code\system\zombie_agent.fsm";
 	};
 	
-	vehicle_gear_count = {
-		private["_counter"];
-		_counter = 0;
-		{
-			_counter = _counter + _x;
-		} forEach _this;
-		_counter
-	};
 	
 	dayz_equipCheck = {
 		private ["_empty", "_needed","_diff","_success"];
@@ -379,22 +372,7 @@ if (!isDedicated) then {
 			dayz_heartBeat = false;
 		};
 	};
-	/*
-	dayz_meleeMagazineCheck = {
-		private["_meleeNum","_magType","_wpnType"];
-		_wpnType = _this;
-		_magType = 	([] + getArray (configFile >> "CfgWeapons" >> _wpnType >> "magazines")) select 0;
-		_meleeNum = ({_x == _magType} count magazines player);
-		if (_meleeNum > 1) then {
-			if (player hasWeapon _wpnType) then {
-				_meleeNum = _meleeNum - 1;
-			};
-			for "_i" from 1 to _meleeNum do {
-				player removeMagazine _magType;
-			};
-		};
-	};
-	*/
+
 	dayz_originalPlayer =		player;
 };
 
@@ -469,6 +447,14 @@ if (!isDedicated) then {
 		_medical
 	};
 	
+	vehicle_gear_count = {
+		private["_counter"];
+		_counter = 0;
+		{
+			_counter = _counter + _x;
+		} count _this;
+		_counter
+	};
 	
 	//Server Only
 	if (isServer) then {
