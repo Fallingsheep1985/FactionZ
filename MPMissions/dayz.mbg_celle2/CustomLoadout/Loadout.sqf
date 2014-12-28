@@ -1,5 +1,7 @@
 systemChat ("Custom Loadout - Started");
 
+
+DebugLoadout = true;
 //Misc Items
 _Medic = ["ItemAntibiotic","ItemBloodbag","ItemEpinephrine","ItemMorphine"];
 _Tools = ["ItemMap","ItemFlashlight"];
@@ -74,19 +76,28 @@ FactionLoadout4 = ["","","",""];
 	DefaultPerk6 = false; //backpack
 	DefaultPerk7 = true; // Toolbox
 	DefaultPerk8 = true; // DeployBike	
-sleep 20;
+sleep 10;
 systemChat ("Custom Loadout - Loading");
-while {true} do {	
-	if ((_myModel == "Survivor2_DZ") || (_myModel == "Survivor2_DZ")) then {
+if (DebugLoadout) then {
+	cutText [format[("Model: %1"),_mymodel], "PLAIN DOWN"];
+};
+if ((_myModel == "Survivor2_DZ") || (_myModel == "Survivor2_DZ")) then {
 		_isNew = true;
+		if (DebugLoadout) then {
+			cutText [format[("Is New Player"),_mymodel], "PLAIN DOWN"];
+		};
 	}else{
 		_isNew = false;
+		if (DebugLoadout) then {
+			cutText [format[("Is Returning Player"),_mymodel], "PLAIN DOWN"];
+		};
 	};
-};
 	
 	//Spawn Fix
 	if (_isNew) then {
-	//if (((_myModel == "Survivor2_DZ") && (isNull unitBackpack player))||((_myModel == "Survivor1_DZ") && (isNull unitBackpack player))) then {
+		if (DebugLoadout) then {
+			cutText [format[("Preparing Loadout"),_mymodel], "PLAIN DOWN"];
+		};
 	//wait for player to load in
 	sleep 10; 	
 		//play intro music for new spawn / respawn
@@ -94,9 +105,13 @@ while {true} do {
 		//clear gear
 			removeAllWeapons player;	
 			removeAllItems player;
-			removeBackpack player;	
-		if (_playerUID in AdminUidLoadout) then {
+			removeBackpack player;
 
+			
+		if (_playerUID in AdminUidLoadout) then {
+			if (DebugLoadout) then {
+				cutText [format[("Loading: Admin Loadout"),_mymodel], "PLAIN DOWN"];
+			};
 			//Loadout
 			_primAdmin = "LeeEnfield";
 			_pistolAdmin = "glock17_EP1";
