@@ -4,7 +4,7 @@
 //Player only
 if (!isDedicated) then {
 	_config = 	missionConfigFile >> "CfgLoot";
-	_config1 = 	missionConfigFile >> "CfgMagazines" >> "FoodEdible";
+	_config1 = 	configFile >> "CfgMagazines" >> "FoodEdible";
 	_config2 = 	configFile >> "CfgWeapons" >> "Loot";
 
 	"filmic" setToneMappingParams [0.07, 0.31, 0.23, 0.37, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
@@ -202,6 +202,15 @@ if (!isDedicated) then {
 		//_unit = 	_this select 0;
 		//_pos =		getPosATL _unit;
 		//_id = [_pos,_unit] execFSM "\z\AddOns\dayz_code\system\zombie_agent.fsm";
+	};
+	
+	vehicle_gear_count = {
+		private["_counter"];
+		_counter = 0;
+		{
+			_counter = _counter + _x;
+		} forEach _this;
+		_counter
 	};
 	
 	dayz_equipCheck = {
