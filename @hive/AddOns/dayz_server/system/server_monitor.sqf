@@ -74,12 +74,17 @@ if (_script != "") then
 			};
 			
 			if (_damage < 1) then {
-				diag_log format["OBJ: %1 - %2", _idKey,_type];
+				 diag_log("Spawned: " + str(_idKey) + " " + _type);
 				
 				//Create it
 				_object = createVehicle [_type, _pos, [], 0, "CAN_COLLIDE"];
 				_object setVariable ["lastUpdate",time];
-				if (_ownerID == "0") then {_object setVariable ["ObjectID", str(_idKey), true];} else {_object setVariable ["ObjectUID", str(_idKey),true];}; //_object setVariable ["ObjectID", _idKey, true];
+				if (_ownerID == "0") then {
+					_object setVariable ["ObjectID", str(_idKey), true];
+				} else {
+					_object setVariable ["ObjectUID", _worldspace call dayz_objectUID2, true];
+					//_object setVariable ["ObjectUID", str(_idKey),true];
+				}; //_object setVariable ["ObjectID", _idKey, true];
 				_object setVariable ["CharacterID", _ownerID, true];
 				
 				clearWeaponCargoGlobal  _object;
@@ -92,6 +97,8 @@ if (_script != "") then
 				};
 				_object setdir _dir;
 				_object setDamage _damage;
+				
+				
 				if( count (_intentory) > 3)then{
 					_object setVariable ["bankMoney", _intentory select 3, true];
 				}else{
