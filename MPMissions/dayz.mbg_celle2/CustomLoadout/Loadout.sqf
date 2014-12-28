@@ -1,5 +1,11 @@
 systemChat ("Custom Loadout - Started");
-
+//Variables
+_playerUID = getPlayerUID player;
+_myModel = typeOf player;
+_mags = magazines player;
+_weapons = weapons player;
+_backpack = unitBackpack player;	
+_isNew = true;
 
 DebugLoadout = true;
 //Misc Items
@@ -10,11 +16,6 @@ _Binocs = "Binocular";
 _RangeFinder = "Binocular_Vector";
 _special = "ItemShed";
 
-_playerUID = getPlayerUID player;
-_myModel = typeOf player;
-_mags = magazines player;
-_weapons = weapons player;
-_backpack = unitBackpack player;	
 
 //Admin Loadout
 AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","0"];
