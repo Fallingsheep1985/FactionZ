@@ -351,10 +351,42 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		if (s_player_studybody < 0) then {
 			s_player_studybody = player addAction [localize "str_action_studybody", "\z\addons\dayz_code\actions\study_body.sqf",cursorTarget, 0, false, true, "",""];
 		};
+		if (s_player_studybody2 < 0) then {
+			s_player_studybody2 = player addAction [("<t color=""#FF0000"">"+("Check Wallet") + "</t>"), "ZSC\actions\check_wallet.sqf",_cursorTarget, 0, false, true, "",""];
+		};
 	} else {
 		player removeAction s_player_studybody;
 		s_player_studybody = -1;
+		player removeAction s_player_studybody2;
+		s_player_studybody2 = -1;
 	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal) then {
+		if (s_givemoney_dialog < 0) then {
+			s_givemoney_dialog = player addAction [format["Give Money to %1", (name _cursorTarget)], "ZSC\actions\give_player_dialog.sqf",_cursorTarget, 3, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_givemoney_dialog;
+		s_givemoney_dialog = -1;
+	};
+	if(typeOf CursorTarget in ZSC_MoneyStorage && (player distance _cursorTarget < 5)) then {
+		if (s_bank_dialog < 0) then {
+				s_bank_dialog = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",_cursorTarget, 3, true, true, "", ""];	
+		};
+	} else {
+     	player removeAction s_bank_dialog;
+		s_bank_dialog = -1;
+	};
+
+	// cars 
+	if( _isVehicle && !_isMan &&_isAlive && !_isMan && !(_cursorTarget isKindOf "Bicycle") && (player distance _cursorTarget < 5)) then {		
+		if (s_bank_dialog2 < 0) then {
+			s_bank_dialog2 = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",_cursorTarget, 3, true, true, "", ""];
+		};			
+	} else {		
+		player removeAction s_bank_dialog2;
+		s_bank_dialog2 = -1;
+	};
+	
 	// START OF CLOTHES
     if (_isMan and !_isAlive and !_isZombie) then {
     if (s_clothes < 0) then {
@@ -486,6 +518,14 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	
 	player removeAction s_clothes;
     s_clothes = -1;
+	player removeAction s_givemoney_dialog;
+	s_givemoney_dialog = -1;
+	player removeAction s_bank_dialog;
+	s_bank_dialog = -1;
+	player removeAction s_bank_dialog2;
+	s_bank_dialog2 = -1;
+	player removeAction s_player_studybody2;
+	s_player_studybody2 = -1;
 	
 };
 

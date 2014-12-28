@@ -551,7 +551,8 @@ class RscTitles
         };
     };
 };
-
+#include "ZSC\config\ZSCdefines.hpp"
+#include "ZSC\config\ZSCdialogs.hpp"
 
 // Right click - NOT WORKING YET
 #include "sheep\extra_rc.hpp"

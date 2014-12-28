@@ -102,7 +102,7 @@ if (_characterID != "0") then {
 	};
 	if (_isNewGear) then {
 		//diag_log ("gear..."); sleep 0.05;
-		_playerGear = [weapons _character,_magazines];
+		_playerGear = [weapons _character,_magazines, _character getVariable["cashMoney",0]]; 
 //diag_log ("playerGear: " +str(_playerGear));
 		_backpack = unitBackpack _character;
 		_playerBackp = [typeOf _backpack,getWeaponCargo _backpack,getMagazineCargo _backpack];

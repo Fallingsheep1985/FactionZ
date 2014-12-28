@@ -23,6 +23,10 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";	
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
+/*ZSC*/	
+call compile preprocessFileLineNumbers "ZSC\gold\ZSCinit.sqf";
+/*ZSC*/	
+progressLoadingScreen 0.7;
 call compile preprocessFileLineNumbers "compiles.sqf";				//Compile regular functions
 progressLoadingScreen 1.0;
 
@@ -47,7 +51,7 @@ if ((!isServer) && (player != player)) then {
 };
 
 if (isServer) then {
-	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
+	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 	//Lights
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
     "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};	

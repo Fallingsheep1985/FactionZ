@@ -245,6 +245,10 @@ dayz_resetSelfActions = {
 	s_player_removeactions = -1;
 	s_player_drinkWater = -1;
 	s_player_checkGear = -1;
+	s_givemoney_dialog = -1;
+	s_bank_dialog = -1;
+	s_bank_dialog2 = -1;
+	s_player_studybody2 = 	-1;
 };
 call dayz_resetSelfActions;
 

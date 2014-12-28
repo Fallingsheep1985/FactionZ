@@ -92,7 +92,11 @@ if (_script != "") then
 				};
 				_object setdir _dir;
 				_object setDamage _damage;
-				
+				if( count (_intentory) > 3)then{
+					_object setVariable ["bankMoney", _intentory select 3, true];
+				}else{
+					_object setVariable ["bankMoney", 0, true];
+				};
 				if (count _intentory > 0) then {
 					//Add weapons
 					_objWpnTypes = (_intentory select 0) select 0;

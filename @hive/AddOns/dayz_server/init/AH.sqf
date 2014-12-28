@@ -4032,7 +4032,7 @@ publicVariable '"+_randvar28+"';
 							};
 						} forEach ([0,0,0] nearEntities ['AllVehicles', 10000000]);
 						_pOn = count _pOn;
-						
+						_Money = player getVariable['cashMoney',0];
 						_humanity = player getVariable['humanity',0];
 						if (_humanity > 999999) then
 						{
@@ -4055,6 +4055,7 @@ publicVariable '"+_randvar28+"';
 						<br/>
 						<t size='1' font='Bitstream' align='left' color='#FFBF00'>UPTIME: </t><t size='1' font='Bitstream' align='right'>%5h %6min</t><br/>
 						<t size='1' font='Bitstream' align='left' color='#FFBF00'>FPS: </t><t size='1' font='Bitstream' align='right'>%8</t><br/>
+						<t size='1' font='Bitstream' align='left' color='#CC0000'>Vigils: </t><t size='1' font='Bitstream' align='right'>%13</t><br/>
 						<t size='1' font='Bitstream' align='Center' color='#CC0000'>%7</t>
 						"",
 						_txt,
@@ -4068,7 +4069,8 @@ publicVariable '"+_randvar28+"';
 						(player getVariable['zombieKills', 0]),
 						(player getVariable['humanKills', 0]),
 						(player getVariable['banditKills', 0]),
-						_pOn
+						_pOn,
+						_Money
 						];
 						uiSleep 1;
 					};

@@ -60,7 +60,8 @@ _object_inventory = {
 	_inventory = [
 		getWeaponCargo _object,
 		getMagazineCargo _object,
-		getBackpackCargo _object
+		getBackpackCargo _object,
+		_object getVariable["bankMoney",0]
 	];
 	_previous = str(_object getVariable["lastInventory",[]]);
 	if (str(_inventory) != _previous) then {

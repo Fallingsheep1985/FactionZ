@@ -26,6 +26,7 @@ private ["_playerUID"];
 
 //BackUp Weapons and Mags
 private ["_weapons","_magazines","_primweapon","_secweapon"];
+	_cashMoney = player getVariable["cashMoney",0];
 	_weapons 	= weapons player;
 	_magazines	= call player_countmagazines; //magazines player;
 
@@ -91,7 +92,7 @@ private ["_newBackpackType","_backpackWpn","_backpackMag"];
 
 	_newUnit 	setPosATL _position;
 	_newUnit 	setDir _dir;
-
+	_newUnit setVariable ["cashMoney",_cashMoney,true];
 //Clear New Character
 	{_newUnit removeMagazine _x;} forEach  magazines _newUnit;
 	removeAllWeapons _newUnit;	
@@ -197,4 +198,6 @@ private ["_newBackpackType","_backpackWpn","_backpackMag"];
 	_playerObjName = format["player%1",_playerUID];
 	call compile format["player%1 = player;",_playerUID];
 	publicVariable _playerObjName;
+	
+	player setVariable ["cashMoney",_cashMoney,true];
 
