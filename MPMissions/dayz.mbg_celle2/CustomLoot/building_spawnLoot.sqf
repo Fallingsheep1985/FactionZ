@@ -2,7 +2,7 @@ private["_obj","_type","_config","_positions","_iPos","_nearBy","_itemType","_it
 
 _obj = 			_this select 0;
 _type = 		typeOf _obj;
-_config = 		missionConfigFile  >> "CfgBuildingLoot" >> _type;
+_config = 		configFile >> "CfgBuildingLoot" >> _type;
 _positions =	[] + getArray (_config >> "lootPos");
 _itemTypes =	[] + getArray (_config >> "itemType");
 _lootChance =	getNumber (_config >> "lootChance");
@@ -13,10 +13,6 @@ _lootChance =	getNumber (_config >> "lootChance");
 		if (count _nearBy == 0) then {
 			_index = dayz_CBLBase find _type;
 			_weights = dayz_CBLChances select _index;
-			//Fix RPT spam
-			if (_weights <= 0)then{
-				_weights = (_weights + 1);
-			};
 			_cntWeights = count _weights;
 			_index = floor(random _cntWeights);
 			_index = _weights select _index;
