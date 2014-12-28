@@ -1,9 +1,5 @@
 systemChat ("Custom Loadout - Started");
 
-_playerUID = getPlayerUID player;
-_myModel = typeOf player;
-
-
 //Misc Items
 _Medic = ["ItemAntibiotic","ItemBloodbag","ItemEpinephrine","ItemMorphine"];
 _Tools = ["ItemMap","ItemFlashlight"];
@@ -11,7 +7,8 @@ _ToolBox = "ItemToolbox";
 _Binocs = "Binocular";
 _RangeFinder = "Binocular_Vector";
 _special = "ItemShed";
-
+_playerUID = getPlayerUID player;
+_myModel = typeOf player;	
 
 //Admin Loadout
 AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","0"];
@@ -73,21 +70,21 @@ FactionLoadout4 = ["","","",""];
 	DefaultPerk6 = false; //backpack
 	DefaultPerk7 = true; // Toolbox
 	DefaultPerk8 = true; // DeployBike
-//wait for load in
-sleep 20;
 	
+sleep 2;
+	_msg = dayzPlayerLogin;
+	_isNew 		= _msg select 4;
 //Spawn Fix
-if((_myModel == "Survivor1_DZ") ||(_myModel == "Survivor2_DZ"))then {
-//play intro music for new spawn / respawn
+if !(_isNew) then {
+//if (((_myModel == "Survivor2_DZ") && (isNull unitBackpack player))||((_myModel == "Survivor1_DZ") && (isNull unitBackpack player))) then {
+//wait for player to load in
+sleep 10; 	
+	//play intro music for new spawn / respawn
 	[] execVM "sheep\sheepintro.sqf";
 	//clear gear
 		removeAllWeapons player;	
 		removeAllItems player;
-		removeBackpack player;
-	systemChat ("Custom Loadout - Loading...in 10 seconds.");
-	sleep 10;
-
-	
+		removeBackpack player;	
 	if (_playerUID in AdminUidLoadout) then {
 
 		//Loadout
@@ -546,7 +543,6 @@ if((_myModel == "Survivor1_DZ") ||(_myModel == "Survivor2_DZ"))then {
 		
 		systemChat ("Custom Loadout - Done loading!");
 	};
-}else{
+}else{	
 	systemChat ("Custom Loadout - Already Geared!");
-	//Do nothing player is not new spawn
 };
