@@ -75,7 +75,7 @@ sleep 2;
 	_msg = dayzPlayerLogin;
 	_isNew 		= _msg select 4;
 //Spawn Fix
-if !(_isNew) then {
+if (_isNew) then {
 //if (((_myModel == "Survivor2_DZ") && (isNull unitBackpack player))||((_myModel == "Survivor1_DZ") && (isNull unitBackpack player))) then {
 //wait for player to load in
 sleep 10; 	
