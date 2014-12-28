@@ -73,19 +73,17 @@ FactionLoadout4 = ["","","",""];
 	DefaultPerk5 = false; // medical supplies in backpack
 	DefaultPerk6 = false; //backpack
 	DefaultPerk7 = true; // Toolbox
-	DefaultPerk8 = true; // DeployBike
+	DefaultPerk8 = true; // DeployBike	
+sleep 20;
+systemChat ("Custom Loadout - Loading");
 while {true} do {	
 	if ((_myModel == "Survivor2_DZ") || (_myModel == "Survivor2_DZ")) then {
-		_Spawnplayergear = true;
+		_isNew = true;
 	}else{
-		_Spawnplayergear = false;
+		_isNew = false;
 	};
 };
 	
-sleep 10;
-while {_Spawnplayergear} do {
-
-
 	//Spawn Fix
 	if (_isNew) then {
 	//if (((_myModel == "Survivor2_DZ") && (isNull unitBackpack player))||((_myModel == "Survivor1_DZ") && (isNull unitBackpack player))) then {
@@ -555,9 +553,6 @@ while {_Spawnplayergear} do {
 			
 			systemChat ("Custom Loadout - Done loading!");
 		};
-			_Spawnplayergear = false;
 	}else{	
 		systemChat ("Custom Loadout - Already Geared!");
 	};
-
-};
