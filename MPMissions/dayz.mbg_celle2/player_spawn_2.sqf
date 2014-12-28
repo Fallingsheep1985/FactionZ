@@ -12,8 +12,6 @@ player setVariable ["temperature",dayz_temperatur,true];
 
 dayz_myLoad = (((count dayz_myBackpackMags) * 0.2) + (count dayz_myBackpackWpns)) +  (((count dayz_myMagazines) * 0.1) + (count dayz_myWeapons * 0.5));
 
-	//player addMagazine "Hatchet_swing";
-	//player addWeapon "MeleeHatchet";
 
 while {true} do {
 	//Initialize
@@ -23,76 +21,6 @@ while {true} do {
 	_speed = 	round((_vel distance [0,0,0]) * 3.5);
 	_saveTime = (playersNumber west * 2) + 10;
 	
-/*	
-	//reset position
-	_randomSpot = true;
-	_tempPos = getPosATL player;
-
-	_distance = _debug distance _tempPos;
-	if (_distance < 2000) then {
-		_randomSpot = false;
-	};	
-	_distance = [0,0,0] distance _tempPos;
-	if (_distance < 500) then {
-		_randomSpot = false;
-	};
-	_distance = _mylastPos distance _tempPos;
-	if (_distance > 400) then {
-		_randomSpot = false;
-	};
-	
-	if (_randomSpot) then {
-		_mylastPos = _tempPos;
-	};
-	
-	dayz_mylastPos = _mylastPos;
-	dayz_areaAffect = _size;
-	
-	
-	if (_speed > 0.1) then {
-		_timeOut = _timeOut + 1;
-	};
-	
-	_humanity = player getVariable ["humanity",0];
-	if (_timeOut > 150) then {
-		_timeOut = 0;
-		if (_humanity < 2500) then {
-			_humanity = _humanity + 150;
-			_humanity = _humanity min 2500;
-			player setVariable ["humanity",_humanity,true];
-		};
-	};
-	
-	if (_humanity < -2000 and !_isBandit) then {
-		_isBandit = true;
-		_model = typeOf player;
-		if (_model == "Survivor2_DZ") then {
-			[dayz_playerUID,dayz_characterID,"Clan_Terror_DZC"] spawn player_humanityMorph;
-		};
-		if (_model == "SurvivorW2_DZ") then {
-			[dayz_playerUID,dayz_characterID,"Clan_Terror_DZC"] spawn player_humanityMorph;
-		};
-	};
-	
-	if (_humanity > 0 and _isBandit) then {
-		_isBandit = false;
-		_model = typeOf player;
-		if (_model == "Clan_Terror_DZC") then {
-			[dayz_playerUID,dayz_characterID,"Survivor2_DZ"] spawn player_humanityMorph;
-		};
-		if (_model == "Clan_Terror_DZC") then {
-			[dayz_playerUID,dayz_characterID,"SurvivorW2_DZ"] spawn player_humanityMorph;
-		};
-	};
-	
-	if (_humanity > 5000 and !_isHero) then {
-		_isBandit = false;
-		_model = typeOf player;
-		if (_model == "Survivor2_DZ") then {
-			[dayz_playerUID,dayz_characterID,"Clan_Delta1"] spawn player_humanityMorph;
-		};
-	};
-*/	
 	//Has infection?
 	if (r_player_infected) then {
 		[player,"cough",8,true] call dayz_zombieSpeak;
@@ -209,7 +137,9 @@ while {true} do {
 		if ((time - dayz_damageCounter) > 180) then {
 			if (!r_player_unconscious) then {
 				dayz_canDisconnect = true;
-				["dayzDiscoRem",getPlayerUID player] call callRpcProcedure;
+				//["dayzDiscoRem",getPlayerUID player] call callRpcProcedure;
+				dayzDiscoRem = getPlayerUID player;
+				publicVariable "dayzDiscoRem";
 				
 				//Ensure Control is hidden
 				_display = uiNamespace getVariable 'DAYZ_GUI_display';
@@ -222,8 +152,15 @@ while {true} do {
 	//Save Checker
 	if (dayz_unsaved) then {
 		if ((time - dayz_lastSave) > _saveTime) then {
-			["dayzPlayerSave",[player,dayz_Magazines,false]] call callRpcProcedure;			
+			//["dayzPlayerSave",[player,dayz_Magazines,false]] call callRpcProcedure;
 			
+			dayzPlayerSave = [player,dayz_Magazines,false];
+			publicVariableServer "dayzPlayerSave";
+			
+			if (isServer) then {
+				dayzPlayerSave call server_playerSync;
+			};
+						
 			dayz_lastSave = time;
 			dayz_Magazines = [];
 		};
@@ -235,30 +172,6 @@ while {true} do {
 
 	if (!dayz_unsaved) then {
 		dayz_lastSave = time;
-	};
-
-	//Attach Trigger Current Object
-	//dayz_playerTrigger attachTo [_refObj,[0,0,0]];
-	//dayz_playerTrigger setTriggerArea [_size,_size,0,false];
-
-	if (dayzDebug) then {
-		//Debug Info
-		_headShots = 	player getVariable["headShots",0];
-		_kills = 		player getVariable["zombieKills",0];
-		_killsH = 		player getVariable["humanKills",0];
-		_killsB = 		player getVariable["banditKills",0];
-		_humanity =		player getVariable["humanity",0];
-		_zombies =		count entities "zZombie_Base";
-		_zombiesA = 	{alive _x} count entities "zZombie_Base";
-		//_groups =		count allGroups;
-		//_dead =			count allDead;
-		//dayz_zombiesLocal =		{local _x} count entities "zZombie_Base";
-		//_loot = 		count allMissionObjects "WeaponHolder";
-		//_wrecks = 		count allMissionObjects "Wreck_Base";
-		//_lootL = 		{local _x} count allMissionObjects "WeaponHolder";
-		//_speed = (_vel distance [0,0,0]); 
-		
-		hintSilent format["DEBUG MONITOR: \n\nZombies Killed: %1\nHeadshots: %2\nMurders: %10\nBandits Killed: %12\nBlood: %4\nZombies (alive/total): %15/%8\nName: %14\nHumanity: %11",_kills,_headShots,_speed,r_player_blood,round(dayz_temperatur),r_player_infected,dayz_inside,_zombies,_lastSave,_killsH,round(_humanity),_killsB,_freeTarget,dayz_playerName,_zombiesA];
 	};
 
 	// If in combat, display counter and restrict logout
@@ -289,39 +202,9 @@ while {true} do {
 		_combatcontrol = 	_combatdisplay displayCtrl 1307;
 		_combatcontrol ctrlShow true;
 	};
-	
-	/*
-	setGroupIconsVisible [false,false];
-	clearGroupIcons group player;
-	*/
+
 	"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [1, 1, 1, 0.0]];
 	"colorCorrections" ppEffectCommit 0;
 	sleep 2;
-	/*
-	_myPos = player getVariable["lastPos",[]];
-	if (count _myPos > 0) then {
-		player setVariable["lastPos",_mylastPos, true];
-		player setVariable["lastPos",[]];
-	};
-	
-	_lastPos = getPosATL player;	
-	if (player == vehicle player) then {
-		if (_mylastPos distance _lastPos > 200) then {
-			if (alive player) then {
-				player setPosATL _mylastPos;
-			};
-		};
-	} else {
-		if (_mylastPos distance _lastPos > 800) then {
-			if (alive player) then {
-				player setPosATL _mylastPos;
-			};
-		};
-	};
-	*/
-	//Hatchet ammo fix	
-	//"MeleeHatchet" call dayz_meleeMagazineCheck;
-	
-	//Crowbar ammo fix	
-	//"MeleeCrowbar" call dayz_meleeMagazineCheck;
+
 };
