@@ -42,8 +42,7 @@ if (!isNull _nearLight) then {
 _canDo = (!r_drag_sqf and !r_player_unconscious and !_onLadder);
 /////////////////////////////////////////////////////////////////////////////////////////////////DEPLOY BIKE START////////////////////////////////////////////////////////////////////////////////////////////////////
 //Only Allow if player has perk
-if (((_playerUID in AdminUidLoadout)&&(AdminPerk8))|| ((_playerUID in FactionLoadout1)&&(Faction1Perk8))|| ((_playerUID in FactionLoadout2)&&(Faction2Perk8))|| ((_playerUID in FactionLoadout3)&&(Faction3Perk8))|| ((_playerUID in FactionLoadout4)&&(Faction4Perk8)) || (!(_playerUID in AdminUidLoadout)&&(DefaultPerk8))) then {
-		//Deploy Bike
+
 		if((speed player <= 1) && cursorTarget isKindOf "TT650_Civ" && _canDo) then {
 			if (s_player_deploybike4 < 0) then {
 				s_player_deploybike4 = player addaction[("<t color=""#007ab7"">" + ("Re-Pack Motorcycle") +"</t>"),"sheep\spawnbike\bike4.sqf","",5,false,true,"", ""];
@@ -70,17 +69,6 @@ if (((_playerUID in AdminUidLoadout)&&(AdminPerk8))|| ((_playerUID in FactionLoa
 			player removeAction s_player_deploybike2;
 			s_player_deploybike2 = -1;
 		};
-		if((speed player <= 1) && _hasToolbox && _canDo) then {
-			if (s_player_deploybike1 < 0) then {
-				s_player_deploybike1 = player addaction[("<t color=""#007ab7"">" + ("Deploy Bike") +"</t>"),"sheep\spawnbike\deploy_init.sqf","",5,false,true,"", ""];
-			};
-		} else {
-				
-			player removeAction s_player_deploybike1;
-			s_player_deploybike1 = -1;
-		};
-		
-};
 /////////////////////////////////////////////////////////////////////////////////////////////////DEPLOY BIKE END////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Grab Flare
