@@ -41,7 +41,7 @@ while {true} do {
 	_timeToSpawn = time + _frequency + _timeAdjust;
 
 	//Random Heli-Type
-	_heliModel = ["C130J"] call BIS_fnc_selectRandom;
+	_heliModel = ["C130J_US_EP1"] call BIS_fnc_selectRandom;
 
 	//Random-Startpositions, Adjust this for other Maps then Chernarus
 	_heliStart = [[6993.7007,173.05298,300],[1623.715,218.18848,300]] call BIS_fnc_selectRandom;
