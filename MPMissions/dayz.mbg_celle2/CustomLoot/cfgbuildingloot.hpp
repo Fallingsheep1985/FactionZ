@@ -1,6 +1,6 @@
 //Custom Loot
 #include "CfgLoot.hpp"
-#include "CfgLootSmall.hpp"
+
 
 class CfgBuildingLoot {
 	class Default {
