@@ -69,6 +69,7 @@ if (DebugLoadout) then {
 };
 //Variables
 _playerUID = getPlayerUID player;
+_playerCHID = player getVariable ["CharacterID", 0];
 _myModel = typeOf player;
 _mags = magazines player;
 _weapons = weapons player;
@@ -145,7 +146,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -224,7 +225,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -299,7 +300,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -374,7 +375,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -449,7 +450,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -525,7 +526,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
