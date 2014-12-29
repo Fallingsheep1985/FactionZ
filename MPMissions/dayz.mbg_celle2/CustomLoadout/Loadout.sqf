@@ -1,28 +1,6 @@
 systemChat ("Custom Loadout - Started");
 DebugLoadout = true;
 
-sleep 20;
-if (DebugLoadout) then {
-	systemChat ("Custom Loadout - Phase 1");
-};
-//Variables
-_playerUID = getPlayerUID player;
-_myModel = typeOf player;
-_mags = magazines player;
-_weapons = weapons player;
-_backpack = unitBackpack player;	
-_isNew = true;
-
-
-//Misc Items
-_Medic = ["ItemAntibiotic","ItemBloodbag","ItemEpinephrine","ItemMorphine"];
-_Tools = ["ItemMap","ItemFlashlight"];
-_ToolBox = "ItemToolbox";
-_Binocs = "Binocular";
-_RangeFinder = "Binocular_Vector";
-_special = "ItemShed";
-
-
 //Admin Loadout
 AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","0"];
 	AdminPerk1 = true; //Binocs
@@ -77,14 +55,37 @@ FactionLoadout4 = ["","","",""];
 //Default Perks
 	DefaultPerk1 = false; //Binocs
 	DefaultPerk2 = false; //Rangefinder
-	DefaultPerk3 = true; //Pistol
+	DefaultPerk3 = false; //Pistol
 	DefaultPerk4 = false; //Tools
 	DefaultPerk5 = false; // medical supplies in backpack
 	DefaultPerk6 = false; //backpack
-	DefaultPerk7 = true; // Toolbox
-	DefaultPerk8 = true; // DeployBike	
+	DefaultPerk7 = false; // Toolbox
+	DefaultPerk8 = false; // DeployBike	
+sleep 20;
+if (DebugLoadout) then {
+	systemChat ("Custom Loadout - Phase 1");
+};
+//Variables
+_playerUID = getPlayerUID player;
+_myModel = typeOf player;
+_mags = magazines player;
+_weapons = weapons player;
+_backpack = unitBackpack player;	
+_isNew = true;
+
+
+//Misc Items
+_Medic = ["ItemAntibiotic","ItemBloodbag","ItemEpinephrine","ItemMorphine"];
+_Tools = ["ItemMap","ItemFlashlight"];
+_ToolBox = "ItemToolbox";
+_Binocs = "Binocular";
+_RangeFinder = "Binocular_Vector";
+_special = "ItemShed";
+
+
 sleep 10;
 systemChat ("Custom Loadout - Phase 2");
+_myModel = typeOf player; // check again to make sure
 if (DebugLoadout) then {
 	cutText [format[("Model: %1"),_mymodel], "PLAIN DOWN"];
 };
