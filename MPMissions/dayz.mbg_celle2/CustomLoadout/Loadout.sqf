@@ -1,75 +1,13 @@
 systemChat ("Custom Loadout - Started");
-DebugLoadout = true;
+DebugLoadout = false;
 //Clothing 10 is missing on purpose!!
 SkinList = Clothing1 + Clothing2 + Clothing3 + Clothing4 + Clothing5 + Clothing6 + Clothing7 + Clothing8 + Clothing9 + Clothing11  + Clothing12  + Clothing13  + Clothing14  + Clothing15  + Clothing16  + Clothing17  + Clothing18  + Clothing19 + Clothing20 + Clothing21+ Clothing22+ Clothing23+ Clothing24+ Clothing25+ Clothing26+ Clothing27+ Clothing28;
 
-//Admin Loadout
-AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","0"];
-	AdminPerk1 = true; //Binocs
-	AdminPerk2 = true; //Rangefinder
-	AdminPerk3 = true; //Pistol
-	AdminPerk4 = true; //Tools
-	AdminPerk5 = true; // medical supplies in backpack
-	AdminPerk6 = true; //backpack
-	AdminPerk7 = true; //Toolbox
-	AdminPerk8 = true; //Deploy Bike
-//FACTION 1 - [MTG] Me and the guys
-FactionLoadout1 = ["","","",""];
-	Faction1Perk1 = true; //Binocs
-	Faction1Perk2 = false; //Rangefinder
-	Faction1Perk3 = true; //Pistol
-	Faction1Perk4 = false; //Tools
-	Faction1Perk5 = false; // medical supplies in backpack
-	Faction1Perk6 = true; //backpack
-	Faction1Perk7 = true; // Toolbox
-	Faction1Perk8 = false; //Deploy Bike
-//FACTION 2 - [DZZ] D'zz Nutzz
-FactionLoadout2 = ["","","",""];
-	Faction2Perk1 = true; //Binocs
-	Faction2Perk2 = false; //Rangefinder
-	Faction2Perk3 = true; //Pistol
-	Faction2Perk4 = false; //Tools
-	Faction2Perk5 = false; // medical supplies in backpack
-	Faction2Perk6 = true; //backpack
-	Faction2Perk7 = true; // Toolbox
-	Faction2Perk8 = false; //Deploy Bike
-//FACTION 3 - [GH] Gewekt Heren
-FactionLoadout3 = ["","","",""];
-	Faction3Perk1 = true; //Binocs
-	Faction3Perk2 = false; //Rangefinder
-	Faction3Perk3 = true; //Pistol
-	Faction3Perk4 = false; //Tools
-	Faction3Perk5 = false; // medical supplies in backpack
-	Faction3Perk6 = true; //backpack
-	Faction3Perk7 = true; // Toolbox
-	Faction3Perk8 = false; //Deploybike
-//FACTION 4 - NAME OF FACTION HERE
-FactionLoadout4 = ["","","",""];
-	Faction4Perk1 = true; //Binocs
-	Faction4Perk2 = false; //Rangefinder
-	Faction4Perk3 = true; //Pistol
-	Faction4Perk4 = false; //Tools
-	Faction4Perk5 = false; // medical supplies in backpack
-	Faction4Perk6 = true; //backpack
-	Faction4Perk7 = true; // Toolbox
-	Faction4Perk8 = false; // DeployBike
-
-//Default Perks
-	DefaultPerk1 = false; //Binocs
-	DefaultPerk2 = false; //Rangefinder
-	DefaultPerk3 = false; //Pistol
-	DefaultPerk4 = false; //Tools
-	DefaultPerk5 = false; // medical supplies in backpack
-	DefaultPerk6 = false; //backpack
-	DefaultPerk7 = false; // Toolbox
-	DefaultPerk8 = false; // DeployBike	
 sleep 20;
 if (DebugLoadout) then {
 	systemChat ("Custom Loadout - Phase 1");
 };
 //Variables
-_playerUID = getPlayerUID player;
-_playerCHID = player getVariable ["CharacterID", 0];
 _myModel = typeOf player;
 _mags = magazines player;
 _weapons = weapons player;
@@ -83,9 +21,10 @@ _Tools = ["ItemMap","ItemFlashlight"];
 _ToolBox = "ItemToolbox";
 _Binocs = "Binocular";
 _RangeFinder = "Binocular_Vector";
-_special = "ItemShed";
+//_special = "ItemShed";
+_special = "ItemTent";
 
-
+dayz_playerUID = getPlayerUID player;
 sleep 20;
 
 _myModel = typeOf player; // check again to make sure
@@ -105,6 +44,8 @@ sleep 20;
 //Check second time after load in
 if !(_myModel in SkinList) then {
 	_isNew = true;
+			//play intro music for new spawn / respawn
+		[] execVM "sheep\sheepintro.sqf";
 	if (DebugLoadout) then {
 		cutText [format[("Is New Player"),_mymodel], "PLAIN DOWN"];
 	};
@@ -126,7 +67,7 @@ if (DebugLoadout) then {
 		//play intro music for new spawn / respawn
 		[] execVM "sheep\sheepintro.sqf";
 			
-		if (_playerUID in AdminUidLoadout) then {
+		if (dayz_playerUID in AdminUidLoadout) then {
 			if (DebugLoadout) then {
 				cutText [format[("Loading: Admin Loadout"),_mymodel], "PLAIN DOWN"];
 			};
@@ -146,7 +87,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -207,7 +148,7 @@ if (DebugLoadout) then {
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 1 - NAME OF FACTION HERE
 		/////////////////////////////////////////////////////////////////////////////
-		if (_playerUID in FactionLoadout1) then {
+		if (dayz_playerUID in FactionLoadout1) then {
 
 			//Loadout
 			_primAdmin = "";
@@ -225,7 +166,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -282,7 +223,7 @@ if (DebugLoadout) then {
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 2 - NAME OF FACTION HERE
 		/////////////////////////////////////////////////////////////////////////////
-		if (_playerUID in FactionLoadout2) then {
+		if (dayz_playerUID in FactionLoadout2) then {
 
 			//Loadout
 			_primAdmin = "";
@@ -300,7 +241,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -357,7 +298,7 @@ if (DebugLoadout) then {
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 3 - NAME OF FACTION HERE
 		/////////////////////////////////////////////////////////////////////////////
-		if (_playerUID in FactionLoadout3) then {
+		if (dayz_playerUID in FactionLoadout3) then {
 
 			//Loadout
 			_primAdmin = "";
@@ -375,7 +316,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -432,7 +373,7 @@ if (DebugLoadout) then {
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 4 - NAME OF FACTION HERE
 		/////////////////////////////////////////////////////////////////////////////
-		if (_playerUID in FactionLoadout4) then {
+		if (dayz_playerUID in FactionLoadout4) then {
 
 			//Loadout
 			_primAdmin = "";
@@ -450,7 +391,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
@@ -507,7 +448,7 @@ if (DebugLoadout) then {
 
 
 		//Default Loadout for all other players
-		if !(_playerUID in AdminUidLoadout) then {
+		if !(dayz_playerUID in AdminUidLoadout) then {
 
 			
 			//Loadout
@@ -526,7 +467,7 @@ if (DebugLoadout) then {
 
 			//Set skin
 			if (_skin != _myModel) then {
-				[_playerUID,_playerCHID,_skin] spawn player_humanityMorph;
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
 				waitUntil {typeOf player != _myModel};
 				//no ammo fix
 				uiSleep 1;
