@@ -11,8 +11,8 @@ _newwealth = _wealth - _amount;
 _player setVariable["cashMoney",_newwealth, true];
 _player setVariable ["moneychanged",1,true];    
 _result = true;
-PVDZE_plr_Save = [_player,(magazines _player),true,true] ;
-publicVariableServer "PVDZE_plr_Save";            
+dayzPlayerSave = [_player,(magazines _player),true,true] ;
+publicVariableServer "dayzPlayerSave";            
 };
 }else{
 _result = true;

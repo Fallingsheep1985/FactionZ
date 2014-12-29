@@ -5,18 +5,24 @@ startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
 
+//How many Vigils to gain from killing a zombie
+Zed_Vigil_Amount = 1;
+//How much humanity to gain from killing a zed
+Zed_Humanity_Amount = 1;
+
 //REALLY IMPORTANT VALUES
 dayZ_instance = 35380;
 dayzHiveRequest = [];
 initialized = false;
 dayz_previousID = 0;
-dayz_antihack = 0; // DayZ Antihack / 1 = enabled // 0 = disabled
-dayz_REsec = 0; // DayZ RE Security / 1 = enabled // 0 = disabled
+dayz_antihack = 0;
+dayz_REsec = 0;
 dayz_spawnselection = 0;
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 //Load faction stuff
 execVM "FactionControl.sqf";
+execVM "TraderControl.sqf";
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "sheep\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
@@ -25,9 +31,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";	
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
-/*ZSC*/	
 call compile preprocessFileLineNumbers "ZSC\gold\ZSCinit.sqf";
-/*ZSC*/	
 progressLoadingScreen 0.7;
 call compile preprocessFileLineNumbers "compiles.sqf";				//Compile regular functions
 progressLoadingScreen 1.0;

@@ -14,4 +14,4 @@ _body setVariable ["cashMoney", 0 , true];
 if(typeName (_myMoney) == "SCALAR")then{
     player setVariable ["cashMoney", _myMoney , true];
 };
-systemChat format ['You took %1 coins, ID says %2 !',_hisMoney,_name];
+systemChat format ['You took %1 vigils, ID says %2 !',_hisMoney,_name];
