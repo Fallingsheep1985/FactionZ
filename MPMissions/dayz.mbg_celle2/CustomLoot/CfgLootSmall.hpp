@@ -331,7 +331,7 @@ class CfgLootSmall {
 		,{"Skin_CZ_Heavy3_DZC",0.02}
 	};
 	machinegunammoexpl[] = {
-		,{"100Rnd_556x45_BetaCMag",0.20}
+		{"100Rnd_556x45_BetaCMag",0.20}
 		,{"75Rnd_545x39_RPK",0.20}
 		,{"100Rnd_556x45_M249",0.15}
 		,{"100Rnd_762x51_M240",0.15}

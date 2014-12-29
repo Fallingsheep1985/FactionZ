@@ -485,7 +485,7 @@ class CfgLoot {
 		//,{"SVD_CAMO",0.07}
 		//,{"SVD_des_EP1",0.07}
 		//,{"SVD",0.07}
-		,{"huntingrifle",0.09}
+		{"huntingrifle",0.09}
 		//,{"M24_des_EP1",0.08}
 		//,{"M24",0.07}
 		//,{"BAF_LRR_scoped",0.07}
