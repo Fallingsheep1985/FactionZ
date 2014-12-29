@@ -1,4 +1,10 @@
 systemChat ("Custom Loadout - Started");
+DebugLoadout = true;
+
+sleep 20;
+if (DebugLoadout) then {
+	systemChat ("Custom Loadout - Phase 1");
+};
 //Variables
 _playerUID = getPlayerUID player;
 _myModel = typeOf player;
@@ -7,7 +13,7 @@ _weapons = weapons player;
 _backpack = unitBackpack player;	
 _isNew = true;
 
-DebugLoadout = true;
+
 //Misc Items
 _Medic = ["ItemAntibiotic","ItemBloodbag","ItemEpinephrine","ItemMorphine"];
 _Tools = ["ItemMap","ItemFlashlight"];
@@ -78,7 +84,7 @@ FactionLoadout4 = ["","","",""];
 	DefaultPerk7 = true; // Toolbox
 	DefaultPerk8 = true; // DeployBike	
 sleep 10;
-systemChat ("Custom Loadout - Loading");
+systemChat ("Custom Loadout - Phase 2");
 if (DebugLoadout) then {
 	cutText [format[("Model: %1"),_mymodel], "PLAIN DOWN"];
 };
