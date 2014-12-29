@@ -5,6 +5,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- [] call fnc_usec_selfActions;
 ************************************************************/
 private["_menClose","_hasBandage","_hasEpi","_hasMorphine","_hasBlood","_vehicle","_inVehicle","_color","_part"];
+//Traders
 
 _vehicle = vehicle player;
 _inVehicle = (_vehicle != player);
@@ -441,6 +442,63 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_followdog;
 		s_player_followdog = -1;
 	};
+	//TRADERS
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and DoctorTrader) then {
+		if (s_player_buy1 < 0) then {
+			s_player_buy1 = player addAction [("<t color=""#007ab7"">" + ("Buy Morphine - 150") +"</t>"), "trader\buy_morph.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy1;
+		s_player_buy1 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and DoctorTrader) then {
+		if (s_player_buy2 < 0) then {
+			s_player_buy2 = player addAction [("<t color=""#007ab7"">" + ("Buy Bloodbag - 250 ") +"</t>"), "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy2;
+		s_player_buy2 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and DoctorTrader) then {
+		if (s_player_buy3 < 0) then {
+			s_player_buy3 = player addAction [("<t color=""#007ab7"">" + ("Buy Bandage - 10") +"</t>"), "trader\buy_bandage.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy3;
+		s_player_buy3 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and DoctorTrader) then {
+		if (s_player_buy4 < 0) then {
+			s_player_buy4 = player addAction [("<t color=""#007ab7"">" + ("Buy Epipen - 20") +"</t>"), "trader\buy_epinephrine.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy4;
+		s_player_buy4 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and DoctorTrader) then {
+		if (s_player_buy5 < 0) then {
+			s_player_buy5 = player addAction [("<t color=""#007ab7"">" + ("Buy Heatpack - 15") +"</t>"), "trader\buy_heatpack.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy5;
+		s_player_buy5 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and DoctorTrader) then {
+		if (s_player_buy6 < 0) then {
+			s_player_buy6 = player addAction [("<t color=""#007ab7"">" + ("Buy Painkillers - 25") +"</t>"), "trader\buy_painkiller.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy6;
+		s_player_buy6 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and DoctorTrader) then {
+		if (s_player_buy7 < 0) then {
+			s_player_buy7 = player addAction [("<t color=""#007ab7"">" + ("Buy Antibiotics - 175") +"</t>"), "trader\buy_antibiotic.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy7;
+		s_player_buy7 = -1;
+	};
 } else {
 	//Engineering
 		//Remove Parts
@@ -515,6 +573,22 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_bank_dialog2 = -1;
 	player removeAction s_player_studybody2;
 	s_player_studybody2 = -1;
+	
+	//doctor trader
+	player removeAction s_player_buy1;
+	s_player_buy1 = -1;
+	player removeAction s_player_buy2;
+	s_player_buy2 = -1;
+	player removeAction s_player_buy3;
+	s_player_buy3 = -1;
+	player removeAction s_player_buy4;
+	s_player_buy4 = -1;
+	player removeAction s_player_buy5;
+	s_player_buy5 = -1;
+	player removeAction s_player_buy6;
+	s_player_buy6 = -1;
+	player removeAction s_player_buy7;
+	s_player_buy7 = -1;
 	
 };
 
