@@ -6,7 +6,8 @@ private["_playerPos","_canDrink","_isPond","_isWell","_pondPos","_objectsWell","
 
 _stagnant_water_rates = 25; // percent chance of having infected water (default = 25)
 
-
+disableSerialization;
+ 
 	if ((floor (random 100) < _stagnant_water_rates)) then {
 	
 		player playActionNow "PutDown";
