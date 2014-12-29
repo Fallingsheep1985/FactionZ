@@ -1,5 +1,7 @@
 systemChat ("Custom Loadout - Started");
 DebugLoadout = true;
+//Clothing 10 is missing on purpose!!
+SkinList = Clothing1 + Clothing2 + Clothing3 + Clothing4 + Clothing5 + Clothing6 + Clothing7 + Clothing8 + Clothing9 + Clothing11  + Clothing12  + Clothing13  + Clothing14  + Clothing15  + Clothing16  + Clothing17  + Clothing18  + Clothing19 + Clothing20 + Clothing21+ Clothing22+ Clothing23+ Clothing24+ Clothing25+ Clothing26+ Clothing27+ Clothing28;
 
 //Admin Loadout
 AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","0"];
@@ -71,7 +73,7 @@ _myModel = typeOf player;
 _mags = magazines player;
 _weapons = weapons player;
 _backpack = unitBackpack player;	
-_isNew = true;
+_isNew = false;
 
 
 //Misc Items
@@ -83,35 +85,43 @@ _RangeFinder = "Binocular_Vector";
 _special = "ItemShed";
 
 
-sleep 15;
-systemChat ("Custom Loadout - Phase 2");
+sleep 20;
+
 _myModel = typeOf player; // check again to make sure
-if (DebugLoadout) then {
-	cutText [format[("Model: %1"),_mymodel], "PLAIN DOWN"];
-};
-if ((_myModel == "Survivor1_DZ") || (_myModel == "Survivor2_DZ")) then {
-		_isNew = true;
-		if (DebugLoadout) then {
-			cutText [format[("Is New Player"),_mymodel], "PLAIN DOWN"];
-		};
-	}else{
-		_isNew = false;
-		if (DebugLoadout) then {
-			cutText [format[("Is Returning Player"),_mymodel], "PLAIN DOWN"];
-		};
+
+if !(_myModel in SkinList) then {
+	_isNew = true;
+	if (DebugLoadout) then {
+		cutText [format[("Is New Player"),_mymodel], "PLAIN DOWN"];
 	};
-	sleep 10;
-systemChat ("Custom Loadout - Phase 3");	
+}else{
+	_isNew = false;
+	if (DebugLoadout) then {
+		cutText [format[("Is Returning Player"),_mymodel], "PLAIN DOWN"];
+	};
+};
+sleep 20;
+//Check second time after load in
+if !(_myModel in SkinList) then {
+	_isNew = true;
+	if (DebugLoadout) then {
+		cutText [format[("Is New Player"),_mymodel], "PLAIN DOWN"];
+	};
+}else{
+	_isNew = false;
+	if (DebugLoadout) then {
+		cutText [format[("Is Returning Player"),_mymodel], "PLAIN DOWN"];
+	};
+};
+if (DebugLoadout) then {
+	systemChat ("Custom Loadout - Phase 3");
+};	
 	//Spawn Fix
 	if (_isNew) then {
 		if (DebugLoadout) then {
 			cutText [format[("Preparing Loadout"),_mymodel], "PLAIN DOWN"];
 		};
-		//Check again - stupid arma code :)
-		_myModel = typeOf player;
-		if (!(_myModel == "Survivor1_DZ") || !(_myModel == "Survivor2_DZ")) exitWith {
-			systemChat ("Custom Loadout - Already Geared!");
-		}; 		
+ 		
 		//play intro music for new spawn / respawn
 		[] execVM "sheep\sheepintro.sqf";
 			
@@ -192,7 +202,6 @@ systemChat ("Custom Loadout - Phase 3");
 			//reload player to make sure he is ready to go
 			reload player;
 			
-			systemChat ("Custom Loadout - Done loading!");
 		};
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 1 - NAME OF FACTION HERE
@@ -268,7 +277,6 @@ systemChat ("Custom Loadout - Phase 3");
 			//reload player to make sure he is ready to go
 			reload player;
 			
-			systemChat ("Custom Loadout - Done loading!");
 		};
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 2 - NAME OF FACTION HERE
@@ -344,7 +352,6 @@ systemChat ("Custom Loadout - Phase 3");
 			//reload player to make sure he is ready to go
 			reload player;
 			
-			systemChat ("Custom Loadout - Done loading!");
 		};
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 3 - NAME OF FACTION HERE
@@ -420,7 +427,6 @@ systemChat ("Custom Loadout - Phase 3");
 			//reload player to make sure he is ready to go
 			reload player;
 			
-			systemChat ("Custom Loadout - Done loading!");
 		};
 		/////////////////////////////////////////////////////////////////////////////
 		//					FACTION 4 - NAME OF FACTION HERE
@@ -496,7 +502,6 @@ systemChat ("Custom Loadout - Phase 3");
 			//reload player to make sure he is ready to go
 			reload player;
 			
-			systemChat ("Custom Loadout - Done loading!");
 		};
 
 
@@ -573,8 +578,13 @@ systemChat ("Custom Loadout - Phase 3");
 			//reload player to make sure he is ready to go
 			reload player;
 			
+
+		};
+		if (DebugLoadout) then {
 			systemChat ("Custom Loadout - Done loading!");
 		};
-	}else{	
-		systemChat ("Custom Loadout - Already Geared!");
+	}else{
+		if (DebugLoadout) then {	
+			systemChat ("Custom Loadout - Already Geared!");
+		};
 	};
