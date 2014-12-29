@@ -39,6 +39,9 @@ player_spawn_2 			= compile preprocessFileLineNumbers "player_spawn_2.sqf"; //dg
 //Base protection set up
 canBuild = true;
 
+//Custom Right Click Actions
+call compile preprocessFileLineNumbers "click_actions\init.sqf";
+
 if ((!isServer) && (isNull player) ) then
 {
 waitUntil {!isNull player};
