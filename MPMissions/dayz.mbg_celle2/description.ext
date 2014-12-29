@@ -10,7 +10,7 @@ OnLoadMissionTime = False;
 disabledAI = true;
 disableChannels[]={};
 enableItemsDropping = 0;
-onPauseScript = "\z\addons\dayz_code\compile\player_onPause.sqf";
+onPauseScript = "player_onPause.sqf";
 
 loadScreen = "sheep\loadscreen.jpg";
 class Header
