@@ -528,12 +528,19 @@ _isWell = false;
 _pondPos = [];
 _objectsWell = [];
  
+ if (!_canDrink) then {
+	 if (_isWater)then{
+		_canDrink = true;
+	 };
+ };
 if (!_canDrink) then {
     _objectsWell = nearestObjects [_playerPos, [], 4];
     {
         //Check for Well
         _isWell = ["_well",str(_x),false] call fnc_inString;
-        if (_isWell) then {_canDrink = true};
+        if (_isWell) then {
+			_canDrink = true;
+		};
     } forEach _objectsWell;
 };
  
@@ -553,7 +560,7 @@ if (!_canDrink) then {
  
 if (_canDrink) then {
         if (s_player_drinkWater < 0) then {
-            s_player_drinkWater = player addaction[("<t color=""#0000c7"">" + (localize "STR_action_drink") +"</t>"),"script\drink_water\drink_water.sqf"];
+            s_player_drinkWater = player addaction[("<t color=""#0000c7"">" + (localize "STR_action_drink") +"</t>"),"sheep\drink_water\drink_water.sqf"];
         };
     } else {
         player removeAction s_player_drinkWater;
