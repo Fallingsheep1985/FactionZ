@@ -68,6 +68,12 @@ switch (_iClass) do {
 						if (_mags select 0 == "20Rnd_556x45_Stanag") then{ _mags set[0, "30Rnd_556x45_Stanag"] };
 						if (_mags select 0 == "30Rnd_556x45_G36") then{ _mags set[0, "30Rnd_556x45_Stanag"] };
 						if (_mags select 0 == "30Rnd_556x45_G36SD") then{ _mags set[0, "30Rnd_556x45_StanagSD"] };
+						if (!(_item2 in MeleeWeapons)) then{
+							_magQty = round(random 10);
+							if (_magQty > 3) then{
+								_item addMagazineCargoGlobal[(_mags select 0), (round(random 1) + 1)];
+							};
+						};
 					};
 				};
 				if ((_item2 != "") && (isClass(configFile >> "CfgMagazines" >> _item2))) then{
