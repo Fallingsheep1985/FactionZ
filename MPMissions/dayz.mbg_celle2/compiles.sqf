@@ -12,7 +12,7 @@ if (!isDedicated) then {
 	BIS_Effects_Burn = 			compile preprocessFile "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf"; 
 	player_zombieCheck = 		compile preprocessFileLineNumbers "sheep\player_zombieCheck.sqf";	//Run on a players computer, checks if the player is near a zombie
 	player_zombieAttack = 		compile preprocessFileLineNumbers "sheep\player_zombieAttack.sqf";	//Run on a players computer, causes a nearby zombie to attack them
-	fnc_usec_damageActions =	compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageActions.sqf";		//Checks which actions for nearby casualty
+	fnc_usec_damageActions =	compile preprocessFileLineNumbers "sheep\fn_damageActions.sqf";		//Checks which actions for nearby casualty
 	fnc_inAngleSector =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_inAngleSector.sqf";		//Checks which actions for nearby casualty
 	fnc_usec_selfActions =		compile preprocessFileLineNumbers "sheep\fn_selfActions.sqf";		//Checks which actions for self
 	fnc_usec_unconscious =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_unconscious.sqf";
