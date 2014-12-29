@@ -26009,9 +26009,9 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			name="faction1base";
-			expCond="(player distance faction1base) < 5;";
-			expActiv="canbuild = false;";
-			expDesactiv="canbuild = true;";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction1Dome.sqf"";";
+			expDesactiv="terminate dome1;";
 			class Effects
 			{
 			};
