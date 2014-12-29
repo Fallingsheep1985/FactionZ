@@ -456,6 +456,17 @@ if (!isDedicated) then {
 		_counter
 	};
 	
+	FNC_GetPos = {
+		private "_pos";
+		if (isNil {_this select 0}) exitWith {[0,0,0]};
+		_thingy = _this select 0;
+		_pos = getPosASL _thingy;
+		if !(surfaceIsWater _pos) then {
+			_pos =  ASLToATL _pos;
+		};
+		_pos
+	};
+	
 	//Server Only
 	if (isServer) then {
 		call compile preprocessFileLineNumbers "\z\addons\dayz_server\init\server_functions.sqf";
