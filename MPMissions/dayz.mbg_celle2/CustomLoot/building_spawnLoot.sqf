@@ -2,7 +2,7 @@ private["_obj","_type","_config","_positions","_iPos","_nearBy","_itemType","_it
 
 _obj = 			_this select 0;
 _type = 		typeOf _obj;
-_config = 		missionConfigFile >> "CfgBuildingLoot" >> _type;
+_config = 		missionConfigFile  >> "CfgBuildingLoot" >> _type;
 _positions =	[] + getArray (_config >> "lootPos");
 _itemTypes =	[] + getArray (_config >> "itemType");
 _lootChance =	getNumber (_config >> "lootChance");

@@ -16,7 +16,7 @@ _agent = 	objNull;
 if (!_isNoone) exitWith {};
 
 if (count _unitTypes == 0) then {
-	_unitTypes = 	[]+ getArray (missionConfigFile >> "CfgBuildingLoot" >> "Default" >> "zombieClass");
+	_unitTypes = 	[]+ getArray (missionConfigFile  >> "CfgBuildingLoot" >> "Default" >> "zombieClass");
 };
 _type = _unitTypes call BIS_fnc_selectRandom;
 
@@ -52,7 +52,28 @@ if (random 1 > 0.7) then {
 if (_nearByPlayer) then {
 	deleteVehicle _agent;
 };
-
+/*
+//_agent setVariable["host",player,true];
+if (!_doLoiter) then {
+	_agent setPosATL _position;
+	_agent setDir round(random 180);
+	if (_nearByPlayer) then {
+		deleteVehicle _agent;
+	};
+} else {
+	if (_nearByPlayer) then {
+		_attempt = 0;
+		while {_nearByPlayer} do {
+			_position = [_position,0,20,10,0,20,0] call BIS_fnc_findSafePos;
+			_agent setPos _position;
+			_nearByPlayer = ({isPlayer _x} count (_position nearEntities ["CAManBase",30]) > 0);
+			_attempt = _attempt + 1;
+			if (_attempt > 10) exitWith {};
+		};
+		_agent setPos _position;
+	};
+};
+*/
 if (isNull _agent) exitWith {
 	dayz_spawnZombies = dayz_spawnZombies - 1;
 };
@@ -69,7 +90,7 @@ _rnd = random 1;
 if (_rnd > 0.3) then {
 	_lootType = 		configFile >> "CfgVehicles" >> _type >> "zombieLoot";
 	if (isText _lootType) then {
-		_array = []+ getArray (configFile >> "cfgLoot" >> getText(_lootType));
+		_array = []+ getArray (missionConfigFile  >> "cfgLoot" >> getText(_lootType));
 		if (count _array > 0) then {
 			_loot = _array call BIS_fnc_selectRandomWeighted;
 			if(!isNil "_array") then {
