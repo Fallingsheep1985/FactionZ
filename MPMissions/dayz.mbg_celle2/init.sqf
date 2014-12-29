@@ -15,6 +15,8 @@ dayz_REsec = 0; // DayZ RE Security / 1 = enabled // 0 = disabled
 dayz_spawnselection = 0;
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
+//Load faction stuff
+execVM "FactionControl.sqf";
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "sheep\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
@@ -74,7 +76,7 @@ if (!isDedicated) then {
 	[] execVM "lights\street_lights.sqf";	
 };
 //Custom Loadout
-[] execVM "CustomLoadout\Loadout.sqf"; //also call intro music so it only happens on new spawns
+//[] execVM "CustomLoadout\Loadout.sqf"; //also call intro music so it only happens on new spawns
 //Base Safe zones
 execVM "custombases\CAGN\initiate.sqf";	
 
