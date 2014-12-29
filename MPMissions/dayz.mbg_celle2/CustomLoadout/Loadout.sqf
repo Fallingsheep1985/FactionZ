@@ -83,13 +83,13 @@ _RangeFinder = "Binocular_Vector";
 _special = "ItemShed";
 
 
-sleep 10;
+sleep 15;
 systemChat ("Custom Loadout - Phase 2");
 _myModel = typeOf player; // check again to make sure
 if (DebugLoadout) then {
 	cutText [format[("Model: %1"),_mymodel], "PLAIN DOWN"];
 };
-if ((_myModel == "Survivor2_DZ") || (_myModel == "Survivor2_DZ")) then {
+if ((_myModel == "Survivor1_DZ") || (_myModel == "Survivor2_DZ")) then {
 		_isNew = true;
 		if (DebugLoadout) then {
 			cutText [format[("Is New Player"),_mymodel], "PLAIN DOWN"];
@@ -100,21 +100,20 @@ if ((_myModel == "Survivor2_DZ") || (_myModel == "Survivor2_DZ")) then {
 			cutText [format[("Is Returning Player"),_mymodel], "PLAIN DOWN"];
 		};
 	};
-	
+	sleep 10;
+systemChat ("Custom Loadout - Phase 3");	
 	//Spawn Fix
 	if (_isNew) then {
 		if (DebugLoadout) then {
 			cutText [format[("Preparing Loadout"),_mymodel], "PLAIN DOWN"];
 		};
-	//wait for player to load in
-	sleep 10; 	
+		//Check again - stupid arma code :)
+		_myModel = typeOf player;
+		if (!(_myModel == "Survivor1_DZ") || !(_myModel == "Survivor2_DZ")) exitWith {
+			systemChat ("Custom Loadout - Already Geared!");
+		}; 		
 		//play intro music for new spawn / respawn
 		[] execVM "sheep\sheepintro.sqf";
-		//clear gear
-			removeAllWeapons player;	
-			removeAllItems player;
-			removeBackpack player;
-
 			
 		if (_playerUID in AdminUidLoadout) then {
 			if (DebugLoadout) then {
