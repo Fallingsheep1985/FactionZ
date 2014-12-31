@@ -1,4 +1,4 @@
-DoctorTrader = cursorTarget isKindOf "Dr_Hladik_EP1";
+DoctorTrader = ["Doctor_DZC"];
 
 //Medical costs in vigils
 Morphine_Cost = 150;
