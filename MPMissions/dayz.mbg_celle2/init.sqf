@@ -66,6 +66,10 @@ if (isServer) then {
     "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};	
 	//Sheeps Kill Pit
 	execVM "Custombases\sheepkillpit.sqf";
+	//Extra street lights
+	execVM "Custombases\extrastreetlights.sqf";
+	//Doctor Trader
+	execVM "Custombases\doctortrader.sqf";
 };
 
 if (!isDedicated) then {
