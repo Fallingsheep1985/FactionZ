@@ -2,7 +2,7 @@
 _vehicle_1000 = objNull;
 if (true) then
 {
-  _this = createAgent ["Dr_Hladik_EP1", [8899.4492, 2131.6995, 4.7683716e-006], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["Doctor_DZC", [8899.4492, 2131.6995, 4.7683716e-006], [], 0, "CAN_COLLIDE"];
   _vehicle_1000 = _this;
   _this setDir 84.416573;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";

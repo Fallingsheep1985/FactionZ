@@ -56,6 +56,7 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 	_hasBlood = 	"ItemBloodbag" in magazines player;	
 	_hasToolbox = 	"ItemToolbox" in items player;
 	_hasJerry = 	"ItemJerrycan" in magazines player;
+	_hasEJerry = 	"ItemJerrycanEmpty" in magazines player;
 	_hasEtool = 	"ItemEtool" in weapons player;
 	_hasWire = 		"ItemWire" in magazines player;
 	_hasPainkillers = 	"ItemPainkiller" in magazines player;
@@ -124,6 +125,7 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 			_action = _unit addAction [format[localize "str_actions_medical_10",_typeVeh], "\z\addons\dayz_code\actions\refuel.sqf",[_unit], 0, true, true, "", "'ItemJerrycan' in magazines player"];
 			r_player_actions set [count r_player_actions,_action];
 		};
+		
 		//CAN WE ISSUE ANOTHER KIND OF AMMUNITION?
 		if (count weapons _unit > 0) then {
 			//Get mag array
@@ -181,15 +183,8 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 	if (r_action) then {
 		r_action_targets = r_action_targets + [_unit];
 	};
+	*/
 };
-
-
-if ((r_player_vehicle != _vehicle) and r_action) then {
-	//Player is in a new vehicle
-	r_action = false;
-	call fnc_usec_medic_removeActions;
-};
-*/
 
 if (_inVehicle) then {
 	//Check if patients
@@ -229,9 +224,3 @@ if ((!_isClose or !_hasPatient) and r_action) then {
 	call fnc_usec_medic_removeActions;
 	r_action = false;
 };
-
-//Pain Effects
-//if (r_player_inpain and !r_player_unconscious) then {
-//	playSound "breath_1";
-//	addCamShake [2, 1, 25];
-//};
