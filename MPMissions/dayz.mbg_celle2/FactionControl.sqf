@@ -65,4 +65,4 @@ FactionLoadout4 = ["","","",""];
 	DefaultPerk6 = false; //backpack
 	DefaultPerk7 = false; // Toolbox
 	//Perks
-	DefaultPerk8 = true; // DeployBike	
+	DefaultPerk8 = false; // DeployBike	

@@ -248,6 +248,14 @@ dayz_resetSelfActions = {
 	s_bank_dialog = -1;
 	s_bank_dialog2 = -1;
 	s_player_studybody2 = 	-1;
+	s_clothes = -1;
+	s_player_buy1 = -1;
+	s_player_buy2 = -1;
+	s_player_buy3 = -1;
+	s_player_buy4 = -1;
+	s_player_buy5 = -1;
+	s_player_buy6 = -1;
+	s_player_buy7 = -1;
 };
 call dayz_resetSelfActions;
 
