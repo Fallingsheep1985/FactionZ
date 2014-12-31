@@ -70,6 +70,8 @@ if (isServer) then {
 	execVM "Custombases\extrastreetlights.sqf";
 	//Doctor Trader
 	execVM "Custombases\doctortrader.sqf";
+	//Hunter Trader
+	execVM "Custombases\huntertrader.sqf";
 };
 
 if (!isDedicated) then {

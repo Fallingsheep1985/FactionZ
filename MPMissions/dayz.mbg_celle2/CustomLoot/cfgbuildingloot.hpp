@@ -74,7 +74,7 @@ class CfgBuildingLoot {
 			{"Skin_Storm_Trooper3_DZC","magazine"},
 			{"Skin_Storm_Trooper4_DZC","magazine"},
 			{"Skin_Civ_Soldier_DZC","magazine"},
-			{"Skin_Doctor_DZC","magazine"}
+			//{"Skin_Doctor_DZC","magazine"}
 		};
 		itemChance[] =	{
 			3.50,	//Generic
@@ -122,7 +122,7 @@ class CfgBuildingLoot {
 			0.01,	//Skin_Storm_Trooper3_DZC
 			0.01,	//Skin_Storm_Trooper4_DZC
 			0.01,	//Skin_Civ_Soldier_DZC
-			0.02	//Skin_Doctor_DZC
+			//0.02	//Skin_Doctor_DZC
 		};	
 	};
 	class Estate: Default {
@@ -279,7 +279,7 @@ class CfgBuildingLoot {
 			{"Skin_Sniper1_DZC","magazine"},
 			{"Skin_Camo1_DZC","magazine"},
 			{"Skin_Camo2_DZC","magazine"},
-			{"Skin_Camo3_DZC","magazine"}
+			//{"Skin_Camo3_DZC","magazine"}
 		};
 		itemChance[] =	{
 			0.40,
@@ -304,7 +304,7 @@ class CfgBuildingLoot {
 			0.01,	//Skin_Sniper1_DZC
 			0.03,	//Skin_Camo1_DZC
 			0.02,	//Skin_Camo2_DZC
-			0.01	//Skin_Camo3_DZC
+			//0.01	//Skin_Camo3_DZC
 		};
 };
 class Hunting: Default {
@@ -336,7 +336,7 @@ class Hunting: Default {
 			{"Skin_Sniper1_DZC","magazine"},
 			{"Skin_Camo1_DZC","magazine"},
 			{"Skin_Camo2_DZC","magazine"},
-			{"Skin_Camo3_DZC","magazine"}
+			//{"Skin_Camo3_DZC","magazine"}
 		};
 		itemChance[] =	{
 			0.40,
@@ -361,7 +361,7 @@ class Hunting: Default {
 			0.01,	//Skin_Sniper1_DZC
 			0.03,	//Skin_Camo1_DZC
 			0.02,	//Skin_Camo2_DZC
-			0.01	//Skin_Camo3_DZC
+			//0.01	//Skin_Camo3_DZC
 		};
 };
 	class Supermarket: Default {
@@ -527,7 +527,7 @@ class Hunting: Default {
 			{"","trash"},
 			{"","hospital"},
 			{"MedBox0","object"},
-			{"Skin_Doctor_DZC","magazine"},
+			//{"Skin_Doctor_DZC","magazine"},
 			{"Skin_Hazmat_Black_DZC","magazine"},
 			{"Skin_Hazmat_Red_DZC","magazine"},
 			{"Skin_Hazmat_Yellow_DZC","magazine"},
@@ -540,7 +540,7 @@ class Hunting: Default {
 			0.25,
 			0.75,
 			0.05,
-			0.10,	//Skin_Doctor_DZC
+			//0.10,	//Skin_Doctor_DZC
 			0.01,	//Skin_Hazmat_Black_DZC
 			0.02,	//Skin_Hazmat_Red_DZC
 			0.02,	//Skin_Hazmat_Yellow_DZC

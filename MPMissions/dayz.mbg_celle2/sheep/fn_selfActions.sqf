@@ -352,7 +352,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_studybody2;
 		s_player_studybody2 = -1;
 	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal) then {
+	if (_isMan && _isAlive && !_isZombie && !_isAnimal && !(_traderType in DoctorTrader) && !(_traderType in HunterTrader) && (player distance cursorTarget < 5)) then {
 		if (s_givemoney_dialog < 0) then {
 			s_givemoney_dialog = player addAction [format["Give Money to %1", (name cursorTarget)], "ZSC\actions\give_player_dialog.sqf",cursorTarget, 3, true, true, "", ""];
 		};
@@ -371,7 +371,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 
 	// cars 
-	if( _isVehicle && !_isMan &&_isAlive && !_isMan && !(cursorTarget isKindOf "Bicycle") && (player distance cursorTarget < 5)) then {		
+	if( _isVehicle && !_isMan &&_isAlive && !(cursorTarget isKindOf "Bicycle") && (player distance cursorTarget < 5)) then {		
 		if (s_bank_dialog2 < 0) then {
 			s_bank_dialog2 = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",cursorTarget, 3, true, true, "", ""];
 		};			
@@ -445,9 +445,10 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		s_player_followdog = -1;
 	};
 	//TRADERS
+	//Medical Trader
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy1 < 0) then {
-			s_player_buy1 = player addAction [("<t color=""#007ab7"">" + ("Buy Morphine - 150") +"</t>"), "trader\buy_morph.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy1 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Morphine - %1") +"</t>"),Morphine_Cost], "trader\buy_morph.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy1;
@@ -455,7 +456,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy2 < 0) then {
-			s_player_buy2 = player addAction [("<t color=""#007ab7"">" + ("Buy Bloodbag - 250 ") +"</t>"), "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy2 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Bloodbag - %1 ") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy2;
@@ -463,7 +464,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy3 < 0) then {
-			s_player_buy3 = player addAction [("<t color=""#007ab7"">" + ("Buy Bandage - 10") +"</t>"), "trader\buy_bandage.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy3 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Bandage - %1") +"</t>"),Bandage_Cost], "trader\buy_bandage.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy3;
@@ -471,7 +472,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy4 < 0) then {
-			s_player_buy4 = player addAction [("<t color=""#007ab7"">" + ("Buy Epipen - 20") +"</t>"), "trader\buy_epinephrine.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy4 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Epipen - %1") +"</t>"),Epipen_Cost], "trader\buy_epinephrine.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy4;
@@ -479,7 +480,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy5 < 0) then {
-			s_player_buy5 = player addAction [("<t color=""#007ab7"">" + ("Buy Heatpack - 15") +"</t>"), "trader\buy_heatpack.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy5 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Heatpack - %1") +"</t>"),HeatPack_Cost], "trader\buy_heatpack.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy5;
@@ -487,7 +488,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy6 < 0) then {
-			s_player_buy6 = player addAction [("<t color=""#007ab7"">" + ("Buy Painkillers - 25") +"</t>"), "trader\buy_painkiller.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy6 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Painkillers - %1") +"</t>"),Painkiller_Cost], "trader\buy_painkiller.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy6;
@@ -495,12 +496,78 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy7 < 0) then {
-			s_player_buy7 = player addAction [("<t color=""#007ab7"">" + ("Buy Antibiotics - 175") +"</t>"), "trader\buy_antibiotic.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy7 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Antibiotics - %1") +"</t>"),Antibiotic_Cost], "trader\buy_antibiotic.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy7;
 		s_player_buy7 = -1;
 	};
+	
+	//Hunter Trader
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy8 < 0) then {
+			s_player_buy8 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Raw Beef - %1") +"</t>"),Rawbeef_Cost], "trader\buy_rawbeef.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy8;
+		s_player_buy8 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy9 < 0) then {
+			s_player_buy9 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Cooked Beef - %1 ") +"</t>"),Cooked_Beef], "trader\buy_cookedbeef.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy9;
+		s_player_buy9 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy10 < 0) then {
+			s_player_buy10 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Knife - %1") +"</t>"),Knife_Cost], "trader\buy_knife.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy10;
+		s_player_buy10 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy11 < 0) then {
+			s_player_buy11 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Axe - %1") +"</t>"),Axe_Cost], "trader\buy_axe.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy11;
+		s_player_buy11 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy12 < 0) then {
+			s_player_buy12 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Beartrap - %1") +"</t>"),Beartrap_Cost], "trader\buy_beartrap.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy12;
+		s_player_buy12 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy13 < 0) then {
+			s_player_buy13 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Compass - %1") +"</t>"),Compass_Cost], "trader\buy_compass.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy13;
+		s_player_buy13 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy14 < 0) then {
+			s_player_buy14 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Map - %1") +"</t>"),Map_Cost], "trader\buy_map.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy14;
+		s_player_buy14 = -1;
+	};
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy15 < 0) then {
+			s_player_buy15 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Matches - %1") +"</t>"),Matches_Cost], "trader\buy_matches.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy15;
+		s_player_buy15 = -1;
+	};	
 } else {
 	//Engineering
 		//Remove Parts
@@ -591,6 +658,22 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_player_buy6 = -1;
 	player removeAction s_player_buy7;
 	s_player_buy7 = -1;
+	player removeAction s_player_buy8;
+	s_player_buy8 = -1;
+	player removeAction s_player_buy9;
+	s_player_buy9 = -1;
+	player removeAction s_player_buy10;
+	s_player_buy10 = -1;
+	player removeAction s_player_buy11;
+	s_player_buy11 = -1;
+	player removeAction s_player_buy12;
+	s_player_buy12 = -1;
+	player removeAction s_player_buy13;
+	s_player_buy13 = -1;
+	player removeAction s_player_buy14;
+	s_player_buy14 = -1;
+	player removeAction s_player_buy15;
+	s_player_buy15 = -1;
 	
 };
 
