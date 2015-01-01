@@ -1,5 +1,8 @@
 #include "CustomLoot\cfgbuildingloot.hpp"
-
+//Trade
+#include "trader\medic\medic.hpp"
+#include "trader\mechanic\mechanic.hpp"
+#include "trader\hunter\hunter.hpp"
 
 respawn = "BASE";
 respawndelay = 5;
@@ -38,6 +41,18 @@ class RscText
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {0, 0, 0, 0};
 	linespacing = 1;
+};
+class MyRscFrame
+{
+	type = 0;
+	idc = -1;
+	style = 64;
+	shadow = 2;
+	colorBackground[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
+	font = "Zeppelin32";
+	sizeEx = 0.02;
+	text = "";
 };
 class RscStructuredText {
 	access = ReadAndWrite;

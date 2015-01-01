@@ -1189,7 +1189,7 @@ class Hunting: Default {
 		{"WeaponHolder_PartVRotor", "object"}, 
 		{"ItemGPS","weapon"}, 
 		{"Skin_US_Pilot1_DZC","magazine"},
-		{"Skin_Soldier3_SL_DZC","magazine"}, 
+		//{"Skin_Soldier3_SL_DZC","magazine"}, 
 		{"Skin_Soldier3_AT_DZC","magazine"}, 
 		{"Skin_Soldier1_DZC","magazine"},	
 		{"Skin_Soldier2_DZC","magazine"},
@@ -1223,15 +1223,15 @@ class Hunting: Default {
 		0.03,	//Rotor
 		0.04,
 		0.05,
+		//0.04,	//Skin_Soldier3_SL_DZC
 		0.04,
-		0.04,
+		0.05,	//Skin_Soldier1_DZC
 		0.05,
-		0.05,
-		0.01,
+		0.01,	//Skin_HazmatVest_Black_DZC
 		0.02,
-		0.02,
+		0.02,	//Skin_US_Heavy2_DZC
 		0.06,
-		0.02	//Equals 1.0
+		0.02	//DZ_Backpack_EP1
 		};
 	};
 	class C130Wreck_DZC: UH1Wreck_DZC {};	

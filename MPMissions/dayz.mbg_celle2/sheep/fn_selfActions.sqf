@@ -395,7 +395,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	//Hunter menu
 		if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
 		if (s_player_buy1 < 0) then {
-			s_player_buy1 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy1 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\Hunter\open_dialog.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy1;
@@ -404,7 +404,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	//Doctor menu
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
 		if (s_player_buy2 < 0) then {
-			s_player_buy2 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy2 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\Medic\open_dialog.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy2;
@@ -413,7 +413,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	//Mechanic menu
 	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in MechanicTrader)) then {
 		if (s_player_buy3 < 0) then {
-			s_player_buy3 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+			s_player_buy3 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\Mechanic\open_dialog.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
 		player removeAction s_player_buy3;
@@ -545,8 +545,13 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	player removeAction s_bank_dialog2;
 	s_bank_dialog2 = -1;
 	player removeAction s_player_studybody2;
-	s_player_studybody2 = -1;
-
+	s_player_studybody2 = -1;		
+	player removeAction s_player_buy1;
+	s_player_buy1 = -1;
+	player removeAction s_player_buy2;
+	s_player_buy2 = -1;
+	player removeAction s_player_buy3;
+	s_player_buy3 = -1;
 };
 
 // ----------------------------- / Drink water \ ----------------------
