@@ -5,7 +5,7 @@ _player = player;
 _item = "FoodSteakCooked";
 if ((_wealth > Cooked_Beef) && !(_trading)) then {
 	_trading = true;
-	cutText [format[("Trade in progress."),Cooked_Beef], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n Trade in progress."),Cooked_Beef], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 	_result = [player,_item] call BIS_fnc_invAdd;
     if (_result) then {
@@ -18,11 +18,11 @@ if ((_wealth > Cooked_Beef) && !(_trading)) then {
 		//time between trades
 	sleep 1;
 	_trading = false;
-	cutText [format[("Bought Cooked Beef."),Cooked_Beef], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n Bought Cooked Beef."),Cooked_Beef], "PLAIN DOWN"];
 	}else{
-        cutText [format["Not enough room!", Toolbox_Cost], "PLAIN DOWN"];
+        titleText [format["  \n \n \n Not enough room!", Cooked_Beef], "PLAIN DOWN"];
     };	
 } else {
-	cutText [format[("You need %1 vigils to buy this!"),Axe_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n You need %1 vigils to buy this!"),Cooked_Beef], "PLAIN DOWN"];
 };
 

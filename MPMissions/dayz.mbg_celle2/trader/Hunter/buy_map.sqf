@@ -5,7 +5,7 @@ _player = player;
 _item = "ItemMap";
 if ((_wealth > Map_Cost) && !(_trading)) then {
 	_trading = true;
-	cutText [format[("Trade in progress."),Map_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n Trade in progress."),Map_Cost], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 	_result = [player,_item] call BIS_fnc_invAdd;
     if (_result) then {
@@ -17,11 +17,11 @@ if ((_wealth > Map_Cost) && !(_trading)) then {
 		publicVariableServer "dayzPlayerSave"; 
 		sleep 1;
 		_trading = false;
-		cutText [format[("Bought a Map."),Map_Cost], "PLAIN DOWN"];
+		titleText [format[("  \n \n \n Bought a Map."),Map_Cost], "PLAIN DOWN"];
 	}else{
-        cutText [format["Not enough room!", Toolbox_Cost], "PLAIN DOWN"];
+        titleText [format["  \n \n \n Not enough room!", Map_Cost], "PLAIN DOWN"];
     };	
 } else {
-	cutText [format[("You need %1 vigils to buy this!"),Axe_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n You need %1 vigils to buy this!"),Map_Cost], "PLAIN DOWN"];
 };
 

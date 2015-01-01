@@ -6,6 +6,16 @@ class RscDisplayHunter
 
    class Controls
    {
+   		 class RscBackground_5000: RscBackground
+		 {
+		    idc = 5000;
+		    colorBackground[] = {0,0,0,1};
+		    colorText[] = {1,1,1,1};
+		    x = 0.397168 * safezoneW + safezoneX;
+			y = 0.300323 * safezoneH + safezoneY;
+			w = 0.190974 * safezoneW;
+			h = 0.422846 * safezoneH;
+		 };
 		class RscFrame_1800: RscFrame
 		{
 			idc = 1800;
@@ -94,7 +104,7 @@ class RscDisplayHunter
 			y = 0.323814 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_rawbeef.sqf';";
+			action = "[]execVM 'trader\hunter\buy_rawbeef.sqf';";
 		};
 		class RscButton_1601: RscButton
 		{
@@ -104,7 +114,7 @@ class RscDisplayHunter
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_cookedbeef.sqf';";
+			action = "[]execVM 'trader\hunter\buy_cookedbeef.sqf';";
 		};
 		class RscButton_1602: RscButton
 		{
@@ -114,7 +124,7 @@ class RscDisplayHunter
 			y = 0.41778 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_knife.sqf';";
+			action = "[]execVM 'trader\hunter\buy_knife.sqf';";
 		};
 		class RscButton_1603: RscButton
 		{
@@ -124,7 +134,7 @@ class RscDisplayHunter
 			y = 0.464763 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_axe.sqf';";
+			action = "[]execVM 'trader\hunter\buy_axe.sqf';";
 		};
 		class RscButton_1604: RscButton
 		{
@@ -134,7 +144,7 @@ class RscDisplayHunter
 			y = 0.511746 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_beartrap.sqf';";
+			action = "[]execVM 'trader\hunter\buy_beartrap.sqf';";
 		};
 		class RscButton_1605: RscButton
 		{
@@ -144,7 +154,7 @@ class RscDisplayHunter
 			y = 0.558729 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_compass.sqf';";
+			action = "[]execVM 'trader\hunter\buy_compass.sqf';";
 		};
 		class RscButton_1606: RscButton
 		{
@@ -154,7 +164,7 @@ class RscDisplayHunter
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_map.sqf';";
+			action = "[]execVM 'trader\hunter\buy_map.sqf';";
 		};
 		class RscButton_1607: RscButton
 		{
@@ -164,7 +174,7 @@ class RscDisplayHunter
 			y = 0.652694 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_matches.sqf';";
+			action = "[]execVM 'trader\hunter\buy_matches.sqf';";
 		};
 		class RscButton_1608: RscButton
 		{
@@ -184,6 +194,7 @@ class RscDisplayHunter
 			y = 0.323814 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_rawbeef.sqf';";
 		};
 		class RscButton_1610: RscButton
 		{
@@ -193,6 +204,7 @@ class RscDisplayHunter
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_cookedbeef.sqf';";
 		};
 		class RscButton_1611: RscButton
 		{
@@ -202,6 +214,7 @@ class RscDisplayHunter
 			y = 0.41778 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_knife.sqf';";
 		};
 		class RscButton_1612: RscButton
 		{
@@ -211,6 +224,7 @@ class RscDisplayHunter
 			y = 0.464763 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_axe.sqf';";
 		};
 		class RscButton_1613: RscButton
 		{
@@ -220,6 +234,7 @@ class RscDisplayHunter
 			y = 0.511746 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_beartrap.sqf';";
 		};
 		class RscButton_1614: RscButton
 		{
@@ -229,6 +244,7 @@ class RscDisplayHunter
 			y = 0.558729 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_compass.sqf';";
 		};
 		class RscButton_1615: RscButton
 		{
@@ -238,6 +254,7 @@ class RscDisplayHunter
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_map.sqf';";
 		};
 		class RscButton_1616: RscButton
 		{
@@ -247,6 +264,7 @@ class RscDisplayHunter
 			y = 0.652694 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\hunter\sell_matches.sqf';";
 		};
    };
 };

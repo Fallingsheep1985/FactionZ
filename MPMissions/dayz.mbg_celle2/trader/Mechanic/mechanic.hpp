@@ -6,6 +6,16 @@ class RscDisplayMechanic
 
    class Controls
    {
+   		 class RscBackground_5000: RscBackground
+		 {
+		    idc = 5000;
+		    colorBackground[] = {0,0,0,1};
+		    colorText[] = {1,1,1,1};
+		    x = 0.397168 * safezoneW + safezoneX;
+			y = 0.300323 * safezoneH + safezoneY;
+			w = 0.190974 * safezoneW;
+			h = 0.422846 * safezoneH;
+		 };
 		class RscFrame_1800: RscFrame
 		{
 			idc = 1800;
@@ -184,6 +194,7 @@ class RscDisplayMechanic
 			y = 0.323814 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_wheel.sqf';";
 		};
 		class RscButton_1610: RscButton
 		{
@@ -193,6 +204,7 @@ class RscDisplayMechanic
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_fueltank.sqf';";
 		};
 		class RscButton_1611: RscButton
 		{
@@ -202,6 +214,7 @@ class RscDisplayMechanic
 			y = 0.41778 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_scrapmetal.sqf';";
 		};
 		class RscButton_1612: RscButton
 		{
@@ -211,6 +224,7 @@ class RscDisplayMechanic
 			y = 0.464763 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_engine.sqf';";
 		};
 		class RscButton_1613: RscButton
 		{
@@ -220,6 +234,7 @@ class RscDisplayMechanic
 			y = 0.511746 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_rotor.sqf';";
 		};
 		class RscButton_1614: RscButton
 		{
@@ -229,6 +244,7 @@ class RscDisplayMechanic
 			y = 0.558729 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_glass.sqf';";
 		};
 		class RscButton_1615: RscButton
 		{
@@ -238,6 +254,7 @@ class RscDisplayMechanic
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_jerrycan.sqf';";
 		};
 		class RscButton_1616: RscButton
 		{
@@ -247,6 +264,7 @@ class RscDisplayMechanic
 			y = 0.652694 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\mechanic\sell_toolbox.sqf';";
 		};
    };
 };

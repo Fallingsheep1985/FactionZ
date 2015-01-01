@@ -3,9 +3,9 @@ _wealth = player getVariable["cashMoney",0];
 _trading = false;
 _player = player;
 _item = "PartEngine";
-if ((Engine_Cost)&& !(_trading)) then {
+if ((_wealth > Engine_Cost)&& !(_trading)) then {
 	_trading = true;
-	cutText [format[("Trade in progress."),Engine_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n Trade in progress."),Engine_Cost], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 	_result = [player,_item] call BIS_fnc_invAdd;
     if (_result) then {
@@ -17,11 +17,11 @@ if ((Engine_Cost)&& !(_trading)) then {
 		publicVariableServer "dayzPlayerSave"; 
 		sleep 1;
 		_trading = false;
-		cutText [format[("Bought a Engine."),Engine_Cost], "PLAIN DOWN"];
+		titleText [format[("  \n \n \n Bought a Engine."),Engine_Cost], "PLAIN DOWN"];
 	}else{
-        cutText [format["Not enough room!", Toolbox_Cost], "PLAIN DOWN"];
+        titleText [format["  \n \n \n Not enough room!", Engine_Cost], "PLAIN DOWN"];
     };	
 } else {
-	cutText [format[("You need %1 vigils to buy this!"),Axe_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n You need %1 vigils to buy this!"),Engine_Cost], "PLAIN DOWN"];
 };
 

@@ -6,6 +6,16 @@ class RscDisplayMedic
 
    class Controls
    {
+		 class RscBackground_5000: RscBackground
+		 {
+		    idc = 5000;
+		    colorBackground[] = {0,0,0,1};
+		    colorText[] = {1,1,1,1};
+		    x = 0.397168 * safezoneW + safezoneX;
+			y = 0.300323 * safezoneH + safezoneY;
+			w = 0.190974 * safezoneW;
+			h = 0.422846 * safezoneH;
+		 };
 		class RscFrame_1800: RscFrame
 		{
 			idc = 1800;
@@ -85,7 +95,7 @@ class RscDisplayMedic
 			y = 0.323814 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_morphine.sqf';";
+			action = "[]execVM 'trader\medic\buy_morphine.sqf';";
 		};
 		class RscButton_1601: RscButton
 		{
@@ -95,7 +105,7 @@ class RscDisplayMedic
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_bloodbag.sqf';";
+			action = "[]execVM 'trader\medic\buy_bloodbag.sqf';";
 		};
 		class RscButton_1602: RscButton
 		{
@@ -105,7 +115,7 @@ class RscDisplayMedic
 			y = 0.41778 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_epipen.sqf';";
+			action = "[]execVM 'trader\medic\buy_epipen.sqf';";
 		};
 		class RscButton_1603: RscButton
 		{
@@ -115,7 +125,7 @@ class RscDisplayMedic
 			y = 0.464763 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_bandage.sqf';";
+			action = "[]execVM 'trader\medic\buy_bandage.sqf';";
 		};
 		class RscButton_1604: RscButton
 		{
@@ -125,7 +135,7 @@ class RscDisplayMedic
 			y = 0.511746 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_heatpack.sqf';";
+			action = "[]execVM 'trader\medic\buy_heatpack.sqf';";
 		};
 		class RscButton_1605: RscButton
 		{
@@ -135,7 +145,7 @@ class RscDisplayMedic
 			y = 0.558729 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_antibiotic.sqf';";
+			action = "[]execVM 'trader\medic\buy_antibiotic.sqf';";
 		};
 		class RscButton_1606: RscButton
 		{
@@ -145,7 +155,7 @@ class RscDisplayMedic
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\mechanic\buy_painkiller.sqf';";
+			action = "[]execVM 'trader\medic\buy_painkiller.sqf';";
 		};
 		class RscButton_1608: RscButton
 		{
@@ -165,6 +175,7 @@ class RscDisplayMedic
 			y = 0.323814 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\medic\sell_morphine.sqf';";
 		};
 		class RscButton_1610: RscButton
 		{
@@ -174,6 +185,7 @@ class RscDisplayMedic
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\medic\sell_bloodbag.sqf';";
 		};
 		class RscButton_1611: RscButton
 		{
@@ -183,6 +195,7 @@ class RscDisplayMedic
 			y = 0.41778 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\medic\sell_epipen.sqf';";
 		};
 		class RscButton_1612: RscButton
 		{
@@ -192,6 +205,7 @@ class RscDisplayMedic
 			y = 0.464763 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\medic\sell_bandage.sqf';";
 		};
 		class RscButton_1613: RscButton
 		{
@@ -201,6 +215,7 @@ class RscDisplayMedic
 			y = 0.511746 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\medic\sell_heatpack.sqf';";
 		};
 		class RscButton_1614: RscButton
 		{
@@ -210,6 +225,7 @@ class RscDisplayMedic
 			y = 0.558729 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\medic\sell_antibiotic.sqf';";
 		};
 		class RscButton_1615: RscButton
 		{
@@ -219,6 +235,7 @@ class RscDisplayMedic
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\medic\sell_painkiller.sqf';";
 		};
    };
 };

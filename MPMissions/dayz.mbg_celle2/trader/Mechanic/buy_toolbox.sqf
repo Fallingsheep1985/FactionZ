@@ -3,9 +3,9 @@ _wealth = player getVariable["cashMoney",0];
 _trading = false;
 _player = player;
 _item = "ItemToolbox";
-if ((Toolbox_Cost)&& !(_trading)) then {
+if ((_wealth >Toolbox_Cost)&& !(_trading)) then {
 	_trading = true;
-	cutText [format[("Trade in progress."),Toolbox_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n Trade in progress."),Toolbox_Cost], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 	//check if space and add item
 	_result = [player,_item] call BIS_fnc_invAdd;
@@ -17,11 +17,11 @@ if ((Toolbox_Cost)&& !(_trading)) then {
 		publicVariableServer "dayzPlayerSave"; 
 		sleep 1;
 		_trading = false;
-		cutText [format[("Bought a Toolbox."),Toolbox_Cost], "PLAIN DOWN"];
+		titleText [format[("  \n \n \n Bought a Toolbox."),Toolbox_Cost], "PLAIN DOWN"];
     }else{
-        cutText [format["Not enough room!", Toolbox_Cost], "PLAIN DOWN"];
+        titleText [format["  \n \n \n Not enough room!", Toolbox_Cost], "PLAIN DOWN"];
     };
 } else {
-	cutText [format[("You need %1 vigils to buy this!"),Toolbox_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n You need %1 vigils to buy this!"),Toolbox_Cost], "PLAIN DOWN"];
 };
 

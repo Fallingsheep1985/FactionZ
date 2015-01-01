@@ -5,7 +5,7 @@ _player = player;
 _item = "ItemCompass";
 if ((_wealth > Compass_Cost) && !(_trading)) then {
 	_trading = true;
-	cutText [format[("Trade in progress."),Compass_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n Trade in progress."),Compass_Cost], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 	_result = [player,_item] call BIS_fnc_invAdd;
     if (_result) then {
@@ -18,11 +18,11 @@ if ((_wealth > Compass_Cost) && !(_trading)) then {
 		//time between trades
 	sleep 1;
 	_trading = false;
-	cutText [format[("Bought a Compass."),Compass_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n Bought a Compass."),Compass_Cost], "PLAIN DOWN"];
 	}else{
-        cutText [format["Not enough room!", Toolbox_Cost], "PLAIN DOWN"];
+        titleText [format["  \n \n \n Not enough room!", Compass_Cost], "PLAIN DOWN"];
     };	
 } else {
-	cutText [format[("You need %1 vigils to buy this!"),Axe_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n \n You need %1 vigils to buy this!"),Compass_Cost], "PLAIN DOWN"];
 };
 
