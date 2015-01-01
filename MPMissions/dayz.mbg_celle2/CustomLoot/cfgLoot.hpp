@@ -288,7 +288,7 @@ class CfgLoot {
 			0.20,  //"TrashTinCan",
 			0.20,  //"ItemSodaEmpty",
 			0.05,  //"ItemBandage",
-			0.05,  //"ItemPainkiller",
+			0.02,  //"ItemPainkiller",
 			0.04,  //"15Rnd_9x19_M9",
 			//0.04 //"30Rnd_9x19_MP5",
 			//0.04,  //"20Rnd_556x45_Stanag",
@@ -320,7 +320,7 @@ class CfgLoot {
 			0.02,  //"HandChemGreen",
 			0.02,  //"HandChemBlue",
 			0.02,  //"HandChemRed",
-			0.05   //"ItemHeatPack"			
+			0.02   //"ItemHeatPack"			
 		}
 	};
 	policeman[] = {
@@ -354,12 +354,12 @@ class CfgLoot {
 			"FoodNutmix"
 		},
 		{
-			1,
+			0.5,
 			0.5,
 			0.2,
 			0.5,
 			0.2,
-			1,
+			0.51,
 			0.2,
 			0.04,
 			0.1

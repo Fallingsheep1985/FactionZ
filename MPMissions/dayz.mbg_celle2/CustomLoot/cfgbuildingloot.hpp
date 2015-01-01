@@ -455,7 +455,7 @@ class Hunting: Default {
 			//{"Mk_48_DZ","weapon"},
 			//{"MG36","weapon"},
 			{"","military"},
-			{"","medical"},
+			//{"","medical"},
 			{"MedBox0","object"},
 			{"AmmoBoxSmall_556","object"},
 			{"AmmoBoxSmall_762","object"},			
@@ -489,7 +489,7 @@ class Hunting: Default {
 			//0.03,		//"Mk_48_DZ"
 			//0.05,		//"M249_DZ"
 			1.00,			//"military"
-			0.50,		//"medical"
+			//0.50,		//"medical"
 			0.10,		//"MedBox0"
 			0.10,
 			0.10,
@@ -664,7 +664,7 @@ class Hunting: Default {
 			0.05,   //M9
 			//0.05,   //M16A2
 			//0.01,   //M16A2GL
-			0.02,   //M9SD
+			0.05,   //M9SD
 			//0.08,   //M4A1_Aim
 			//0.05,   //G36K
 			//0.05,   //G36C
@@ -673,9 +673,9 @@ class Hunting: Default {
 			0.02,   //M1014
 			//0.01,   //M4A1
 			//0.05,   //M14_EP1
-			0.08,   //UZI_EP1
-			0.10,   //Remington870_lamp
-			0.04,   //glock17_EP1
+			0.03,   //UZI_EP1
+			0.02,   //Remington870_lamp
+			0.05,   //glock17_EP1
 			//0.02,   //MP5A5
 			//0.01,   //MP5SD
 			//0.01,	//M4A3_CCO_EP1
@@ -700,13 +700,13 @@ class Hunting: Default {
 			//0.02,	//RH_HK53eot
 			//0.02,	//RH_HK53RFX
 			//0.03,	//RH_mp7p
-			0.01,	//RH_Deaglem 
-			0.01,	//RH_Deaglemz
+			0.02,	//RH_Deaglem 
+			0.02,	//RH_Deaglemz
 			0.01,	//RH_uspm
 			0.05,	//RH_usp
 			0.03,	//RH_uspsd
-			0.01,	//RH_g17sd
-			0.01,	//RH_m1911sd
+			0.03,	//RH_g17sd
+			0.02,	//RH_m1911sd
 			//0.04,	//RH_mp5sd6RFX
 			//0.04,	//RH_mp5sd6eot
 			0.02,	//RH_m9sd
@@ -834,7 +834,7 @@ class Hunting: Default {
 			{"Skin_Soldier3_AT_DZC","magazine"},
 			{"Skin_Soldier1_SL_DZC","magazine"}, 
 			{"Skin_Soldier2_SL_DZC","magazine"},	
-			{"Skin_Soldier3_SL_DZC","magazine"}
+			//{"Skin_Soldier3_SL_DZC","magazine"}
 		};
 		itemChance[] =	{
 			0.02,
@@ -846,7 +846,7 @@ class Hunting: Default {
 			0.50,
 		//Throwaway guns
 			//0.07,	//M16A2
-			0.07,	//M1014
+			0.06,	//M1014
 			//0.06,	//M16A2GL
 			0.08,	//RH_m1911
 			0.08,	//RH_m1911old
@@ -871,7 +871,7 @@ class Hunting: Default {
 			//0.01,	//RH_mp5kpdwRFX
 			//0.06,	//RH_fmg9
 			//0.04,	//RH_tmpeot
-			0.06,	//RH_uzi
+			0.03,	//RH_uzi
 		//MidTech
 			//0.01,	//RH_M4CEOTECH
 			//0.02,	//RH_M4CAIM
@@ -900,8 +900,8 @@ class Hunting: Default {
 			//0.01,	//RH_M60E4
 			//0.01,	//RH_MK43
 			//0.02,	//RH_mp5sd6RFX
-			0.005,	//RH_m9sd
-			0.005,	//RH_deagle
+			0.02,	//RH_m9sd
+			0.02,	//RH_deagle
 			//0.01,	//RH_tmpsd
 			//0.01,	//RH_tmpsdaim  
 			//0.01,	//RH_tmpsdeot
@@ -924,7 +924,7 @@ class Hunting: Default {
 			0.01,
 			0.02,
 			0.01,
-			0.01,
+			//0.01,
 		};
 	};
 	class MilitarySpecial: Default {
@@ -1019,11 +1019,11 @@ class Hunting: Default {
 			//0.10,	//{"M4A1_Aim","weap
 			//0.01,	//{"M24","weapon"},
 			//0.01,   //{"SVD_CAMO","weap
-			0.20,	//{"M1014","weapon"},
+			0.02,	//{"M1014","weapon"},
 			//0.10,	//{"M4A1","weapon"}
 			//0.03,	//{"M14_EP1","weapon"
-			0.20,	//{"UZI_EP1","weapon"
-			0.10, 	//{"glock17_EP1","wea
+			0.02,	//{"UZI_EP1","weapon"
+			0.01, 	//{"glock17_EP1","wea
 			//0.20, //{"M4A1_AIM_SD_cam
 			//0.04, //{"M16A4_ACG","wea
 			//0.05, //{"M4A1_HWS_GL_cam
@@ -1091,8 +1091,8 @@ class Hunting: Default {
 		lootPos[] = {};
 		itemType[] =	{
 		{"","military"}, 
-		{"","trash"}, 
-		{"", "medical"}, 
+		//{"","trash"}, 
+		//{"", "medical"}, 
 		{"ItemMap","weapon"}, 
 		{"ItemCompass", "generic"}, 
 		{"RH_browninghp","weapon"},		//Pistol
@@ -1124,14 +1124,14 @@ class Hunting: Default {
 		};
 		itemChance[] =	{
 			1.00,	//military
-			0.40,	//trash
-			0.20,	//medical
+			//0.40,	//trash
+			//0.20,	//medical
 			0.10,	//ItemMap
 			0.15,	//ItemCompass
 			0.15,	//RH_browninghp
 			0.10,	//RH_p226s
 			0.02,	//RH_g17sd 
-			0.08,  	//M1014
+			0.06,  	//M1014
 			//0.08, 	//FN_FAL
 			//0.07, 	//RH_mp5kpdwRFX
 			//0.03,	//FN_FAL_ANPVS4
@@ -1167,8 +1167,8 @@ class Hunting: Default {
 		lootPos[] = {};
 		itemType[] =	{
 		{"","military"}, 
-		{"","trash"}, 
-		{"", "medical"}, 
+		//{"","trash"}, 
+		//{"", "medical"}, 
 		{"ItemMap","weapon"}, 
 		{"ItemCompass", "generic"}, 
 		{"RH_p226","weapon"},
@@ -1201,15 +1201,15 @@ class Hunting: Default {
 		};
 		itemChance[] =	{
 		1.00,	//military
-		0.40,	//trash
-		0.20,	//medical
+		//0.40,	//trash
+		//0.20,	//medical
 		0.10,	//ItemMap
 		0.15,	//ItemCompass
 		0.15,	//RH_p226
 		0.02,	//RH_m9csd
 		0.02,	//RH_Deaglem
 		0.01,	//RH_m1911sd
-		0.10,   //M1014
+		0.04,   //M1014
 		//0.10,   //M16A4_ACOG
 		//0.05,   //M16A4_ACG_GL
 		//0.05,	//RH_SCARL_AIM
@@ -1245,8 +1245,8 @@ class Hunting: Default {
 		lootPos[] = {};
 		itemType[] =	{
 			{"","military"}, 
-			{"","trash"}, 
-			{"", "medical"}, 
+			//{"","trash"}, 
+			//{"", "medical"}, 
 			{"ItemMap","weapon"}, 
 			{"ItemCompass", "generic"}, 
 			{"RH_g19t","weapon"}, 
@@ -1277,14 +1277,14 @@ class Hunting: Default {
 		};
 		itemChance[] =	{
 			1.00,	//military
-			0.40,	//trash
-			0.20,	//medical
+			//0.40,	//trash
+			//0.20,	//medical
 			0.10,	//ItemMap
 			0.15,	//ItemCompass
 			0.15,	//RH_g19t
-			0.10,	//RH_uspm
+			0.05,	//RH_uspm
 			0.10,	//RH_tt33
-			0.05,   //Remington870_lamp
+			0.02,   //Remington870_lamp
 			//0.05,   //RH_mp7aim
 			//0.05,   //G36K
 			//0.04,	//RH_ump
@@ -1319,8 +1319,8 @@ class Hunting: Default {
 		lootPos[] = {};
 		itemType[] =	{
 		{"","military"}, 
-		{"","trash"}, 
-		{"", "medical"}, 
+		//{"","trash"}, 
+		//{"", "medical"}, 
 		{"ItemMap","weapon"}, 
 		{"ItemCompass", "generic"}, 
 		{"Makarov","weapon"}, 
@@ -1349,13 +1349,13 @@ class Hunting: Default {
 		};
 		itemChance[] =	{
 		1.00,	//military
-		0.40,	//trash
-		0.20,	//medical
+		//0.40,	//trash
+		//0.20,	//medical
 		0.10,	//ItemMap
 		0.15,	//ItemCompass
 		0.15,	//Makarov
 		0.02,	//MakarovSD
-		0.10,	//Saiga12K
+		0.03,	//Saiga12K
 		//0.05,   //RH_ak102
 		//0.03,   //RH_ScarAkeotech
 		//0.03,	//RH_ScarAkaim

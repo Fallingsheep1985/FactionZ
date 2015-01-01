@@ -391,6 +391,34 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
     };
     // END OF CLOTHES 
 
+	//Traders
+	//Hunter menu
+		if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
+		if (s_player_buy1 < 0) then {
+			s_player_buy1 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy1;
+		s_player_buy1 = -1;
+	};
+	//Doctor menu
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
+		if (s_player_buy2 < 0) then {
+			s_player_buy2 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy2;
+		s_player_buy2 = -1;
+	};
+	//Mechanic menu
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in MechanicTrader)) then {
+		if (s_player_buy3 < 0) then {
+			s_player_buy3 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy3;
+		s_player_buy3 = -1;
+	};
 	//Dog
 	if (_isDog and _isAlive and (_hasRawMeat) and _canDo and _ownerID == "0" and player getVariable ["dogID", 0] == 0) then {
 		if (s_player_tamedog < 0) then {
@@ -444,130 +472,6 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_followdog;
 		s_player_followdog = -1;
 	};
-	//TRADERS
-	//Medical Trader
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
-		if (s_player_buy1 < 0) then {
-			s_player_buy1 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Morphine - %1") +"</t>"),Morphine_Cost], "trader\buy_morph.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy1;
-		s_player_buy1 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
-		if (s_player_buy2 < 0) then {
-			s_player_buy2 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Bloodbag - %1 ") +"</t>"),Bloodbag_Cost], "trader\buy_blood.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy2;
-		s_player_buy2 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
-		if (s_player_buy3 < 0) then {
-			s_player_buy3 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Bandage - %1") +"</t>"),Bandage_Cost], "trader\buy_bandage.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy3;
-		s_player_buy3 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
-		if (s_player_buy4 < 0) then {
-			s_player_buy4 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Epipen - %1") +"</t>"),Epipen_Cost], "trader\buy_epinephrine.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy4;
-		s_player_buy4 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
-		if (s_player_buy5 < 0) then {
-			s_player_buy5 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Heatpack - %1") +"</t>"),HeatPack_Cost], "trader\buy_heatpack.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy5;
-		s_player_buy5 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
-		if (s_player_buy6 < 0) then {
-			s_player_buy6 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Painkillers - %1") +"</t>"),Painkiller_Cost], "trader\buy_painkiller.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy6;
-		s_player_buy6 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in DoctorTrader)) then {
-		if (s_player_buy7 < 0) then {
-			s_player_buy7 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Antibiotics - %1") +"</t>"),Antibiotic_Cost], "trader\buy_antibiotic.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy7;
-		s_player_buy7 = -1;
-	};
-	
-	//Hunter Trader
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy8 < 0) then {
-			s_player_buy8 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Raw Beef - %1") +"</t>"),Rawbeef_Cost], "trader\buy_rawbeef.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy8;
-		s_player_buy8 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy9 < 0) then {
-			s_player_buy9 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Cooked Beef - %1 ") +"</t>"),Cooked_Beef], "trader\buy_cookedbeef.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy9;
-		s_player_buy9 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy10 < 0) then {
-			s_player_buy10 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Knife - %1") +"</t>"),Knife_Cost], "trader\buy_knife.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy10;
-		s_player_buy10 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy11 < 0) then {
-			s_player_buy11 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Axe - %1") +"</t>"),Axe_Cost], "trader\buy_axe.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy11;
-		s_player_buy11 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy12 < 0) then {
-			s_player_buy12 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Beartrap - %1") +"</t>"),Beartrap_Cost], "trader\buy_beartrap.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy12;
-		s_player_buy12 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy13 < 0) then {
-			s_player_buy13 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Compass - %1") +"</t>"),Compass_Cost], "trader\buy_compass.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy13;
-		s_player_buy13 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy14 < 0) then {
-			s_player_buy14 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Map - %1") +"</t>"),Map_Cost], "trader\buy_map.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy14;
-		s_player_buy14 = -1;
-	};
-	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in HunterTrader)) then {
-		if (s_player_buy15 < 0) then {
-			s_player_buy15 = player addAction [format[("<t color=""#007ab7"">" + ("Buy Matches - %1") +"</t>"),Matches_Cost], "trader\buy_matches.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-	} else {	
-		player removeAction s_player_buy15;
-		s_player_buy15 = -1;
-	};	
 } else {
 	//Engineering
 		//Remove Parts
@@ -642,39 +546,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_bank_dialog2 = -1;
 	player removeAction s_player_studybody2;
 	s_player_studybody2 = -1;
-	
-	//doctor trader
-	player removeAction s_player_buy1;
-	s_player_buy1 = -1;
-	player removeAction s_player_buy2;
-	s_player_buy2 = -1;
-	player removeAction s_player_buy3;
-	s_player_buy3 = -1;
-	player removeAction s_player_buy4;
-	s_player_buy4 = -1;
-	player removeAction s_player_buy5;
-	s_player_buy5 = -1;
-	player removeAction s_player_buy6;
-	s_player_buy6 = -1;
-	player removeAction s_player_buy7;
-	s_player_buy7 = -1;
-	player removeAction s_player_buy8;
-	s_player_buy8 = -1;
-	player removeAction s_player_buy9;
-	s_player_buy9 = -1;
-	player removeAction s_player_buy10;
-	s_player_buy10 = -1;
-	player removeAction s_player_buy11;
-	s_player_buy11 = -1;
-	player removeAction s_player_buy12;
-	s_player_buy12 = -1;
-	player removeAction s_player_buy13;
-	s_player_buy13 = -1;
-	player removeAction s_player_buy14;
-	s_player_buy14 = -1;
-	player removeAction s_player_buy15;
-	s_player_buy15 = -1;
-	
+
 };
 
 // ----------------------------- / Drink water \ ----------------------
