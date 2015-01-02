@@ -7,7 +7,7 @@ if !(_trading) then {
 
 if ( _item in Weapons Player)then{
 	_trading = true;
-	titleText [format[("  \n \n \n Trade in progress."),Map_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade in progress."),Map_Sell], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 		player removeWeapon _item;
 		_newwealth = _wealth + Map_Sell;
@@ -18,10 +18,10 @@ if ( _item in Weapons Player)then{
 			//time between trades
 		sleep 1;
 		_trading = false;
-		titleText [format[("  \n \n \n Sold Map for %1."),Map_Sell], "PLAIN DOWN"];
+		titleText [format[("  \n \n Sold Map for %1."),Map_Sell], "PLAIN DOWN"];
 	}else{
-        titleText [format["  \n \n \n You dont have a Map!", _item], "PLAIN DOWN"];
+        titleText [format["  \n \n You dont have a Map!", _item], "PLAIN DOWN"];
     };	
 } else {
-	titleText [format[("  \n \n \n Trade already in progress."),Map_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade already in progress."),Map_Sell], "PLAIN DOWN"];
 };

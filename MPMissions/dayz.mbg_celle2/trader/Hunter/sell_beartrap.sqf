@@ -7,7 +7,7 @@ if !(_trading) then {
 
 if ( _item in Magazines Player)then{
 	_trading = true;
-	titleText [format[("  \n \n \n Trade in progress."),Beartrap_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade in progress."),Beartrap_Sell], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 		player removeMagazine _item;
 		_newwealth = _wealth + Beartrap_Sell;
@@ -18,10 +18,10 @@ if ( _item in Magazines Player)then{
 			//time between trades
 		sleep 1;
 		_trading = false;
-		titleText [format[("  \n \n \n Sold Bear Trap for %1."),Beartrap_Sell], "PLAIN DOWN"];
+		titleText [format[("  \n \n Sold Bear Trap for %1."),Beartrap_Sell], "PLAIN DOWN"];
 	}else{
-        titleText [format["  \n \n \n You dont have a Beartrap!", _item], "PLAIN DOWN"];
+        titleText [format["  \n \n You dont have a Beartrap!", _item], "PLAIN DOWN"];
     };	
 } else {
-	titleText [format[("  \n \n \n Trade already in progress."),Beartrap_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade already in progress."),Beartrap_Sell], "PLAIN DOWN"];
 };

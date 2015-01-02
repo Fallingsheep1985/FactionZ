@@ -53,19 +53,19 @@ RH_7Rnd_32cal_ppk_Cost = 250;
 RH_8Rnd_9x19_p38_Cost = 250;
 RH_6Rnd_44_Mag_Cost = 250;
 RH_6Rnd_357_Mag_Cost = 250;
-15Rnd_9x19_M9_Cost = 250;
-15Rnd_9x19_M9SD_Cost = 250;
-17Rnd_9x19_glock17_Cost = 250;
-7Rnd_45ACP_1911_Cost = 250;
+A_15Rnd_9x19_M9_Cost = 250;
+A_15Rnd_9x19_M9SD_Cost = 250;
+A_17Rnd_9x19_glock17_Cost = 250;
+A_7Rnd_45ACP_1911_Cost = 250;
 
-6Rnd_45ACP_Cost = 250;
-8Rnd_9x18_Makarov_Cost = 250;
-10x_303_Cost = 250;
-30Rnd_9x19_UZI_Cost = 250;
-15Rnd_W1866_Slug_Cost = 250;
-2Rnd_shotgun_74Slug_Cost = 250;
-8Rnd_B_Beneli_74Pellets_Cost = 250;
-8Rnd_B_Beneli_74Slug_Cost = 250;
+A_6Rnd_45ACP_Cost = 250;
+A_8Rnd_9x18_Makarov_Cost = 250;
+A_10x_303_Cost = 250;
+A_30Rnd_9x19_UZI_Cost = 250;
+A_15Rnd_W1866_Slug_Cost = 250;
+A_2Rnd_shotgun_74Slug_Cost = 250;
+A_8Rnd_B_Beneli_74Pellets_Cost = 250;
+A_8Rnd_B_Beneli_74Slug_Cost = 250;
 
 
 //Sell Price

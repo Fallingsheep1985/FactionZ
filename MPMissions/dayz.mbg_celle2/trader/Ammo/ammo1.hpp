@@ -11,10 +11,10 @@ class RscDisplayAmmo1
 		    idc = 5000;
 		    colorBackground[] = {0,0,0,1};
 		    colorText[] = {1,1,1,1};
-		    x = 0.397168 * safezoneW + safezoneX;
-			y = 0.300323 * safezoneH + safezoneY;
-			w = 0.190974 * safezoneW;
-			h = 0.422846 * safezoneH;
+			x = 0.279645 * safezoneW + safezoneX;
+			y = 0.276831 * safezoneH + safezoneY;
+			w = 0.44071 * safezoneW;
+			h = 0.399355 * safezoneH;
 		 };
 		class RscFrame_1800: RscFrame
 		{
@@ -32,7 +32,7 @@ class RscDisplayAmmo1
 			y = 0.312068 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_7Rnd_50_AE.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_7Rnd_50_AE.sqf';";
 		};
 		class RscButton_1601: RscButton
 		{
@@ -42,7 +42,7 @@ class RscDisplayAmmo1
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_13Rnd_9x19_bhp.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_13Rnd_9x19_bhp.sqf';";
 		};
 		class RscButton_1602: RscButton
 		{
@@ -52,7 +52,7 @@ class RscDisplayAmmo1
 			y = 0.429526 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_8Rnd_9x19_Mk.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_8Rnd_9x19_Mk.sqf';";
 		};
 		class RscButton_1603: RscButton
 		{
@@ -62,7 +62,7 @@ class RscDisplayAmmo1
 			y = 0.488254 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_8Rnd_9x19_Mksd.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_8Rnd_9x19_Mksd.sqf';";
 		};
 		class RscButton_1604: RscButton
 		{
@@ -72,7 +72,7 @@ class RscDisplayAmmo1
 			y = 0.546983 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_15Rnd_9x19_usp.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_15Rnd_9x19_usp.sqf';";
 		};
 		class RscButton_1605: RscButton
 		{
@@ -82,7 +82,7 @@ class RscDisplayAmmo1
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_15Rnd_9x19_uspsd.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_15Rnd_9x19_uspsd.sqf';";
 		};
 		class RscButton_1606: RscButton
 		{
@@ -92,7 +92,7 @@ class RscDisplayAmmo1
 			y = 0.312068 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_12Rnd_45cal_usp.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_12Rnd_45cal_usp.sqf';";
 		};
 		class RscButton_1607: RscButton
 		{
@@ -102,7 +102,7 @@ class RscDisplayAmmo1
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
-			action = "[]execVM 'trader\hunter\buy_RH_8Rnd_45cal_m1911.sqf';";
+			action = "[]execVM 'trader\ammo\buy_RH_8Rnd_45cal_m1911.sqf';";
 		};
 		class RscButton_1608: RscButton
 		{
@@ -112,6 +112,7 @@ class RscDisplayAmmo1
 			y = 0.429526 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_20Rnd_9x19_M93.sqf';";
 		};
 		class RscButton_1609: RscButton
 		{
@@ -121,6 +122,7 @@ class RscDisplayAmmo1
 			y = 0.488254 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_17Rnd_9x19_g17.sqf';";
 		};
 		class RscButton_1610: RscButton
 		{
@@ -130,6 +132,7 @@ class RscDisplayAmmo1
 			y = 0.546983 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_19Rnd_9x19_g18.sqf';";
 		};
 		class RscButton_1611: RscButton
 		{
@@ -139,6 +142,7 @@ class RscDisplayAmmo1
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_33Rnd_9x19_g18.sqf';";
 		};
 		class RscButton_1612: RscButton
 		{
@@ -148,6 +152,7 @@ class RscDisplayAmmo1
 			y = 0.312068 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_10Rnd_22LR_mk2.sqf';";
 		};
 		class RscButton_1613: RscButton
 		{
@@ -157,6 +162,7 @@ class RscDisplayAmmo1
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_8Rnd_762_tt33.sqf';";
 		};
 		class RscButton_1614: RscButton
 		{
@@ -166,6 +172,7 @@ class RscDisplayAmmo1
 			y = 0.429526 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_30Rnd_9x19_tec.sqf';";
 		};
 		class RscButton_1615: RscButton
 		{
@@ -175,6 +182,7 @@ class RscDisplayAmmo1
 			y = 0.488254 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_32Rnd_9x19_Muzi.sqf';";
 		};
 		class RscButton_1616: RscButton
 		{
@@ -184,6 +192,7 @@ class RscDisplayAmmo1
 			y = 0.546983 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_7Rnd_32cal_ppk.sqf';";
 		};
 		class RscButton_1617: RscButton
 		{
@@ -193,6 +202,7 @@ class RscDisplayAmmo1
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_8Rnd_9x19_p38.sqf';";
 		};
 		class RscButton_1618: RscButton
 		{
@@ -202,6 +212,7 @@ class RscDisplayAmmo1
 			y = 0.312068 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_6Rnd_44_Mag.sqf';";
 		};
 		class RscButton_1619: RscButton
 		{
@@ -211,6 +222,7 @@ class RscDisplayAmmo1
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_RH_6Rnd_357_Mag.sqf';";
 		};
 		class RscButton_1620: RscButton
 		{
@@ -220,6 +232,7 @@ class RscDisplayAmmo1
 			y = 0.429526 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_15Rnd_9x19_M9.sqf';";
 		};
 		class RscButton_1621: RscButton
 		{
@@ -229,6 +242,7 @@ class RscDisplayAmmo1
 			y = 0.488254 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_15Rnd_9x19_M9SD.sqf';";
 		};
 		class RscButton_1622: RscButton
 		{
@@ -238,6 +252,7 @@ class RscDisplayAmmo1
 			y = 0.546983 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_17Rnd_9x19_glock17.sqf';";
 		};
 		class RscButton_1623: RscButton
 		{
@@ -247,6 +262,7 @@ class RscDisplayAmmo1
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_7Rnd_45ACP_1911.sqf';";
 		};
 		class RscButton_1624: RscButton
 		{
@@ -256,6 +272,7 @@ class RscDisplayAmmo1
 			y = 0.312068 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_6Rnd_45ACP.sqf';";
 		};
 		class RscButton_1625: RscButton
 		{
@@ -265,6 +282,7 @@ class RscDisplayAmmo1
 			y = 0.370797 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_8Rnd_9x18_Makarov.sqf';";
 		};
 		class RscButton_1626: RscButton
 		{
@@ -274,6 +292,7 @@ class RscDisplayAmmo1
 			y = 0.429526 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_10x_303.sqf';";
 		};
 		class RscButton_1627: RscButton
 		{
@@ -283,6 +302,7 @@ class RscDisplayAmmo1
 			y = 0.488254 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_30Rnd_9x19_UZI.sqf';";
 		};
 		class RscButton_1628: RscButton
 		{
@@ -292,6 +312,7 @@ class RscDisplayAmmo1
 			y = 0.546983 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_15Rnd_W1866_Slug.sqf';";
 		};
 		class RscButton_1629: RscButton
 		{
@@ -301,6 +322,7 @@ class RscDisplayAmmo1
 			y = 0.605712 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_2Rnd_shotgun_74Slug.sqf';";
 		};
 		class RscButton_1630: RscButton
 		{
@@ -310,6 +332,7 @@ class RscDisplayAmmo1
 			y = 0.406034 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_8Rnd_B_Beneli_74Pellets.sqf';";
 		};
 		class RscButton_1631: RscButton
 		{
@@ -319,6 +342,7 @@ class RscDisplayAmmo1
 			y = 0.546983 * safezoneH + safezoneY;
 			w = 0.0367258 * safezoneW;
 			h = 0.0234914 * safezoneH;
+			action = "[]execVM 'trader\ammo\buy_8Rnd_B_Beneli_74Slug.sqf';";
 		};
 		class RscText_1000: RscText
 		{

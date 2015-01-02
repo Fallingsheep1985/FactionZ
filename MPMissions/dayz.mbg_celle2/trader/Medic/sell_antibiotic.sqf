@@ -6,7 +6,7 @@ _item = "ItemAntibiotic";
 if !(_trading) then {
 if ( _item in Magazines Player)then{
 	_trading = true;
-	titleText [format[("  \n \n \n Trade in progress."),Antibiotic_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade in progress."),Antibiotic_Sell], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 		player removeMagazine _item;
 		_newwealth = _wealth + Antibiotic_Sell;
@@ -17,10 +17,10 @@ if ( _item in Magazines Player)then{
 			//time between trades
 		sleep 1;
 		_trading = false;
-		titleText [format[("  \n \n \n Sold Antibiotics for %1."),Antibiotic_Sell], "PLAIN DOWN"];
+		titleText [format[("  \n \n Sold Antibiotics for %1."),Antibiotic_Sell], "PLAIN DOWN"];
 	}else{
-        titleText [format["  \n \n \n You dont have any Antibiotics!", _item], "PLAIN DOWN"];
+        titleText [format["  \n \n You dont have any Antibiotics!", _item], "PLAIN DOWN"];
     };	
 } else {
-	titleText [format[("  \n \n \n Trade already in progress."),Antibiotic_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade already in progress."),Antibiotic_Sell], "PLAIN DOWN"];
 };

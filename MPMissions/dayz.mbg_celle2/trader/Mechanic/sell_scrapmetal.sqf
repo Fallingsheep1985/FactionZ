@@ -7,7 +7,7 @@ if !(_trading) then {
 
 if ( _item in Magazines Player)then{
 	_trading = true;
-	titleText [format[("  \n \n \n Trade in progress."),Scrap_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade in progress."),Scrap_Sell], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 		player removeMagazine _item;
 		_newwealth = _wealth + Scrap_Sell;
@@ -18,10 +18,10 @@ if ( _item in Magazines Player)then{
 			//time between trades
 		sleep 1;
 		_trading = false;
-		titleText [format[("  \n \n \n Sold Scrap Metal for %1."),Scrap_Sell], "PLAIN DOWN"];
+		titleText [format[("  \n \n Sold Scrap Metal for %1."),Scrap_Sell], "PLAIN DOWN"];
 	}else{
-        titleText [format["  \n \n \n You dont have any Scrap Metal!", _item], "PLAIN DOWN"];
+        titleText [format["  \n \n You dont have any Scrap Metal!", _item], "PLAIN DOWN"];
     };	
 } else {
-	titleText [format[("  \n \n \n Trade already in progress."),Scrap_Sell], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade already in progress."),Scrap_Sell], "PLAIN DOWN"];
 };

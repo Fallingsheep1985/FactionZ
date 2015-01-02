@@ -5,7 +5,7 @@ _player = player;
 _item = "PartVRotor";
 if ((_wealth > Rotor_Cost)&& !(_trading)) then {
 	_trading = true;
-	titleText [format[("  \n \n \n Trade in progress."),Rotor_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n Trade in progress."),Rotor_Cost], "PLAIN DOWN"];
 	player playActionNow "PutDown";
 _result = [player,_item] call BIS_fnc_invAdd;
     if (_result) then {
@@ -17,11 +17,11 @@ _result = [player,_item] call BIS_fnc_invAdd;
 		publicVariableServer "dayzPlayerSave"; 
 		sleep 1;
 		_trading = false;
-		titleText [format[("  \n \n \n Bought a Rotor."),Rotor_Cost], "PLAIN DOWN"];
+		titleText [format[("  \n \n Bought a Rotor."),Rotor_Cost], "PLAIN DOWN"];
 	}else{
-        titleText [format["  \n \n \n Not enough room!", Rotor_Cost], "PLAIN DOWN"];
+        titleText [format["  \n \n Not enough room!", Rotor_Cost], "PLAIN DOWN"];
     };	
 } else {
-	titleText [format[("  \n \n \n You need %1 vigils to buy this!"),Rotor_Cost], "PLAIN DOWN"];
+	titleText [format[("  \n \n You need %1 vigils to buy this!"),Rotor_Cost], "PLAIN DOWN"];
 };
 

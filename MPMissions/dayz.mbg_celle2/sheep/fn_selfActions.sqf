@@ -352,7 +352,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_studybody2;
 		s_player_studybody2 = -1;
 	};
-	if (_isMan && _isAlive && !_isZombie && !_isAnimal && !(_traderType in DoctorTrader) && !(_traderType in HunterTrader) && (player distance cursorTarget < 5)) then {
+	if (_isMan && _isAlive && !_isZombie && !_isAnimal && !(_traderType in DoctorTrader) && !(_traderType in HunterTrader)&& !(_traderType in MechanicTrader)&& !(_traderType in AmmoTrader) && (player distance cursorTarget < 5)) then {
 		if (s_givemoney_dialog < 0) then {
 			s_givemoney_dialog = player addAction [format["Give Money to %1", (name cursorTarget)], "ZSC\actions\give_player_dialog.sqf",cursorTarget, 3, true, true, "", ""];
 		};
