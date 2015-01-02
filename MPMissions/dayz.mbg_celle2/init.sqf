@@ -74,6 +74,8 @@ if (isServer) then {
 	execVM "trader\huntertrader.sqf";
 	//Mechanic Trader
 	execVM "trader\mechanictrader.sqf";
+	//Ammo Trader
+	execVM "trader\ammotrader.sqf";
 };
 
 if (!isDedicated) then {

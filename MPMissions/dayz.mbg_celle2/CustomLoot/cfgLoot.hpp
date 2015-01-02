@@ -171,7 +171,7 @@ class CfgLoot {
 			"15Rnd_W1866_Slug",
 			//"30Rnd_9x19_MP5p",
 			"RH_20Rnd_32cal_vz61",
-			"WoodenArrow"
+			"BoltSteel"
 		},
 		{
 			0.10,
@@ -348,7 +348,7 @@ class CfgLoot {
 			"7Rnd_45ACP_1911",
 			"10x_303",
 			"ItemWaterbottleUnfilled",
-			"WoodenArrow",
+			"BoltSteel",
 			"ItemHeatPack",
 			"FoodMRE",
 			"FoodNutmix"

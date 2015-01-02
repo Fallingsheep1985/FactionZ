@@ -419,6 +419,15 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_buy3;
 		s_player_buy3 = -1;
 	};
+	//Ammo menu
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in AmmoTrader)) then {
+		if (s_player_buy4 < 0) then {
+			s_player_buy4 = player addAction [format[("<t color=""#007ab7"">" + ("Trade") +"</t>"),Bloodbag_Cost], "trader\ammo\open_dialog1.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_buy4;
+		s_player_buy4 = -1;
+	};
 	//Dog
 	if (_isDog and _isAlive and (_hasRawMeat) and _canDo and _ownerID == "0" and player getVariable ["dogID", 0] == 0) then {
 		if (s_player_tamedog < 0) then {
@@ -552,6 +561,8 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_player_buy2 = -1;
 	player removeAction s_player_buy3;
 	s_player_buy3 = -1;
+	player removeAction s_player_buy4;
+	s_player_buy4 = -1;
 };
 
 // ----------------------------- / Drink water \ ----------------------

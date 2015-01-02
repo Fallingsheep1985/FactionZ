@@ -60,7 +60,7 @@ class CfgBuildingLoot {
 			{"DZ_Czech_Vest_Pouch","object"},
 			{"DZ_ALICE_Pack_EP1","object"},
 			{"WeaponHolder_ItemTent","object"},
-			{"Crossbow_DZ","weapon"},
+			{"Crossbow","weapon"},
 			{"Binocular","weapon"},
 			{"PartWoodPile","magazine"},
 			{"WeaponHolder_MeleeCrowbar","object"},
@@ -261,7 +261,7 @@ class CfgBuildingLoot {
 			{"","generic"},
 			{"WeaponHolder_ItemJerrycan","object"},
 			//{"MR43","weapon"},
-			{"Crossbow_DZ","weapon"},
+			{"Crossbow","weapon"},
 			//{"RH_m14ebr","weapon"},
 			//{"RH_mk14","weapon"},
 			//{"RH_m4cmk","weapon"},
@@ -318,7 +318,7 @@ class Hunting: Default {
 			{"","generic"},
 			{"WeaponHolder_ItemJerrycan","object"},
 			//{"MR43","weapon"},
-			{"Crossbow_DZ","weapon"},
+			{"Crossbow","weapon"},
 			//{"RH_m14ebr","weapon"},
 			//{"RH_mk14","weapon"},
 			//{"RH_m4cmk","weapon"},
@@ -391,7 +391,7 @@ class Hunting: Default {
 			{"RH_g19t","weapon"},			
 			{"Winchester1866","weapon"},
 			{"WeaponHolder_ItemTent","object"},
-			{"Crossbow_DZ","weapon"},
+			{"Crossbow","weapon"},
 			{"Binocular","weapon"},
 			{"PartWoodPile","magazine"},
 			//{"MR43","weapon"},
@@ -524,30 +524,30 @@ class Hunting: Default {
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	{
-			{"","trash"},
+			//{"","trash"},
 			{"","hospital"},
 			{"MedBox0","object"},
 			//{"Skin_Doctor_DZC","magazine"},
-			{"Skin_Hazmat_Black_DZC","magazine"},
-			{"Skin_Hazmat_Red_DZC","magazine"},
-			{"Skin_Hazmat_Yellow_DZC","magazine"},
-			{"Skin_Hazmat_Olive_DZC","magazine"},
-			{"Skin_HazmatVest_Red_DZC","magazine"},
-			{"Skin_HazmatVest_Yellow_DZC","magazine"},
-			{"Skin_HazmatVest_Olive_DZC","magazine"}			
+			//{"Skin_Hazmat_Black_DZC","magazine"},
+			//{"Skin_Hazmat_Red_DZC","magazine"},
+			//{"Skin_Hazmat_Yellow_DZC","magazine"},
+			//{"Skin_Hazmat_Olive_DZC","magazine"},
+			//{"Skin_HazmatVest_Red_DZC","magazine"},
+			//{"Skin_HazmatVest_Yellow_DZC","magazine"},
+			//{"Skin_HazmatVest_Olive_DZC","magazine"}			
 		};
 		itemChance[] =	{
-			0.25,
+			//0.25,
 			0.75,
 			0.05,
 			//0.10,	//Skin_Doctor_DZC
-			0.01,	//Skin_Hazmat_Black_DZC
-			0.02,	//Skin_Hazmat_Red_DZC
-			0.02,	//Skin_Hazmat_Yellow_DZC
-			0.01,	//Skin_Hazmat_Olive_DZC
-			0.01,	//Skin_HazmatVest_Red_DZC
-			0.01,	//Skin_HazmatVest_Yellow_DZC
-			0.01,	//Skin_HazmatVest_Olive_DZC
+			//0.01,	//Skin_Hazmat_Black_DZC
+			//0.02,	//Skin_Hazmat_Red_DZC
+			//0.02,	//Skin_Hazmat_Yellow_DZC
+			//0.01,	//Skin_Hazmat_Olive_DZC
+			//0.01,	//Skin_HazmatVest_Red_DZC
+			//0.01,	//Skin_HazmatVest_Yellow_DZC
+			//0.01,	//Skin_HazmatVest_Olive_DZC
 		};
 	};
 	class Military: Default {
@@ -1342,7 +1342,7 @@ class Hunting: Default {
 		{"Skin_CZ_Pilot3_DZC","magazine"},	
 		{"Skin_Soldier3_GL_DZC","magazine"},
 		{"Skin_CZ_Heavy1_DZC","magazine"}, 
-		{"Skin_CZ_Heavy2_DZC","magazine"},	
+		//{"Skin_CZ_Heavy2_DZC","magazine"},	
 		{"Skin_CZ_Heavy3_DZC","magazine"},
 		{"DZ_CivilBackpack_EP1","object"}, 
 		{"DZ_Backpack_EP1","object"}	
@@ -1372,7 +1372,7 @@ class Hunting: Default {
 		0.02,
 		0.04,
 		0.01,
-		0.01,
+		//0.01,
 		0.01,
 		0.06,
 		0.01	//Equals 1.0
@@ -1660,15 +1660,15 @@ class Mi17wreck_DZC: Mi24Wreck_DZC {};
 	};
 // MGB Killhouse Start
 	class MBG_Killhouse_1_InEditor : Industrial {
-		lootChance = .6;
-		minRoaming = 1;
-		maxRoaming = 4;
+		lootChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
 		lootPos[] = {{-0.437, 1.250, 1.05}, {3.501, 3.181, -2.15},{2.595, -1.929, 1.05}, {-1.3824778, 3.3526506, -2.15}, {2.5953794, 2, 1.05} };
 	};
 	class MBG_Killhouse_2_InEditor : Industrial {
-		lootChance = .4;
-		minRoaming = 1;
-		maxRoaming = 2;
+		lootChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
 		lootPos[] = {{5.02, 2.12, 3.75}, {5.25,0,0.45}, {1,-4,-2.85}, {-6.56, 0.49, 0.45}, {-6.99, 1.12, -2.85}, {-5.02, -3.52, .45}, {1,-1,-2.85}, {1,-1,-2.85}, {3.02, -2.12, 3.75}, {2.02, -3.52, 0.45}, {-2.02, 1, .45}, {3.0,0,0.45}};
 	};
 	class MBG_Warehouse_InEditor : Industrial {
@@ -1678,21 +1678,21 @@ class Mi17wreck_DZC: Mi24Wreck_DZC {};
 		lootPos[] = {{17.5, 9.0, -2.85}, {21.5, 12.0, -2.85}, {18.0, 16.0, -2.85}, {19, -2, -2.85}, {19.5, -6, -2.85}, {19.5, -4, -2.85}, {19.5, -11, -2.85}, {19.5, -11, -6.15}, {19.5, -13, -6.15}, {17.5, -11, -6.15}, {17.5, -13, -6.15},{12.5, -8, -6.15}, {0, 0, -6.15}, {2.3, -5.4, -6.15}, {17.5, 0, -5.9}, {11.5, -2.8, -6.15}, {5.9, 5.9, -6.15}, {-15.5, -12, -6.15}, {-12.5, -8, -6.15}, {0, 0, 5.15}, {10, 10, 5.15}, {-10, 10, 5.15}, {-10, -10, 5.15}, {-10, 8, 5.15}, {-12, 15, 5.15}, {18, 0, 5.15}, {10, -10, 5.15}};
 	};
 	class MBG_Killhouse_3_InEditor : Military {
-		lootChance = .5;
+		lootChance = 0;
 		minRoaming = 0;
 		maxRoaming = 0;
 		lootPos[] = { {12.91238, -1.2579162, -.93},{-13.021757, -1.3520229, -.93}, {12.173838, 2.3130512, -2.85}, {3.1853416, 1.5268432, -2.85}, {-11.14875, 2.1999118, -2.85}, {-2.2182579, 1.9148608, -2.85}, {-8.1577587, 0.21965861, -2.85}, {-1.5196946, -1.6437323, 0.5}, {3.8753147, -1.880957, 0.5}, {11.173838, 2.3130512, 0.5}};
 	};
 	class MBG_Killhouse_4_InEditor : Farm {
-		lootChance = .6;
-		minRoaming = 1;
-		maxRoaming = 2;
+		lootChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
 		lootPos[] = { {4.5, -3, -3.88}, {-4, -3, -3.88}, {-3, 5, -3.88}, {4.5, 5, -3.88}, {-4, -3, -0.58}, {-3, 5, -0.58}, {4.5, -3, -0.58}, {4.5, 5, -0.58} };
 	};
 	class MBG_Killhouse_5_InEditor : Farm {
-		lootChance = .6;
-		minRoaming = 1;
-		maxRoaming = 2;
+		lootChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
 		lootPos[] = { {4.5, -3, -3.88}, {-4, -3, -3.88}, {-6, 5, -0.58}, {4.5, 5, -3.88}, {-4, -3, -0.58}, {-3.5, 6.5, -3.88 }, {4.5, -3, -0.58}, {4.5, 5, -0.58} };
 	};
 // MGB Killhouse Finish
