@@ -25998,12 +25998,12 @@ class Mission
 	};
 	class Sensors
 	{
-		items=1;
+		items=10;
 		class Item0
 		{
-			position[]={9191.5938,4.7,1781.0117};
-			a=5;
-			b=5;
+			position[]={0,0,0};
+			a=20;
+			b=20;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26011,6 +26011,159 @@ class Mission
 			name="faction1base";
 			expCond="(vehicle player) in thislist;";
 			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction1Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction2base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction2Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction3base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction3Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item3
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction4base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction4Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item4
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction20base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction5Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item5
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction6base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction6Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item6
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction7base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction7Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item7
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction8base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction8Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item8
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction9base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction9Dome.sqf"";";
+			expDesactiv="terminate dome1;";
+			class Effects
+			{
+			};
+		};
+		class Item9
+		{
+			position[]={0,0,0};
+			a=20;
+			b=20;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="faction10base";
+			expCond="(vehicle player) in thislist;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction10Dome.sqf"";";
 			expDesactiv="terminate dome1;";
 			class Effects
 			{

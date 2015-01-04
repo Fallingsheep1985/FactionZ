@@ -78,7 +78,7 @@ if (!isDedicated) then {
 	player_drink =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_drink.sqf";
 	player_eat =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_eat.sqf";
 	player_useMeds =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_useMeds.sqf";
-	player_fillWater = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\water_fill.sqf";
+	player_fillWater = 			compile preprocessFileLineNumbers "sheep\water_fill.sqf";
 	player_makeFire =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_makefire.sqf";
 	player_chopWood =			compile preprocessFileLineNumbers "sheep\player_chopWood.sqf";
 	player_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build.sqf";
@@ -416,6 +416,7 @@ if (!isDedicated) then {
 	player_humanityChange =		compile preprocessFileLineNumbers "player_humanityChange.sqf";
 	spawn_loot =				compile preprocessFileLineNumbers "CustomLoot\spawn_loot.sqf";
 	player_projectileNear = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_projectileNear.sqf";
+	fnc_veh_ResetEH = 			compile preprocessFileLineNumbers "sheep\veh_ResetEH.sqf";			//Initialize vehicle
 	
 	player_sumMedical = {
 		private["_character","_wounds","_legs","_arms","_medical"];

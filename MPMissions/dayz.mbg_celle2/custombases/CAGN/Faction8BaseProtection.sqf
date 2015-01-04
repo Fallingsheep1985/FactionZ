@@ -24,7 +24,7 @@ _thePlayer = player;
 _playerUID = getPlayerUID player;
 
 while {true} do {
-	if ((_playerUID in FactionLoadout4)||(_playerUID in AdminUidLoadout)) then{
+	if ((_playerUID in FactionLoadout8)||(_playerUID in AdminUidLoadout)) then{
 		waitUntil { !canBuild };
 		_inSafezoneFinished = false;
 		if ( AGN_safeZoneGodmode ) then{

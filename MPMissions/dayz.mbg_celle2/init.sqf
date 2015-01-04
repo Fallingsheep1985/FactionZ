@@ -27,13 +27,15 @@ execVM "TraderControl.sqf";
 //Load in compiled functions
 call compile preprocessFileLineNumbers "sheep\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";				//Initilize the publicVariable event handlers
+call compile preprocessFileLineNumbers "sheep\publicEH.sqf";				//Initilize the publicVariable event handlers
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
 call compile preprocessFileLineNumbers "ZSC\gold\ZSCinit.sqf";
 progressLoadingScreen 0.7;
 call compile preprocessFileLineNumbers "compiles.sqf";				//Compile regular functions
+//Sheeps Tools
+call compile preprocessFileLineNumbers "admintools\AdminList.sqf";
 progressLoadingScreen 1.0;
 
 "filmic" setToneMappingParams [0.153, 0.357, 0.231, 0.1573, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
@@ -65,7 +67,9 @@ if (isServer) then {
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
     "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};	
 	//Sheeps Kill Pit
-	execVM "Custombases\sheepkillpit.sqf";
+	//execVM "Custombases\sheepkillpit.sqf";
+	//Bases
+	execVM "Custombases\puntest.sqf";
 	//Extra street lights
 	execVM "Custombases\extrastreetlights.sqf";
 	//Doctor Trader
@@ -94,7 +98,8 @@ if (!isDedicated) then {
 //Base Safe zones
 execVM "custombases\CAGN\initiate.sqf";	
 
-
+//Sheeps Tools
+[] execVM "admintools\Activate.sqf";
 
 
 

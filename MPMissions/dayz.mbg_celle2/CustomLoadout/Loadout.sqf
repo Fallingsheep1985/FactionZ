@@ -445,8 +445,457 @@ if (DebugLoadout) then {
 			reload player;
 			
 		};
+		/////////////////////////////////////////////////////////////////////////////
+		//					FACTION 5 - NAME OF FACTION HERE
+		/////////////////////////////////////////////////////////////////////////////
+		if (dayz_playerUID in FactionLoadout5) then {
 
+			//Loadout
+			_primAdmin = "";
+			_pistolAdmin = "glock17_EP1";
+			_pistolMagAdmin = "17Rnd_9x19_glock17";
 
+			_magsAdmin =["ItemBandage","ItemPainkiller"];
+			_skin = "Sniper1_DZC";
+			_packAdmin = "DZ_Assault_Pack_EP1";
+
+			//clear gear
+			removeAllWeapons player;	
+			removeAllItems player;
+			removeBackpack player;
+
+			//Set skin
+			if (_skin != _myModel) then {
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				waitUntil {typeOf player != _myModel};
+				//no ammo fix
+				uiSleep 1;
+			};
+
+			//Add primary Weapon
+			player addWeapon _primAdmin;
+			//Add Magazines
+			{player addMagazine _x;_qty=1;} count _magsAdmin;
+			//Backpack
+			if (Faction5Perk6)then {
+				//Add backpack
+				player addBackpack _packAdmin;
+				dayz_myBackpack = unitBackpack player;
+			};
+			//Binoculars
+			if (Faction5Perk1)then {
+				//Add binocs
+				player addWeapon _Binocs;
+			};
+			//RangeFinder
+			if (Faction5Perk2)then {
+				//Add _RangeFinder
+				player addWeapon _RangeFinder;
+			};
+			//Pistol
+			if (Faction5Perk3)then {
+				//Add Mags
+				player addWeapon _pistolAdmin;
+				player addMagazine _pistolMagAdmin;
+			};
+			// Tools
+			if (Faction5Perk4)then {
+				//Add Tools
+				{player addWeapon _x;_qty=1;} count _Tools;
+			};
+			//Backpack Medic Items
+			if (Faction5Perk5)then {
+				if (!isNull dayz_myBackpack) then {
+					{dayz_myBackpack addMagazineCargoGlobal [_x, 1];_qty=1;} count (_Medic);
+				};
+			};
+			if (Faction5Perk7)then {
+				//Add Tool box
+				player addWeapon _Toolbox;
+			};
+
+			//switch to primary weapon on spawn
+			player selectWeapon _primAdmin;
+			//reload player to make sure he is ready to go
+			reload player;
+			
+		};
+	/////////////////////////////////////////////////////////////////////////////
+		//					FACTION 6 - NAME OF FACTION HERE
+		/////////////////////////////////////////////////////////////////////////////
+		if (dayz_playerUID in FactionLoadout6) then {
+
+			//Loadout
+			_primAdmin = "";
+			_pistolAdmin = "glock17_EP1";
+			_pistolMagAdmin = "17Rnd_9x19_glock17";
+
+			_magsAdmin =["ItemBandage","ItemPainkiller"];
+			_skin = "Sniper1_DZC";
+			_packAdmin = "DZ_Assault_Pack_EP1";
+
+			//clear gear
+			removeAllWeapons player;	
+			removeAllItems player;
+			removeBackpack player;
+
+			//Set skin
+			if (_skin != _myModel) then {
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				waitUntil {typeOf player != _myModel};
+				//no ammo fix
+				uiSleep 1;
+			};
+
+			//Add primary Weapon
+			player addWeapon _primAdmin;
+			//Add Magazines
+			{player addMagazine _x;_qty=1;} count _magsAdmin;
+			//Backpack
+			if (Faction6Perk6)then {
+				//Add backpack
+				player addBackpack _packAdmin;
+				dayz_myBackpack = unitBackpack player;
+			};
+			//Binoculars
+			if (Faction6Perk1)then {
+				//Add binocs
+				player addWeapon _Binocs;
+			};
+			//RangeFinder
+			if (Faction6Perk2)then {
+				//Add _RangeFinder
+				player addWeapon _RangeFinder;
+			};
+			//Pistol
+			if (Faction6Perk3)then {
+				//Add Mags
+				player addWeapon _pistolAdmin;
+				player addMagazine _pistolMagAdmin;
+			};
+			// Tools
+			if (Faction6Perk4)then {
+				//Add Tools
+				{player addWeapon _x;_qty=1;} count _Tools;
+			};
+			//Backpack Medic Items
+			if (Faction6Perk5)then {
+				if (!isNull dayz_myBackpack) then {
+					{dayz_myBackpack addMagazineCargoGlobal [_x, 1];_qty=1;} count (_Medic);
+				};
+			};
+			if (Faction6Perk7)then {
+				//Add Tool box
+				player addWeapon _Toolbox;
+			};
+
+			//switch to primary weapon on spawn
+			player selectWeapon _primAdmin;
+			//reload player to make sure he is ready to go
+			reload player;
+			
+		};
+		/////////////////////////////////////////////////////////////////////////////
+		//					FACTION 7 - NAME OF FACTION HERE
+		/////////////////////////////////////////////////////////////////////////////
+		if (dayz_playerUID in FactionLoadout7) then {
+
+			//Loadout
+			_primAdmin = "";
+			_pistolAdmin = "glock17_EP1";
+			_pistolMagAdmin = "17Rnd_9x19_glock17";
+
+			_magsAdmin =["ItemBandage","ItemPainkiller"];
+			_skin = "Sniper1_DZC";
+			_packAdmin = "DZ_Assault_Pack_EP1";
+
+			//clear gear
+			removeAllWeapons player;	
+			removeAllItems player;
+			removeBackpack player;
+
+			//Set skin
+			if (_skin != _myModel) then {
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				waitUntil {typeOf player != _myModel};
+				//no ammo fix
+				uiSleep 1;
+			};
+
+			//Add primary Weapon
+			player addWeapon _primAdmin;
+			//Add Magazines
+			{player addMagazine _x;_qty=1;} count _magsAdmin;
+			//Backpack
+			if (Faction7Perk6)then {
+				//Add backpack
+				player addBackpack _packAdmin;
+				dayz_myBackpack = unitBackpack player;
+			};
+			//Binoculars
+			if (Faction7Perk1)then {
+				//Add binocs
+				player addWeapon _Binocs;
+			};
+			//RangeFinder
+			if (Faction7Perk2)then {
+				//Add _RangeFinder
+				player addWeapon _RangeFinder;
+			};
+			//Pistol
+			if (Faction7Perk3)then {
+				//Add Mags
+				player addWeapon _pistolAdmin;
+				player addMagazine _pistolMagAdmin;
+			};
+			// Tools
+			if (Faction7Perk4)then {
+				//Add Tools
+				{player addWeapon _x;_qty=1;} count _Tools;
+			};
+			//Backpack Medic Items
+			if (Faction7Perk5)then {
+				if (!isNull dayz_myBackpack) then {
+					{dayz_myBackpack addMagazineCargoGlobal [_x, 1];_qty=1;} count (_Medic);
+				};
+			};
+			if (Faction7Perk7)then {
+				//Add Tool box
+				player addWeapon _Toolbox;
+			};
+
+			//switch to primary weapon on spawn
+			player selectWeapon _primAdmin;
+			//reload player to make sure he is ready to go
+			reload player;
+			
+		};
+		/////////////////////////////////////////////////////////////////////////////
+		//					FACTION 8 - NAME OF FACTION HERE
+		/////////////////////////////////////////////////////////////////////////////
+		if (dayz_playerUID in FactionLoadout8) then {
+
+			//Loadout
+			_primAdmin = "";
+			_pistolAdmin = "glock17_EP1";
+			_pistolMagAdmin = "17Rnd_9x19_glock17";
+
+			_magsAdmin =["ItemBandage","ItemPainkiller"];
+			_skin = "Sniper1_DZC";
+			_packAdmin = "DZ_Assault_Pack_EP1";
+
+			//clear gear
+			removeAllWeapons player;	
+			removeAllItems player;
+			removeBackpack player;
+
+			//Set skin
+			if (_skin != _myModel) then {
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				waitUntil {typeOf player != _myModel};
+				//no ammo fix
+				uiSleep 1;
+			};
+
+			//Add primary Weapon
+			player addWeapon _primAdmin;
+			//Add Magazines
+			{player addMagazine _x;_qty=1;} count _magsAdmin;
+			//Backpack
+			if (Faction8Perk6)then {
+				//Add backpack
+				player addBackpack _packAdmin;
+				dayz_myBackpack = unitBackpack player;
+			};
+			//Binoculars
+			if (Faction8Perk1)then {
+				//Add binocs
+				player addWeapon _Binocs;
+			};
+			//RangeFinder
+			if (Faction8Perk2)then {
+				//Add _RangeFinder
+				player addWeapon _RangeFinder;
+			};
+			//Pistol
+			if (Faction8Perk3)then {
+				//Add Mags
+				player addWeapon _pistolAdmin;
+				player addMagazine _pistolMagAdmin;
+			};
+			// Tools
+			if (Faction8Perk4)then {
+				//Add Tools
+				{player addWeapon _x;_qty=1;} count _Tools;
+			};
+			//Backpack Medic Items
+			if (Faction8Perk5)then {
+				if (!isNull dayz_myBackpack) then {
+					{dayz_myBackpack addMagazineCargoGlobal [_x, 1];_qty=1;} count (_Medic);
+				};
+			};
+			if (Faction8Perk7)then {
+				//Add Tool box
+				player addWeapon _Toolbox;
+			};
+
+			//switch to primary weapon on spawn
+			player selectWeapon _primAdmin;
+			//reload player to make sure he is ready to go
+			reload player;
+			
+		};
+		/////////////////////////////////////////////////////////////////////////////
+		//					FACTION 9 - NAME OF FACTION HERE
+		/////////////////////////////////////////////////////////////////////////////
+		if (dayz_playerUID in FactionLoadout9) then {
+
+			//Loadout
+			_primAdmin = "";
+			_pistolAdmin = "glock17_EP1";
+			_pistolMagAdmin = "17Rnd_9x19_glock17";
+
+			_magsAdmin =["ItemBandage","ItemPainkiller"];
+			_skin = "Sniper1_DZC";
+			_packAdmin = "DZ_Assault_Pack_EP1";
+
+			//clear gear
+			removeAllWeapons player;	
+			removeAllItems player;
+			removeBackpack player;
+
+			//Set skin
+			if (_skin != _myModel) then {
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				waitUntil {typeOf player != _myModel};
+				//no ammo fix
+				uiSleep 1;
+			};
+
+			//Add primary Weapon
+			player addWeapon _primAdmin;
+			//Add Magazines
+			{player addMagazine _x;_qty=1;} count _magsAdmin;
+			//Backpack
+			if (Faction9Perk6)then {
+				//Add backpack
+				player addBackpack _packAdmin;
+				dayz_myBackpack = unitBackpack player;
+			};
+			//Binoculars
+			if (Faction9Perk1)then {
+				//Add binocs
+				player addWeapon _Binocs;
+			};
+			//RangeFinder
+			if (Faction9Perk2)then {
+				//Add _RangeFinder
+				player addWeapon _RangeFinder;
+			};
+			//Pistol
+			if (Faction9Perk3)then {
+				//Add Mags
+				player addWeapon _pistolAdmin;
+				player addMagazine _pistolMagAdmin;
+			};
+			// Tools
+			if (Faction9Perk4)then {
+				//Add Tools
+				{player addWeapon _x;_qty=1;} count _Tools;
+			};
+			//Backpack Medic Items
+			if (Faction9Perk5)then {
+				if (!isNull dayz_myBackpack) then {
+					{dayz_myBackpack addMagazineCargoGlobal [_x, 1];_qty=1;} count (_Medic);
+				};
+			};
+			if (Faction9Perk7)then {
+				//Add Tool box
+				player addWeapon _Toolbox;
+			};
+
+			//switch to primary weapon on spawn
+			player selectWeapon _primAdmin;
+			//reload player to make sure he is ready to go
+			reload player;
+			
+		};
+		/////////////////////////////////////////////////////////////////////////////
+		//					FACTION 10 - NAME OF FACTION HERE
+		/////////////////////////////////////////////////////////////////////////////
+		if (dayz_playerUID in FactionLoadout4) then {
+
+			//Loadout
+			_primAdmin = "";
+			_pistolAdmin = "glock17_EP1";
+			_pistolMagAdmin = "17Rnd_9x19_glock17";
+
+			_magsAdmin =["ItemBandage","ItemPainkiller"];
+			_skin = "Sniper1_DZC";
+			_packAdmin = "DZ_Assault_Pack_EP1";
+
+			//clear gear
+			removeAllWeapons player;	
+			removeAllItems player;
+			removeBackpack player;
+
+			//Set skin
+			if (_skin != _myModel) then {
+				[dayz_playerUID,dayz_characterID,_skin] spawn player_humanityMorph;
+				waitUntil {typeOf player != _myModel};
+				//no ammo fix
+				uiSleep 1;
+			};
+
+			//Add primary Weapon
+			player addWeapon _primAdmin;
+			//Add Magazines
+			{player addMagazine _x;_qty=1;} count _magsAdmin;
+			//Backpack
+			if (Faction10Perk6)then {
+				//Add backpack
+				player addBackpack _packAdmin;
+				dayz_myBackpack = unitBackpack player;
+			};
+			//Binoculars
+			if (Faction10Perk1)then {
+				//Add binocs
+				player addWeapon _Binocs;
+			};
+			//RangeFinder
+			if (Faction10Perk2)then {
+				//Add _RangeFinder
+				player addWeapon _RangeFinder;
+			};
+			//Pistol
+			if (Faction10Perk3)then {
+				//Add Mags
+				player addWeapon _pistolAdmin;
+				player addMagazine _pistolMagAdmin;
+			};
+			// Tools
+			if (Faction10Perk4)then {
+				//Add Tools
+				{player addWeapon _x;_qty=1;} count _Tools;
+			};
+			//Backpack Medic Items
+			if (Faction10Perk5)then {
+				if (!isNull dayz_myBackpack) then {
+					{dayz_myBackpack addMagazineCargoGlobal [_x, 1];_qty=1;} count (_Medic);
+				};
+			};
+			if (Faction10Perk7)then {
+				//Add Tool box
+				player addWeapon _Toolbox;
+			};
+
+			//switch to primary weapon on spawn
+			player selectWeapon _primAdmin;
+			//reload player to make sure he is ready to go
+			reload player;
+			
+		};
+		
 		//Default Loadout for all other players
 		if !(dayz_playerUID in AdminUidLoadout) then {
 

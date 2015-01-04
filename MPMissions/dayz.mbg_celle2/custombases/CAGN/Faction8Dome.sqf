@@ -1,5 +1,5 @@
 _playerUID = getPlayerUID player;
-if ((_playerUID in FactionLoadout1)||(_playerUID in AdminUidLoadout)) exitWith { 
+if ((_playerUID in FactionLoadout8)||(_playerUID in AdminUidLoadout)) exitWith { 
 titleText ["Welcome home.", "PLAIN DOWN", 3]; //or,\\ titleText [format ["Welcome, %1", name player], "PLAIN DOWN"]; // welcomes you with your name
 };
 // What happens if unauthorized players get into the dome
