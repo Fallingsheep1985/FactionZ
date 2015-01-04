@@ -230,7 +230,7 @@ while {true} do {
 
 		_num		= round(random _randomizedLoot) + _guaranteedLoot;
 
-		_config = 		configFile >> "CfgBuildingLoot" >> _lootTable;
+		_config = 		missionConfigFile >> "CfgBuildingLoot" >> _lootTable;
 		_itemTypes =	[] + getArray (_config >> "itemType");
 		_index =        dayz_CBLBase  find "HeliCrash";
 		_weights =		dayz_CBLChances select _index;
