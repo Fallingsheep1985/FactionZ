@@ -64,7 +64,7 @@ class CfgBuildingLoot {
 			{"Binocular","weapon"},
 			{"PartWoodPile","magazine"},
 			{"WeaponHolder_MeleeCrowbar","object"},
-			//{"MR43","weapon"},
+			{"MR43","weapon"},
 			{"Skin_Survivor2_DZ","magazine"},
 			{"Skin_EuroMan01_DZC","magazine"},
 			{"Skin_EuroMan02_DZC","magazine"},
@@ -112,7 +112,7 @@ class CfgBuildingLoot {
 			0.08,
 			0.06,
 			0.05,
-			//0.07,	//MR43
+			0.07,	//MR43
 			0.06,	//Skin_Survivor2_DZ
 			0.04,	//Skin_EuroMan01_DZC
 			0.04,	//Skin_EuroMan02_DZC
@@ -135,16 +135,16 @@ class CfgBuildingLoot {
 			{"","generic"},
 			{"","military"},
 			{"","trash"},
-			//{"RH_tec9","weapon"},
-			//{"RH_mac10p","weapon"},
+			{"RH_tec9","weapon"},
+			{"RH_mac10p","weapon"},
 			{"RH_python","weapon"},
-			//{"RH_mp7","weapon"},
-			//{"RH_usp","weapon"},
-			//{"RH_uspm","weapon"},
-			//{"RH_mp5sd6","weapon"},
-			//{"RH_mp5sd6eot","weapon"},
-			//{"RH_mp5sd6aim","weapon"},
-			//{"RH_mp5sd6RFX","weapon"}, 
+			{"RH_mp7","weapon"},
+			{"RH_usp","weapon"},
+			{"RH_uspm","weapon"},
+			{"RH_mp5sd6","weapon"},
+			{"RH_mp5sd6eot","weapon"},
+			{"RH_mp5sd6aim","weapon"},
+			{"RH_mp5sd6RFX","weapon"}, 
 			{"Skin_BAF_Officer1_DZC","magazine"},	
 			{"Skin_BAF_Officer2_DZC","magazine"},
 			{"Skin_BAF_Officer3_DZC","magazine"}, 
@@ -159,7 +159,7 @@ class CfgBuildingLoot {
 			{"ItemMap","weapon"},
 			{"RH_m1911","weapon"},
 			{"RH_m1911old","weapon"},
-			//{"RH_mp5sd6g","magazine"},
+			{"RH_mp5sd6g","magazine"},
 			{"RH_uzig","generic"},
 			{"RH_uzisd","generic"},
 			{"RH_Deagleg","weapon"},
@@ -171,16 +171,16 @@ class CfgBuildingLoot {
 			2.00,	//"generic"
 			0.15,	//"military"
 			1.00,	//"trash"	
-			//0.01,	//"RH_tec9"
-			//0.01,	//RH_mac10p"
+			0.01,	//"RH_tec9"
+			0.01,	//RH_mac10p"
 			0.01,	//RH_python
-			//0.03,	//RH_mp7
-			//0.05,	//RH_usp
-			//0.02,	//RH_uspm
-			//0.03,	//RH_mp5sd6
-			//0.01,	//RH_mp5sd6eot
-			//0.01,	//RH_mp5sd6aim
-			//0.01,	//RH_mp5sd6RFX
+			0.03,	//RH_mp7
+			0.05,	//RH_usp
+			0.02,	//RH_uspm
+			0.03,	//RH_mp5sd6
+			0.01,	//RH_mp5sd6eot
+			0.01,	//RH_mp5sd6aim
+			0.01,	//RH_mp5sd6RFX
 			0.01,	//Skin_BAF_Officer1_DZC
 			0.01,	//Skin_BAF_Officer2_DZC
 			0.01,	//Skin_BAF_Officer3_DZC
@@ -195,7 +195,7 @@ class CfgBuildingLoot {
 			0.10,	//"ItemMap"
 			0.04,	//"RH_m1911"
 			0.04,	//"RH_m1911old"
-			//0.01,	//"RH_mp5sd6g"
+			0.01,	//"RH_mp5sd6g"
 			0.01,	//"RH_uzig"
 			0.01,	//"RH_uzisd"
 			0.01,	//"RH_Deagleg"
@@ -260,12 +260,12 @@ class CfgBuildingLoot {
 			{"","trash"},
 			{"","generic"},
 			{"WeaponHolder_ItemJerrycan","object"},
-			//{"MR43","weapon"},
+			{"MR43","weapon"},
 			{"Crossbow","weapon"},
-			//{"RH_m14ebr","weapon"},
-			//{"RH_mk14","weapon"},
-			//{"RH_m4cmk","weapon"},
-			//{"RH_m4cmkaim","weapon"},
+			{"RH_m14ebr","weapon"},
+			{"RH_mk14","weapon"},
+			{"RH_m4cmk","weapon"},
+			{"RH_m4cmkaim","weapon"},
 			{"huntingrifle","weapon"},
 			{"LeeEnfield","weapon"},
 			{"Winchester1866","weapon"},
@@ -285,12 +285,12 @@ class CfgBuildingLoot {
 			0.40,
 			0.50,
 			0.03,
-			//0.14,
 			0.14,
-			//0.02,
-			//0.02,	//RH_mk14 mod0
-			//0.04,	//Masterkey
-			//0.03,	//Masterkey CCO
+			0.14,
+			0.02,
+			0.02,	//RH_mk14 mod0
+			0.04,	//Masterkey
+			0.03,	//Masterkey CCO
 			0.02,
 			0.12,
 			0.08,
@@ -317,12 +317,12 @@ class Hunting: Default {
 			{"","trash"},
 			{"","generic"},
 			{"WeaponHolder_ItemJerrycan","object"},
-			//{"MR43","weapon"},
+			{"MR43","weapon"},
 			{"Crossbow","weapon"},
-			//{"RH_m14ebr","weapon"},
-			//{"RH_mk14","weapon"},
-			//{"RH_m4cmk","weapon"},
-			//{"RH_m4cmkaim","weapon"},
+			{"RH_m14ebr","weapon"},
+			{"RH_mk14","weapon"},
+			{"RH_m4cmk","weapon"},
+			{"RH_m4cmkaim","weapon"},
 			{"huntingrifle","weapon"},
 			{"LeeEnfield","weapon"},
 			{"Winchester1866","weapon"},
@@ -342,12 +342,12 @@ class Hunting: Default {
 			0.40,
 			0.50,
 			0.03,
-			//0.14,
 			0.14,
-			//0.02,
-			//0.02,	//RH_mk14 mod0
-			//0.04,	//Masterkey
-			//0.03,	//Masterkey CCO
+			0.14,
+			0.02,
+			0.02,	//RH_mk14 mod0
+			0.04,	//Masterkey
+			0.03,	//Masterkey CCO
 			0.02,
 			0.12,
 			0.08,
@@ -394,7 +394,7 @@ class Hunting: Default {
 			{"Crossbow","weapon"},
 			{"Binocular","weapon"},
 			{"PartWoodPile","magazine"},
-			//{"MR43","weapon"},
+			{"MR43","weapon"},
 			{"RH_Deagles","weapon"},
 			{"Skin_Sniper3_DZC","magazine"},
 			{"Skin_Snow_Trooper2_DZC","magazine"}, 
@@ -429,7 +429,7 @@ class Hunting: Default {
 			0.03,	//Crossbow
 			0.05,	//Bino
 			0.02,	//wood
-			//0.01,
+			0.01,
 			0.01,	//RH_Deagles
 			0.01,
 			0.01,
@@ -448,12 +448,12 @@ class Hunting: Default {
 		lootChance = 0.5;
 		lootPos[] = {};
 		itemType[] =	{		
-			//{"FN_FAL","weapon"},
-			//{"G36_C_SD_Eotech","weapon"}, 
+			{"FN_FAL","weapon"},
+			{"G36_C_SD_Eotech","weapon"}, 
 			//{"M14_EP1","weapon"},
 			//{"FN_FAL_ANPVS4","weapon"},
-			//{"Mk_48_DZ","weapon"},
-			//{"MG36","weapon"},
+			{"Mk_48_DZ","weapon"},
+			{"MG36","weapon"},
 			{"","military"},
 			//{"","medical"},
 			{"MedBox0","object"},
@@ -466,28 +466,28 @@ class Hunting: Default {
 			{"RH_uspsd","weapon"},
 			{"RH_g17sd","weapon"},
 			{"RH_g18","weapon"},
-			//{"RH_mp7","weapon"},
-			//{"RH_mp7aim","weapon"},
-			//{"RH_mp7eot","weapon"}, 
-			//{"RH_mp7sd","weapon"},
-			//{"RH_mp7sdaim","weapon"},
-			//{"RH_mp7sdeot","weapon"},
-			//{"RH_mp7p","weapon"},
-			//{"RH_mp5sd6","weapon"},
-			//{"RH_mp5sd6eot","weapon"},
-			//{"RH_mp5sd6aim","weapon"},
-			//{"RH_mp5sd6RFX","weapon"}, 
+			{"RH_mp7","weapon"},
+			{"RH_mp7aim","weapon"},
+			{"RH_mp7eot","weapon"}, 
+			{"RH_mp7sd","weapon"},
+			{"RH_mp7sdaim","weapon"},
+			{"RH_mp7sdeot","weapon"},
+			{"RH_mp7p","weapon"},
+			{"RH_mp5sd6","weapon"},
+			{"RH_mp5sd6eot","weapon"},
+			{"RH_mp5sd6aim","weapon"},
+			{"RH_mp5sd6RFX","weapon"}, 
 			{"RH_m1911sd","weapon"},
 			{"DZ_British_ACU","object"}, //Backpacks
 			{"DZ_Backpack_EP1","object"}
 		};
 		itemChance[] =	{
-			//0.02,		//"FN_FAL"
-			//0.02,		//"G36_C_SD_Eotech"
+			0.02,		//"FN_FAL"
+			0.02,		//"G36_C_SD_Eotech"
 			//0.05,		//"M14_EP1"
 			//0.02,		//"FN_FAL_ANPVS4"
-			//0.03,		//"Mk_48_DZ"
-			//0.05,		//"M249_DZ"
+			0.03,		//"Mk_48_DZ"
+			0.05,		//"M249_DZ"
 			1.00,			//"military"
 			//0.50,		//"medical"
 			0.10,		//"MedBox0"
@@ -500,17 +500,17 @@ class Hunting: Default {
 			0.02,	//RH_uspsd
 			0.02,	//RH_g17sd 
 			0.05,	//RH_g18  --->Fix 33rnd magazine
-			//0.05,	//RH_mp7
-			//0.02,	//RH_mp7aim
-			//0.03,	//RH_mp7eot
-			//0.02,	//RH_mp7sd
-			//0.01,	//RH_mp7sdaim
-			//0.01,	//RH_mp7sdeot
-			//0.03,	//RH_mp7p
-			//0.06,	//RH_mp5sd6
-			//0.04,	//RH_mp5sd6eot
-			//0.04,	//RH_mp5sd6aim
-			//0.02,	//RH_mp5sd6RFX
+			0.05,	//RH_mp7
+			0.02,	//RH_mp7aim
+			0.03,	//RH_mp7eot
+			0.02,	//RH_mp7sd
+			0.01,	//RH_mp7sdaim
+			0.01,	//RH_mp7sdeot
+			0.03,	//RH_mp7p
+			0.06,	//RH_mp5sd6
+			0.04,	//RH_mp5sd6eot
+			0.04,	//RH_mp5sd6aim
+			0.02,	//RH_mp5sd6RFX
 			0.01,	//RH_m1911sd
 			0.04,	//Backpacks
 			0.02
@@ -560,55 +560,55 @@ class Hunting: Default {
 			{"","medical"},
 			{"","generic"},
 			{"","military"},
-			//{"RH_m4c","weapon"},
-			//{"RH_m4cs","weapon"},
-			//{"RH_m4cmk","weapon"},
-			//{"RH_m4caim","weapon"},
-			//{"RH_m4cacog","weapon"},
-			//{"RH_m4ceotech","weapon"},
-			//{"RH_m4ct","weapon"},
-			//{"RH_m4ctsd","weapon"},
-			//{"RH_m4cgl","weapon"},
-			//{"RH_m4ctsdgleotech","weapon"},
+			{"RH_m4c","weapon"},
+			{"RH_m4cs","weapon"},
+			{"RH_m4cmk","weapon"},
+			{"RH_m4caim","weapon"},
+			{"RH_m4cacog","weapon"},
+			{"RH_m4ceotech","weapon"},
+			{"RH_m4ct","weapon"},
+			{"RH_m4ctsd","weapon"},
+			{"RH_m4cgl","weapon"},
+			{"RH_m4ctsdgleotech","weapon"},
 			{"M9","weapon"},
-			//{"M16A2","weapon"},
-			//{"M16A2GL","weapon"},
+			{"M16A2","weapon"},
+			{"M16A2GL","weapon"},
 			{"M9SD","weapon"},
-			//{"M4A1_Aim","weapon"},
-			//{"G36K","weapon"},
-			//{"G36C","weapon"},
-			//{"G36K","weapon"},
-			//{"RH_m4ctsdeotech","weapon"},
+			{"M4A1_Aim","weapon"},
+			{"G36K","weapon"},
+			{"G36C","weapon"},
+			{"G36K","weapon"},
+			{"RH_m4ctsdeotech","weapon"},
 			{"M1014","weapon"},
 			//{"M4A1","weapon"},
 			//{"M14_EP1","weapon"},
 			{"UZI_EP1","weapon"},
 			{"Remington870_lamp","weapon"},
 			{"glock17_EP1","weapon"},
-			//{"MP5A5","weapon"},
-			//{"MP5SD","weapon"},
+			{"MP5A5","weapon"},
+			{"MP5SD","weapon"},
 			//{"M4A3_CCO_EP1","weapon"},
-			//{"RH_P90","weapon"},
-			//{"RH_P90i","weapon"},
-			//{"RH_P90aim","weapon"},
-			//{"RH_P90eot","weapon"},
-			//{"RH_P90sd","weapon"},
-			//{"RH_p90isd","weapon"},
-			//{"RH_p90sdaim","weapon"},
-			//{"RH_p90sdeot","weapon"},
-			//{"RH_UMP","weapon"},
-			//{"RH_umpaim","weapon"},
-			//{"RH_umpeot","weapon"},
-			//{"RH_umpRFX","weapon"},
-			//{"RH_umpsd","weapon"},
-			//{"RH_umpsdaim","weapon"},
-			//{"RH_umpsdeot","weapon"},
-			//{"RH_umpsdRFX","weapon"},
-			//{"RH_HK53","weapon"},
-			//{"RH_HK53aim","weapon"},
-			//{"RH_HK53eot","weapon"},
-			//{"RH_HK53RFX","weapon"},
-			//{"RH_mp7p","weapon"},			
+			{"RH_P90","weapon"},
+			{"RH_P90i","weapon"},
+			{"RH_P90aim","weapon"},
+			{"RH_P90eot","weapon"},
+			{"RH_P90sd","weapon"},
+			{"RH_p90isd","weapon"},
+			{"RH_p90sdaim","weapon"},
+			{"RH_p90sdeot","weapon"},
+			{"RH_UMP","weapon"},
+			{"RH_umpaim","weapon"},
+			{"RH_umpeot","weapon"},
+			{"RH_umpRFX","weapon"},
+			{"RH_umpsd","weapon"},
+			{"RH_umpsdaim","weapon"},
+			{"RH_umpsdeot","weapon"},
+			{"RH_umpsdRFX","weapon"},
+			{"RH_HK53","weapon"},
+			{"RH_HK53aim","weapon"},
+			{"RH_HK53eot","weapon"},
+			{"RH_HK53RFX","weapon"},
+			{"RH_mp7p","weapon"},			
 			{"RH_Deaglem ","weapon"},
 			{"RH_Deaglemz","weapon"},
 			{"RH_uspm","weapon"},
@@ -616,15 +616,15 @@ class Hunting: Default {
 			{"RH_uspsd","weapon"},
 			{"RH_g17sd","weapon"},	
 			{"RH_m1911sd","weapon"},
-			//{"RH_mp5sd6RFX","weapon"},
-			//{"RH_mp5sd6eot","weapon"},
+			{"RH_mp5sd6RFX","weapon"},
+			{"RH_mp5sd6eot","weapon"},
 			{"RH_m9sd","weapon"},	
-			//{"RH_m14ebr","weapon"},
-			//{"RH_m14ebrsp","weapon"},	
-			//{"RH_m14ebrgc","weapon"},
-			//{"RH_m14ebr_sd","weapon"},
-			//{"RH_m14ebrsp_sd","weapon"},
-			//{"RH_m14ebrgc_sd","weapon"},
+			{"RH_m14ebr","weapon"},
+			{"RH_m14ebrsp","weapon"},	
+			{"RH_m14ebrgc","weapon"},
+			{"RH_m14ebr_sd","weapon"},
+			{"RH_m14ebrsp_sd","weapon"},
+			{"RH_m14ebrgc_sd","weapon"},
 			//Items
 			{"Binocular","weapon"},
 			{"ItemFlashlightRed","military"},
@@ -651,55 +651,55 @@ class Hunting: Default {
 			0.50,	//medical
 			1.00,	//generic
 			2.50,	//military	
-			//0.01,   //RH_m4c
-			//0.01,   //RH_m4cs
-			//0.01,   //RH_m4cmk
-			//0.01,	//RH_m4caim
-			//0.01,   //RH_m4cacog
-			//0.01,	//RH_m4ceotech
-			//0.01,   //RH_m4ct
-			//0.01,	//RH_m4ctsd
-			//0.01,   //RH_m4cgl
-			//0.01,   //RH_m4ctsdgleotech
+			0.01,   //RH_m4c
+			0.01,   //RH_m4cs
+			0.01,   //RH_m4cmk
+			0.01,	//RH_m4caim
+			0.01,   //RH_m4cacog
+			0.01,	//RH_m4ceotech
+			0.01,   //RH_m4ct
+			0.01,	//RH_m4ctsd
+			0.01,   //RH_m4cgl
+			0.01,   //RH_m4ctsdgleotech
 			0.05,   //M9
-			//0.05,   //M16A2
-			//0.01,   //M16A2GL
+			0.05,   //M16A2
+			0.01,   //M16A2GL
 			0.05,   //M9SD
-			//0.08,   //M4A1_Aim
-			//0.05,   //G36K
-			//0.05,   //G36C
-			//0.01,   //G36K
-			//0.06,   //RH_m4ctsdeotech
+			0.08,   //M4A1_Aim
+			0.05,   //G36K
+			0.05,   //G36C
+			0.01,   //G36K
+			0.06,   //RH_m4ctsdeotech
 			0.02,   //M1014
 			//0.01,   //M4A1
 			//0.05,   //M14_EP1
 			0.03,   //UZI_EP1
 			0.02,   //Remington870_lamp
 			0.05,   //glock17_EP1
-			//0.02,   //MP5A5
-			//0.01,   //MP5SD
-			//0.01,	//M4A3_CCO_EP1
-			//0.02,	//RH_P90
-			//0.03,	//RH_P90i
-			//0.01,	//RH_P90aim
-			//0.01,	//RH_P90eot
-			//0.02,	//RH_P90sd
-			//0.03,	//RH_p90isd
-			//0.01,	//RH_p90sdaim
-			//0.01,	//RH_p90sdeot
-			//0.02,	//RH_UMP
-			//0.01,	//RH_umpaim
-			//0.01,	//RH_umpeot
-			//0.01,	//RH_umpRFX
-			//0.02,	//RH_umpsd
-			//0.01,	//RH_umpsdaim
-			//0.01,	//RH_umpsdeot
-			//0.01,	//RH_umpsdRFX
-			//0.04,	//RH_HK53
-			//0.02,	//RH_HK53aim
-			//0.02,	//RH_HK53eot
-			//0.02,	//RH_HK53RFX
-			//0.03,	//RH_mp7p
+			0.02,   //MP5A5
+			0.01,   //MP5SD
+			0.01,	//M4A3_CCO_EP1
+			0.02,	//RH_P90
+			0.03,	//RH_P90i
+			0.01,	//RH_P90aim
+			0.01,	//RH_P90eot
+			0.02,	//RH_P90sd
+			0.03,	//RH_p90isd
+			0.01,	//RH_p90sdaim
+			0.01,	//RH_p90sdeot
+			0.02,	//RH_UMP
+			0.01,	//RH_umpaim
+			0.01,	//RH_umpeot
+			0.01,	//RH_umpRFX
+			0.02,	//RH_umpsd
+			0.01,	//RH_umpsdaim
+			0.01,	//RH_umpsdeot
+			0.01,	//RH_umpsdRFX
+			0.04,	//RH_HK53
+			0.02,	//RH_HK53aim
+			0.02,	//RH_HK53eot
+			0.02,	//RH_HK53RFX
+			0.03,	//RH_mp7p
 			0.02,	//RH_Deaglem 
 			0.02,	//RH_Deaglemz
 			0.01,	//RH_uspm
@@ -707,15 +707,15 @@ class Hunting: Default {
 			0.03,	//RH_uspsd
 			0.03,	//RH_g17sd
 			0.02,	//RH_m1911sd
-			//0.04,	//RH_mp5sd6RFX
-			//0.04,	//RH_mp5sd6eot
+			0.04,	//RH_mp5sd6RFX
+			0.04,	//RH_mp5sd6eot
 			0.02,	//RH_m9sd
-			//0.02,	//"RH_m14ebr"
-			//0.01,	//"RH_m14ebrsp"
-			//0.01,	//"RH_m14ebrgc"
-			//0.01,	//"RH_m14ebr_sd",
-			//0.01,	//"RH_m14ebrsp_sd"
-			//0.01,	//"RH_m14ebrgc_sd"
+			0.02,	//"RH_m14ebr"
+			0.01,	//"RH_m14ebrsp"
+			0.01,	//"RH_m14ebrgc"
+			0.01,	//"RH_m14ebr_sd",
+			0.01,	//"RH_m14ebrsp_sd"
+			0.01,	//"RH_m14ebrgc_sd"
 			//Items
 			0.18,
 			0.15,
@@ -755,73 +755,73 @@ class Hunting: Default {
 			{"","trash"},
 			{"","military"},
 		//Throwaway	
-			//{"M16A2","weapon"},
+			{"M16A2","weapon"},
 			{"M1014","weapon"},
-			//{"M16A2GL","weapon"},
+			{"M16A2GL","weapon"},
 			{"RH_m1911","weapon"},
 			{"RH_m1911old","weapon"},
-			//{"RH_mp5kp","weapon"},
+			{"RH_mp5kp","weapon"},
 			{"RH_m9","weapon"},
 			{"RH_g17","weapon"},
-			//{"RH_mp5a4","weapon"},
-			//{"RH_mp5a4aim","weapon"},
-			//{"RH_mp5a4eot","weapon"},
-			//{"RH_mp5a4RFX","weapon"},
-			//{"RH_mp5a5","weapon"},
-			//{"RH_mp5a5aim","weapon"},			
-			//{"RH_mp5a5eot","weapon"},
-			//{"RH_mp5a5RFX","weapon"},
-			//{"RH_mp5a5eod ","weapon"},
-			//{"RH_mp5a5eodaim","weapon"},
-			//{"RH_mp5a5eodeot","weapon"},
-			//{"RH_mp5a5eodRFX","weapon"},
-			//{"RH_mp5kpdw","weapon"},
-			//{"RH_mp5kpdwaim","weapon"},
-			//{"RH_mp5kpdweot","weapon"},
-			//{"RH_mp5kpdwRFX","weapon"},
-			//{"RH_fmg9","weapon"},
-			//{"RH_tmpeot","weapon"},
+			{"RH_mp5a4","weapon"},
+			{"RH_mp5a4aim","weapon"},
+			{"RH_mp5a4eot","weapon"},
+			{"RH_mp5a4RFX","weapon"},
+			{"RH_mp5a5","weapon"},
+			{"RH_mp5a5aim","weapon"},			
+			{"RH_mp5a5eot","weapon"},
+			{"RH_mp5a5RFX","weapon"},
+			{"RH_mp5a5eod ","weapon"},
+			{"RH_mp5a5eodaim","weapon"},
+			{"RH_mp5a5eodeot","weapon"},
+			{"RH_mp5a5eodRFX","weapon"},
+			{"RH_mp5kpdw","weapon"},
+			{"RH_mp5kpdwaim","weapon"},
+			{"RH_mp5kpdweot","weapon"},
+			{"RH_mp5kpdwRFX","weapon"},
+			{"RH_fmg9","weapon"},
+			{"RH_tmpeot","weapon"},
 			{"RH_uzi","weapon"},
 		//Midtech
-			//{"RH_M4CEOTECH","weapon"},
-			//{"RH_M4CAIM","weapon"},		
-			//{"RH_M4CS","weapon"},		
-			//{"RH_M4CSAIM","weapon"},		
-			//{"RH_M4CMKAIM","weapon"},		
-			//{"G36C","weapon"},
-			//{"RH_PDR","weapon"},
-			//{"RH_pdraim","weapon"},
-			//{"RH_pdreot","weapon"},
-			//{"RH_P90","weapon"},
-			//{"RH_P90i","weapon"},
-			//{"RH_P90aim","weapon"},
-			//{"RH_P90eot","weapon"},			
-			//{"RH_HK53","weapon"},
-			//{"RH_HK53aim","weapon"},			
-			//{"RH_HK53eot ","weapon"},
-			//{"RH_HK53RFX","weapon"},
-			//{"RH_m4cmk","weapon"},
+			{"RH_M4CEOTECH","weapon"},
+			{"RH_M4CAIM","weapon"},		
+			{"RH_M4CS","weapon"},		
+			{"RH_M4CSAIM","weapon"},		
+			{"RH_M4CMKAIM","weapon"},		
+			{"G36C","weapon"},
+			{"RH_PDR","weapon"},
+			{"RH_pdraim","weapon"},
+			{"RH_pdreot","weapon"},
+			{"RH_P90","weapon"},
+			{"RH_P90i","weapon"},
+			{"RH_P90aim","weapon"},
+			{"RH_P90eot","weapon"},			
+			{"RH_HK53","weapon"},
+			{"RH_HK53aim","weapon"},			
+			{"RH_HK53eot ","weapon"},
+			{"RH_HK53RFX","weapon"},
+			{"RH_m4cmk","weapon"},
 			//{"Sa58P_EP1","weapon"},
 			//{"Sa58V_EP1","weapon"},
 			{"DZ_Patrol_Pack_EP1","object"}, //Backpacks
 			{"DZ_Assault_Pack_EP1","object"},
 			{"DZ_British_ACU","object"},
 		//Rare
-			//{"RH_M60E4","weapon"},
-			//{"RH_MK43","weapon"},			
-			//{"RH_mp5sd6RFX","weapon"},
+			{"RH_M60E4","weapon"},
+			{"RH_MK43","weapon"},			
+			{"RH_mp5sd6RFX","weapon"},
 			{"RH_m9sd","weapon"},
 			{"RH_deagle","weapon"},
-			//{"RH_tmpsd","weapon"},
-			//{"RH_tmpsdaim","weapon"},
-			//{"RH_tmpsdeot","weapon"},			
-			//{"RH_uzisd","weapon"},
-			//{"RH_P90sd","weapon"},
-			//{"RH_p90isd","weapon"},
-			//{"RH_p90sdaim","weapon"},
-			//{"RH_p90sdeot","weapon"},
-			//{"RH_mk22sd","weapon"},
-			//{"RH_mk22vsd","weapon"},
+			{"RH_tmpsd","weapon"},
+			{"RH_tmpsdaim","weapon"},
+			{"RH_tmpsdeot","weapon"},			
+			{"RH_uzisd","weapon"},
+			{"RH_P90sd","weapon"},
+			{"RH_p90isd","weapon"},
+			{"RH_p90sdaim","weapon"},
+			{"RH_p90sdeot","weapon"},
+			{"RH_mk22sd","weapon"},
+			{"RH_mk22vsd","weapon"},
 		//Clothing
 			{"Skin_Soldier1_STD_DZC","magazine"}, 
 			{"Skin_Soldier2_STD_DZC","magazine"},	
@@ -845,73 +845,73 @@ class Hunting: Default {
 			0.40,
 			0.50,
 		//Throwaway guns
-			//0.07,	//M16A2
+			0.07,	//M16A2
 			0.06,	//M1014
-			//0.06,	//M16A2GL
+			0.06,	//M16A2GL
 			0.08,	//RH_m1911
 			0.08,	//RH_m1911old
-			//0.03,	//RH_mp5kp
+			0.03,	//RH_mp5kp
 			0.08,	//RH_m9
 			0.08,	//RH_g17
-			//0.08,	//RH_mp5a4
-			//0.02,	//RH_mp5a4aim
-			//0.02,	//RH_mp5a4eot
-			//0.02,	//RH_mp5a4RFX
-			//0.06,	//RH_mp5a5
-			//0.01,	//RH_mp5a5aim
-			//0.01,	//RH_mp5a5eot
-			//0.01,	//RH_mp5a5RFX
-			//0.03,	//RH_mp5a5eod 
-			//0.01,	//RH_mp5a5eodaim
-			//0.01,	//RH_mp5a5eodeot
-			//0.01,	//RH_mp5a5eodRFX
-			//0.06,	//RH_mp5kpdw
-			//0.01,	//RH_mp5kpdwaim
-			//0.01,	//RH_mp5kpdweot
-			//0.01,	//RH_mp5kpdwRFX
-			//0.06,	//RH_fmg9
-			//0.04,	//RH_tmpeot
+			0.08,	//RH_mp5a4
+			0.02,	//RH_mp5a4aim
+			0.02,	//RH_mp5a4eot
+			0.02,	//RH_mp5a4RFX
+			0.06,	//RH_mp5a5
+			0.01,	//RH_mp5a5aim
+			0.01,	//RH_mp5a5eot
+			0.01,	//RH_mp5a5RFX
+			0.03,	//RH_mp5a5eod 
+			0.01,	//RH_mp5a5eodaim
+			0.01,	//RH_mp5a5eodeot
+			0.01,	//RH_mp5a5eodRFX
+			0.06,	//RH_mp5kpdw
+			0.01,	//RH_mp5kpdwaim
+			0.01,	//RH_mp5kpdweot
+			0.01,	//RH_mp5kpdwRFX
+			0.06,	//RH_fmg9
+			0.04,	//RH_tmpeot
 			0.03,	//RH_uzi
 		//MidTech
-			//0.01,	//RH_M4CEOTECH
-			//0.02,	//RH_M4CAIM
-			//0.04,	//RH_M4CS
-			//0.02,	//RH_M4CSAIM
-			//0.01,	//RH_M4CMKAIM
-			//0.06,	//G36C			
-			//0.05,	//RH_PDR
-			//0.02,	//RH_pdraim
-			//0.02,	//RH_pdreot
-			//0.02,	//RH_P90
-			//0.04,	//RH_P90i
-			//0.02,	//RH_P90aim
-			//0.02,	//RH_P90eot
-			//0.06,	//RH_HK53
-			//0.02,	//RH_HK53aim
-			//0.02,	//RH_HK53eot
-			//0.02,	//RH_HK53RFX
-			//0.06,	//MasterKey
+			0.01,	//RH_M4CEOTECH
+			0.02,	//RH_M4CAIM
+			0.04,	//RH_M4CS
+			0.02,	//RH_M4CSAIM
+			0.01,	//RH_M4CMKAIM
+			0.06,	//G36C			
+			0.05,	//RH_PDR
+			0.02,	//RH_pdraim
+			0.02,	//RH_pdreot
+			0.02,	//RH_P90
+			0.04,	//RH_P90i
+			0.02,	//RH_P90aim
+			0.02,	//RH_P90eot
+			0.06,	//RH_HK53
+			0.02,	//RH_HK53aim
+			0.02,	//RH_HK53eot
+			0.02,	//RH_HK53RFX
+			0.06,	//MasterKey
 			//0.04,	//Sa58P_EP1
 			//0.04,	//Sa58V_EP1
 			0.10,	//DZ_Patrol_Pack_EP1
 			0.07,	//DZ_Assault_Pack_EP1
 			0.04,	//DZ_British_ACU
 		//Rare
-			//0.01,	//RH_M60E4
-			//0.01,	//RH_MK43
-			//0.02,	//RH_mp5sd6RFX
+			0.01,	//RH_M60E4
+			0.01,	//RH_MK43
+			0.02,	//RH_mp5sd6RFX
 			0.02,	//RH_m9sd
 			0.02,	//RH_deagle
-			//0.01,	//RH_tmpsd
-			//0.01,	//RH_tmpsdaim  
-			//0.01,	//RH_tmpsdeot
-			//0.01,	//RH_uzisd			
-			//0.005,	//RH_P90sd
-			//0.01,	//RH_p90isd
-			//0.005,	//RH_p90sdaim
-			//0.005,	//RH_p90sdeot
-			//0.01,	//mk22sd
-			//0.01,	//mk22vsd
+			0.01,	//RH_tmpsd
+			0.01,	//RH_tmpsdaim  
+			0.01,	//RH_tmpsdeot
+			0.01,	//RH_uzisd			
+			0.005,	//RH_P90sd
+			0.01,	//RH_p90isd
+			0.005,	//RH_p90sdaim
+			0.005,	//RH_p90sdeot
+			0.01,	//mk22sd
+			0.01,	//mk22vsd
 			//Clothing
 			0.02,
 			0.01,
@@ -938,13 +938,13 @@ class Hunting: Default {
 			{"","medical"},
 			{"","generic"},
 			{"","military"},			
-			//{"M16A2","weapon"},
-			//{"M16A2GL","weapon"},
-			//{"MG36","weapon"},
+			{"M16A2","weapon"},
+			{"M16A2GL","weapon"},
+			{"MG36","weapon"},
 			{"M9SD","weapon"},
-			//{"RH_m14ebrgc","weapon"},			
-			//{"G36C","weapon"},
-			//{"G36K","weapon"},
+			{"RH_m14ebrgc","weapon"},			
+			{"G36C","weapon"},
+			{"G36K","weapon"},
 			//{"M4A1_Aim","weapon"},
 			//{"M24","weapon"},
 			//{"SVD_CAMO","weapon"},
@@ -954,21 +954,21 @@ class Hunting: Default {
 			{"UZI_EP1","weapon"},
 			{"glock17_EP1","weapon"},
 			//{"M4A1_AIM_SD_camo","weapon"},
-			//{"M16A4_ACG","weapon"},
-			//{"M4A1_HWS_GL_camo","weapon"},
-			//{"RH_M4C","weapon"},
-			//{"RH_M4CSAIM","weapon"},
-			//{"RH_M4CSACOG","weapon"},
-			//{"RH_M4CSEOTECH","weapon"},
-			//{"RH_M4CT","weapon"},
-			//{"RH_M4CT_F","weapon"},
-			//{"RH_M14EBR","weapon"},
-			//{"RH_M14EBRSP","weapon"},
-			//{"RH_M14EBRGC","weapon"},
-			//{"RH_M4CTSD","weapon"},
-			//{"RH_M4CTSD_F","weapon"},			
-			//{"Mk_48_DZ","weapon"},
-			//{"M240_DZ","weapon"},
+			{"M16A4_ACG","weapon"},
+			{"M4A1_HWS_GL_camo","weapon"},
+			{"RH_M4C","weapon"},
+			{"RH_M4CSAIM","weapon"},
+			{"RH_M4CSACOG","weapon"},
+			{"RH_M4CSEOTECH","weapon"},
+			{"RH_M4CT","weapon"},
+			{"RH_M4CT_F","weapon"},
+			{"RH_M14EBR","weapon"},
+			{"RH_M14EBRSP","weapon"},
+			{"RH_M14EBRGC","weapon"},
+			{"RH_M4CTSD","weapon"},
+			{"RH_M4CTSD_F","weapon"},			
+			{"Mk_48_DZ","weapon"},
+			{"M240_DZ","weapon"},
 			//{"M4A3_CCO_EP1","weapon"},
 			{"Binocular","weapon"},
 			{"ItemFlashlightRed","military"},
@@ -976,18 +976,18 @@ class Hunting: Default {
 			{"ItemGPS","weapon"},
 			{"ItemMap","military"},
 			{"Binocular_Vector","military"},
-			//{"RH_mk21a5","weapon"},
-			//{"RH_mk21a5sd","weapon"},
-			//{"RH_mk14","weapon"},
-			//{"RH_mk14aim","weapon"},
-			//{"RH_mk14eotech","weapon"},
-			//{"RH_mk14sd","weapon"},
-			//{"RH_mk14sdaim","weapon"},
-			//{"RH_mk14sdeotech","weapon"},
-			//{"RH_m60e4eotech","weapon"},
-			//{"RH_mk43","weapon"},
-			//{"RH_m4cmkacog","weapon"},			
-			//{"RH_m4cmkeotech","weapon"},
+			{"RH_mk21a5","weapon"},
+			{"RH_mk21a5sd","weapon"},
+			{"RH_mk14","weapon"},
+			{"RH_mk14aim","weapon"},
+			{"RH_mk14eotech","weapon"},
+			{"RH_mk14sd","weapon"},
+			{"RH_mk14sdaim","weapon"},
+			{"RH_mk14sdeotech","weapon"},
+			{"RH_m60e4eotech","weapon"},
+			{"RH_mk43","weapon"},
+			{"RH_m4cmkacog","weapon"},			
+			{"RH_m4cmkeotech","weapon"},
 		//Backpacks
 			{"DZ_Patrol_Pack_EP1","object"},
 			{"DZ_Assault_Pack_EP1","object"},
@@ -1009,13 +1009,13 @@ class Hunting: Default {
 			0.30,	//Medical
 			0.35,	//generic
 			0.50,	//military
-			//0.10, //{"M16A2","weapon"
-			//0.05, //{"M16A2GL","weapo
-			//0.01, //{"MG36","weapon"}
+			0.10, //{"M16A2","weapon"
+			0.05, //{"M16A2GL","weapo
+			0.01, //{"MG36","weapon"}
 			0.02,	//{"M9SD","weapon"},
-			//0.02,	//{"RH_m14ebrgc","w
-			//0.10,	//{"G36C","weapon"}
-			//0.02,	//{"G36K","weapon"}
+			0.02,	//{"RH_m14ebrgc","w
+			0.10,	//{"G36C","weapon"}
+			0.02,	//{"G36K","weapon"}
 			//0.10,	//{"M4A1_Aim","weap
 			//0.01,	//{"M24","weapon"},
 			//0.01,   //{"SVD_CAMO","weap
@@ -1024,22 +1024,22 @@ class Hunting: Default {
 			//0.03,	//{"M14_EP1","weapon"
 			0.02,	//{"UZI_EP1","weapon"
 			0.01, 	//{"glock17_EP1","wea
-			//0.20, //{"M4A1_AIM_SD_cam
-			//0.04, //{"M16A4_ACG","wea
-			//0.05, //{"M4A1_HWS_GL_cam
-			//0.02, //{"RH_M4C","weapon
-			//0.02,	//{"RH_M4CSAIM","we
-			//0.01,	//{"RH_M4CSACOG","w
-			//0.01,	//{"RH_M4CSEOTECH",
-			//0.04,	//{"RH_M4CT","weapo
-			//0.03,	//{"RH_M4CT_F","wea
-			//0.02,	//{"RH_M14EBR","wea
-			//0.01,	//{"RH_M14EBRSP","w
-			//0.01,	//{"RH_M14EBRGC","w
-			//0.01,	//{"RH_M4CTSD","wea
-			//0.01,	//{"RH_M4CTSD_F","w			
-			//0.01,	//{"Mk_48_DZ","weap
-			//0.01,	//{"M240_DZ","weapo
+			//0.20, //{"M4A1_AIM_SD_camo
+			0.04, //{"M16A4_ACG","wea
+			0.05, //{"M4A1_HWS_GL_cam
+			0.02, //{"RH_M4C","weapon
+			0.02,	//{"RH_M4CSAIM","we
+			0.01,	//{"RH_M4CSACOG","w
+			0.01,	//{"RH_M4CSEOTECH",
+			0.04,	//{"RH_M4CT","weapo
+			0.03,	//{"RH_M4CT_F","wea
+			0.02,	//{"RH_M14EBR","wea
+			0.01,	//{"RH_M14EBRSP","w
+			0.01,	//{"RH_M14EBRGC","w
+			0.01,	//{"RH_M4CTSD","wea
+			0.01,	//{"RH_M4CTSD_F","w			
+			0.01,	//{"Mk_48_DZ","weap
+			0.01,	//{"M240_DZ","weapo
 			//0.08,   //{"M4A3_CCO_EP1","we
 			0.10,	//{"Binocular","weapo
 			0.08,	//{"ItemFlashlightReded
@@ -1047,18 +1047,18 @@ class Hunting: Default {
 			0.05,	//{"ItemGPS","weapon"
 			0.15,	//{"ItemMap","militar
 			0.01,   //{"Binocular_Vector"
-			//0.02,	//{"RH_mk21a5","wea
-			//0.01,	//{"RH_mk21a5sd","w
-			//0.03,	//{"RH_mk14","weapo
-			//0.02,	//{"RH_mk14aim","we
-			//0.02,	//{"RH_mk14eotech",
-			//0.02,	//{"RH_mk14sd","wea
-			//0.01,	//{"RH_mk14sdaim","
-			//0.01,	//{"RH_mk14sdeotechh"
-			//0.01,	//{"RH_m60e4eotech"
-			//0.01,	//{"RH_mk43","weapo
-			//0.03,	//{"RH_m4cmkacog","
-			//0.03,	//{"RH_m4cmkeotech"
+			0.02,	//{"RH_mk21a5","wea
+			0.01,	//{"RH_mk21a5sd","w
+			0.03,	//{"RH_mk14","weapo
+			0.02,	//{"RH_mk14aim","we
+			0.02,	//{"RH_mk14eotech",
+			0.02,	//{"RH_mk14sd","wea
+			0.01,	//{"RH_mk14sdaim","
+			0.01,	//{"RH_mk14sdeotechh"
+			0.01,	//{"RH_m60e4eotech"
+			0.01,	//{"RH_mk43","weapo
+			0.03,	//{"RH_m4cmkacog","
+			0.03,	//{"RH_m4cmkeotech"
 		//Backpacks
 			0.08,
 			0.06,
@@ -1099,15 +1099,15 @@ class Hunting: Default {
 		{"RH_p226s","weapon"}, //Pistol
 		{"RH_g17sd","weapon"}, //Pistol
 		{"M1014","weapon"}, 
-		//{"FN_FAL","weapon"}, 
-		//{"RH_mp5kpdwRFX","weapon"}, 	//HK
-		//{"FN_FAL_ANPVS4","weapon"}, 	//NVG FAL
-		//{"MG36","weapon"},
-		//{"BAF_L85A2_UGL_Holo","weapon"}, 	
-		//{"BAF_L86A2_ACOG","weapon"}, 
-		//{"G36_C_SD_Eotech","weapon"}, 
-		//{"RH_M60E4","weapon"}, 
-		//{"RH_M60E4_EOTECH","weapon"}, 	
+		{"FN_FAL","weapon"}, 
+		{"RH_mp5kpdwRFX","weapon"}, 	//HK
+		{"FN_FAL_ANPVS4","weapon"}, 	//NVG FAL
+		{"MG36","weapon"},
+		{"BAF_L85A2_UGL_Holo","weapon"}, 	
+		{"BAF_L86A2_ACOG","weapon"}, 
+		{"G36_C_SD_Eotech","weapon"}, 
+		{"RH_M60E4","weapon"}, 
+		{"RH_M60E4_EOTECH","weapon"}, 	
 		{"WeaponHolder_PartGeneric", "object"}, 
 		{"WeaponHolder_PartVRotor", "object"}, 
 		{"ItemGPS","weapon"}, 
@@ -1132,15 +1132,15 @@ class Hunting: Default {
 			0.10,	//RH_p226s
 			0.02,	//RH_g17sd 
 			0.06,  	//M1014
-			//0.08, 	//FN_FAL
-			//0.07, 	//RH_mp5kpdwRFX
-			//0.03,	//FN_FAL_ANPVS4
-			//0.05, 	//MG36
-			//0.05, 	//BAF_L85A2_UGL_H
-			//0.03,	//BAF_L86A2_ACOG
-			//0.03,	//G36_C_SD_Eotech
-			//0.01,	//RH_M60E4
-			//0.003,	//RH_M60E4_EOTECH
+			0.08, 	//FN_FAL
+			0.07, 	//RH_mp5kpdwRFX
+			0.03,	//FN_FAL_ANPVS4
+			0.05, 	//MG36
+			0.05, 	//BAF_L85A2_UGL_H
+			0.03,	//BAF_L86A2_ACOG
+			0.03,	//G36_C_SD_Eotech
+			0.01,	//RH_M60E4
+			0.003,	//RH_M60E4_EOTECH
 			0.10,	//Scrap
 			0.03,	//Rotor
 			0.05,
@@ -1176,15 +1176,15 @@ class Hunting: Default {
 		{"RH_Deaglem","weapon"}, 
 		{"RH_m1911sd","weapon"},			
 		{"M1014","weapon"},
-		//{"M16A4_ACOG","weapon"},
-		//{"M16A4_ACG_GL","weapon"}, 
-		//{"RH_SCARL_AIM","weapon"}, 
-		//{"RH_SCARLB_AIM","weapon"}, 
-		//{"M4SPR","weapon"},
-		//{"RH_M14EBRSP","weapon"},	
-		//{"M40A3","weapon"},
-		//{"RH_SCARL_MK4","weapon"},				//Scar
-		//{"Mk_48_DZ","weapon"}, 
+		{"M16A4_ACOG","weapon"},
+		{"M16A4_ACG_GL","weapon"}, 
+		{"RH_SCARL_AIM","weapon"}, 
+		{"RH_SCARLB_AIM","weapon"}, 
+		{"M4SPR","weapon"},
+		{"RH_M14EBRSP","weapon"},	
+		{"M40A3","weapon"},
+		{"RH_SCARL_MK4","weapon"},				//Scar
+		{"Mk_48_DZ","weapon"}, 
 		{"WeaponHolder_PartGeneric", "object"}, 
 		{"WeaponHolder_PartVRotor", "object"}, 
 		{"ItemGPS","weapon"}, 
@@ -1210,15 +1210,15 @@ class Hunting: Default {
 		0.02,	//RH_Deaglem
 		0.01,	//RH_m1911sd
 		0.04,   //M1014
-		//0.10,   //M16A4_ACOG
-		//0.05,   //M16A4_ACG_GL
-		//0.05,	//RH_SCARL_AIM
-		//0.05,   //RH_SCARLB_AIM
-		//0.03,   //M4SPR
-		//0.04,   //RH_M14EBRSP
-		//0.02,   //M40A3
-		//0.01,   //RH_SCARL_MK4
-		//0.01,   //Mk_48_DZ
+		0.10,   //M16A4_ACOG
+		0.05,   //M16A4_ACG_GL
+		0.05,	//RH_SCARL_AIM
+		0.05,   //RH_SCARLB_AIM
+		0.03,   //M4SPR
+		0.04,   //RH_M14EBRSP
+		0.02,   //M40A3
+		0.01,   //RH_SCARL_MK4
+		0.01,   //Mk_48_DZ
 		0.10,	//Scrap
 		0.03,	//Rotor
 		0.04,
@@ -1253,14 +1253,14 @@ class Hunting: Default {
 			{"RH_uspm","weapon"}, //Pistol
 			{"RH_tt33","weapon"}, //Pistol
 			{"Remington870_lamp","weapon"}, 
-			//{"RH_mp7aim","weapon"},
-			//{"G36K","weapon"}, 
-			//{"RH_ump","weapon"},	
-			//{"RH_xm8dc","weapon"},
-			//{"G36a_CAMO","weapon"}, 
-			//{"RH_mp7RFX","weapon"}, 		
-			//{"RH_mp7sdeot","weapon"}, 
-			//{"RH_MK43","weapon"},	
+			{"RH_mp7aim","weapon"},
+			{"G36K","weapon"}, 
+			{"RH_ump","weapon"},	
+			{"RH_xm8dc","weapon"},
+			{"G36a_CAMO","weapon"}, 
+			{"RH_mp7RFX","weapon"}, 		
+			{"RH_mp7sdeot","weapon"}, 
+			{"RH_MK43","weapon"},	
 			{"WeaponHolder_PartGeneric", "object"}, 
 			{"WeaponHolder_PartVRotor", "object"}, 
 			{"RH_g19","weapon"}, 
@@ -1285,14 +1285,14 @@ class Hunting: Default {
 			0.05,	//RH_uspm
 			0.10,	//RH_tt33
 			0.02,   //Remington870_lamp
-			//0.05,   //RH_mp7aim
-			//0.05,   //G36K
-			//0.04,	//RH_ump
-			//0.04,   //RH_xm8dc
-			//0.05,   //G36a_CAMO
-			//0.04,   //RH_mp7RFX"
-			//0.02,   //RH_mp7sdeot
-			//0.02,   //RH_MK43
+			0.05,   //RH_mp7aim
+			0.05,   //G36K
+			0.04,	//RH_ump
+			0.04,   //RH_xm8dc
+			0.05,   //G36a_CAMO
+			0.04,   //RH_mp7RFX"
+			0.02,   //RH_mp7sdeot
+			0.02,   //RH_MK43
 			0.10,	//Scrap
 			0.03,	//Rotor
 			0.04,
@@ -1326,14 +1326,14 @@ class Hunting: Default {
 		{"Makarov","weapon"}, 
 		{"MakarovSD","weapon"},
 		{"Saiga12K","weapon"}, 
-		//{"RH_ak102","weapon"}, 
-		//{"RH_ScarAkeotech","weapon"}, 
-		//{"RH_ScarAkaim","weapon"}, 
-		//{"RH_ScarAk","weapon"}, 
-		//{"AK_107_pso","weapon"}, //NVG
-		//{"RPK_74","weapon"}, 
-		//{"SVD","weapon"}, 
-		//{"bizon_silenced","weapon"}, 
+		{"RH_ak102","weapon"}, 
+		{"RH_ScarAkeotech","weapon"}, 
+		{"RH_ScarAkaim","weapon"}, 
+		{"RH_ScarAk","weapon"}, 
+		{"AK_107_pso","weapon"}, //NVG
+		{"RPK_74","weapon"}, 
+		{"SVD","weapon"}, 
+		{"bizon_silenced","weapon"}, 
 		{"WeaponHolder_PartGeneric", "object"}, 
 		{"WeaponHolder_PartVRotor", "object"}, 
 		{"ItemGPS","weapon"}, 
@@ -1356,14 +1356,14 @@ class Hunting: Default {
 		0.15,	//Makarov
 		0.02,	//MakarovSD
 		0.03,	//Saiga12K
-		//0.05,   //RH_ak102
-		//0.03,   //RH_ScarAkeotech
-		//0.03,	//RH_ScarAkaim
-		//0.04,   //RH_ScarAk
-		//0.02,   //AK_107_pso
-		//0.06,   //RPK_74
-		//0.01,   //SVD
-		//0.03,   //bizon_silenced
+		0.05,   //RH_ak102
+		0.03,   //RH_ScarAkeotech
+		0.03,	//RH_ScarAkaim
+		0.04,   //RH_ScarAk
+		0.02,   //AK_107_pso
+		0.06,   //RPK_74
+		0.01,   //SVD
+		0.03,   //bizon_silenced
 		0.10,		//Scrap
 		0.03,		//Rotor
 		0.04,
