@@ -94,6 +94,8 @@ if (!isDedicated) then {
 //Base Safe zones
 execVM "custombases\CAGN\initiate.sqf";	
 
+//drinkwater bridge fix
+null = [5] execVM "sheep\heightcheck.sqf";
 //Sheeps Tools
 [] execVM "admintools\Activate.sqf";
 
