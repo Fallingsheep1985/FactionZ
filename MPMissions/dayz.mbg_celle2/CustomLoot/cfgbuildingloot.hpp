@@ -262,8 +262,8 @@ class CfgBuildingLoot {
 			{"WeaponHolder_ItemJerrycan","object"},
 			{"MR43","weapon"},
 			{"Crossbow","weapon"},
-			{"RH_m14ebr","weapon"},
-			{"RH_mk14","weapon"},
+			//{"RH_m14ebr","weapon"},
+			//{"RH_mk14","weapon"},
 			{"RH_m4cmk","weapon"},
 			{"RH_m4cmkaim","weapon"},
 			{"huntingrifle","weapon"},
@@ -282,29 +282,29 @@ class CfgBuildingLoot {
 			//{"Skin_Camo3_DZC","magazine"}
 		};
 		itemChance[] =	{
-			0.40,
-			0.50,
-			0.03,
-			0.14,
-			0.14,
-			0.02,
-			0.02,	//RH_mk14 mod0
-			0.04,	//Masterkey
-			0.03,	//Masterkey CCO
-			0.02,
-			0.12,
-			0.08,
-			0.01,
-			0.06,	//Hatchet
-			0.05,	//Trap
-			0.03,	//Python
-			0.01,	//Anaconda
-			0.03,	//Assaultpack
-			0.07,	//Survival ACU
-			0.01,	//Skin_Sniper1_DZC
-			0.03,	//Skin_Camo1_DZC
-			0.02,	//Skin_Camo2_DZC
-			//0.01	//Skin_Camo3_DZC
+			0.40,   //{"","trash"},
+			0.50,   //{"","generic"},
+			0.03,   //{"WeaponHolder_ItemJerrycan","object"},
+			0.14,   //{"MR43","weapon"},
+			0.14,   //{"Crossbow","weapon"},
+			//0.02,   ////{"RH_m14ebr","weapon"},
+			//0.02,	////{"RH_mk14","weapon"},
+			0.04,	//{"RH_m4cmk","weapon"},
+			0.03,	//{"RH_m4cmkaim","weapon"},
+			0.02,   //{"huntingrifle","weapon"},
+			0.12,   //{"LeeEnfield","weapon"},
+			0.08,   //{"Winchester1866","weapon"},
+			0.01,   //{"PartWoodPile","magazine"},
+			0.06,	//{"WeaponHolder_ItemHatchet","object"},
+			0.05,	//{"TrapBear","magazine"},
+			0.03,	//{"RH_python","weapon"},
+			0.01,	//{"RH_anac","weapon"},
+			0.03,	//{"DZ_Assault_Pack_EP1","object"},
+			0.07,	//{"DZ_TK_Assault_Pack_EP1","object"},
+			0.01,	//{"Skin_Sniper1_DZC","magazine"},
+			0.03,	//{"Skin_Camo1_DZC","magazine"},
+			0.02,	//{"Skin_Camo2_DZC","magazine"},
+			//0.01	//{"Skin_Camo3_DZC","magazine"}
 		};
 };
 class Hunting: Default {
@@ -319,8 +319,8 @@ class Hunting: Default {
 			{"WeaponHolder_ItemJerrycan","object"},
 			{"MR43","weapon"},
 			{"Crossbow","weapon"},
-			{"RH_m14ebr","weapon"},
-			{"RH_mk14","weapon"},
+			//{"RH_m14ebr","weapon"},
+			//{"RH_mk14","weapon"},
 			{"RH_m4cmk","weapon"},
 			{"RH_m4cmkaim","weapon"},
 			{"huntingrifle","weapon"},
@@ -339,29 +339,29 @@ class Hunting: Default {
 			//{"Skin_Camo3_DZC","magazine"}
 		};
 		itemChance[] =	{
-			0.40,
-			0.50,
-			0.03,
-			0.14,
-			0.14,
-			0.02,
-			0.02,	//RH_mk14 mod0
-			0.04,	//Masterkey
-			0.03,	//Masterkey CCO
-			0.02,
-			0.12,
-			0.08,
-			0.01,
-			0.06,	//Hatchet
-			0.05,	//Trap
-			0.03,	//Python
-			0.01,	//Anaconda
-			0.03,	//Assaultpack
-			0.07,	//Survival ACU
-			0.01,	//Skin_Sniper1_DZC
-			0.03,	//Skin_Camo1_DZC
-			0.02,	//Skin_Camo2_DZC
-			//0.01	//Skin_Camo3_DZC
+			0.40,   //{"","trash"},
+			0.50,   //{"","generic"},
+			0.03,   //{"WeaponHolder_ItemJerrycan","object"},
+			0.14,   //{"MR43","weapon"},
+			0.14,   //{"Crossbow","weapon"},
+			//0.02,   ////{"RH_m14ebr","weapon"},
+			//0.02,	////{"RH_mk14","weapon"},
+			0.04,	//{"RH_m4cmk","weapon"},
+			0.03,	//{"RH_m4cmkaim","weapon"},
+			0.02,   //{"huntingrifle","weapon"},
+			0.12,   //{"LeeEnfield","weapon"},
+			0.08,   //{"Winchester1866","weapon"},
+			0.01,   //{"PartWoodPile","magazine"},
+			0.06,	//{"WeaponHolder_ItemHatchet","object"},
+			0.05,	//{"TrapBear","magazine"},
+			0.03,	//{"RH_python","weapon"},
+			0.01,	//{"RH_anac","weapon"},
+			0.03,	//{"DZ_Assault_Pack_EP1","object"},
+			0.07,	//{"DZ_TK_Assault_Pack_EP1","object"},
+			0.01,	//{"Skin_Sniper1_DZC","magazine"},
+			0.03,	//{"Skin_Camo1_DZC","magazine"},
+			0.02,	//{"Skin_Camo2_DZC","magazine"},
+			//0.01	////{"Skin_Camo3_DZC","magazine"}
 		};
 };
 	class Supermarket: Default {
@@ -448,7 +448,7 @@ class Hunting: Default {
 		lootChance = 0.5;
 		lootPos[] = {};
 		itemType[] =	{		
-			{"FN_FAL","weapon"},
+			//{"FN_FAL","weapon"},
 			{"G36_C_SD_Eotech","weapon"}, 
 			//{"M14_EP1","weapon"},
 			//{"FN_FAL_ANPVS4","weapon"},
@@ -482,7 +482,7 @@ class Hunting: Default {
 			{"DZ_Backpack_EP1","object"}
 		};
 		itemChance[] =	{
-			0.02,		//"FN_FAL"
+			//0.02,		//"FN_FAL"
 			0.02,		//"G36_C_SD_Eotech"
 			//0.05,		//"M14_EP1"
 			//0.02,		//"FN_FAL_ANPVS4"
@@ -619,12 +619,12 @@ class Hunting: Default {
 			{"RH_mp5sd6RFX","weapon"},
 			{"RH_mp5sd6eot","weapon"},
 			{"RH_m9sd","weapon"},	
-			{"RH_m14ebr","weapon"},
-			{"RH_m14ebrsp","weapon"},	
-			{"RH_m14ebrgc","weapon"},
-			{"RH_m14ebr_sd","weapon"},
-			{"RH_m14ebrsp_sd","weapon"},
-			{"RH_m14ebrgc_sd","weapon"},
+			//{"RH_m14ebr","weapon"},
+			//{"RH_m14ebrsp","weapon"},	
+			//{"RH_m14ebrgc","weapon"},
+			//{"RH_m14ebr_sd","weapon"},
+			//{"RH_m14ebrsp_sd","weapon"},
+			//{"RH_m14ebrgc_sd","weapon"},
 			//Items
 			{"Binocular","weapon"},
 			{"ItemFlashlightRed","military"},
@@ -710,12 +710,12 @@ class Hunting: Default {
 			0.04,	//RH_mp5sd6RFX
 			0.04,	//RH_mp5sd6eot
 			0.02,	//RH_m9sd
-			0.02,	//"RH_m14ebr"
-			0.01,	//"RH_m14ebrsp"
-			0.01,	//"RH_m14ebrgc"
-			0.01,	//"RH_m14ebr_sd",
-			0.01,	//"RH_m14ebrsp_sd"
-			0.01,	//"RH_m14ebrgc_sd"
+			//0.02,	//"RH_m14ebr"
+			//0.01,	//"RH_m14ebrsp"
+			//0.01,	//"RH_m14ebrgc"
+			//0.01,	//"RH_m14ebr_sd",
+			//0.01,	//"RH_m14ebrsp_sd"
+			//0.01,	//"RH_m14ebrgc_sd"
 			//Items
 			0.18,
 			0.15,
@@ -942,7 +942,7 @@ class Hunting: Default {
 			{"M16A2GL","weapon"},
 			{"MG36","weapon"},
 			{"M9SD","weapon"},
-			{"RH_m14ebrgc","weapon"},			
+			//{"RH_m14ebrgc","weapon"},			
 			{"G36C","weapon"},
 			{"G36K","weapon"},
 			//{"M4A1_Aim","weapon"},
@@ -962,9 +962,9 @@ class Hunting: Default {
 			{"RH_M4CSEOTECH","weapon"},
 			{"RH_M4CT","weapon"},
 			{"RH_M4CT_F","weapon"},
-			{"RH_M14EBR","weapon"},
-			{"RH_M14EBRSP","weapon"},
-			{"RH_M14EBRGC","weapon"},
+			//{"RH_M14EBR","weapon"},
+			//{"RH_M14EBRSP","weapon"},
+			//{"RH_M14EBRGC","weapon"},
 			{"RH_M4CTSD","weapon"},
 			{"RH_M4CTSD_F","weapon"},			
 			{"Mk_48_DZ","weapon"},
@@ -978,12 +978,12 @@ class Hunting: Default {
 			{"Binocular_Vector","military"},
 			{"RH_mk21a5","weapon"},
 			{"RH_mk21a5sd","weapon"},
-			{"RH_mk14","weapon"},
-			{"RH_mk14aim","weapon"},
-			{"RH_mk14eotech","weapon"},
-			{"RH_mk14sd","weapon"},
-			{"RH_mk14sdaim","weapon"},
-			{"RH_mk14sdeotech","weapon"},
+			//{"RH_mk14","weapon"},
+			//{"RH_mk14aim","weapon"},
+			//{"RH_mk14eotech","weapon"},
+			//{"RH_mk14sd","weapon"},
+			//{"RH_mk14sdaim","weapon"},
+			//{"RH_mk14sdeotech","weapon"},
 			{"RH_m60e4eotech","weapon"},
 			{"RH_mk43","weapon"},
 			{"RH_m4cmkacog","weapon"},			
@@ -1013,7 +1013,7 @@ class Hunting: Default {
 			0.05, //{"M16A2GL","weapo
 			0.01, //{"MG36","weapon"}
 			0.02,	//{"M9SD","weapon"},
-			0.02,	//{"RH_m14ebrgc","w
+			//0.02,	//{"RH_m14ebrgc","w
 			0.10,	//{"G36C","weapon"}
 			0.02,	//{"G36K","weapon"}
 			//0.10,	//{"M4A1_Aim","weap
@@ -1033,9 +1033,9 @@ class Hunting: Default {
 			0.01,	//{"RH_M4CSEOTECH",
 			0.04,	//{"RH_M4CT","weapo
 			0.03,	//{"RH_M4CT_F","wea
-			0.02,	//{"RH_M14EBR","wea
-			0.01,	//{"RH_M14EBRSP","w
-			0.01,	//{"RH_M14EBRGC","w
+			//0.02,	//{"RH_M14EBR","wea
+			//0.01,	//{"RH_M14EBRSP","w
+			//0.01,	//{"RH_M14EBRGC","w
 			0.01,	//{"RH_M4CTSD","wea
 			0.01,	//{"RH_M4CTSD_F","w			
 			0.01,	//{"Mk_48_DZ","weap
@@ -1049,12 +1049,12 @@ class Hunting: Default {
 			0.01,   //{"Binocular_Vector"
 			0.02,	//{"RH_mk21a5","wea
 			0.01,	//{"RH_mk21a5sd","w
-			0.03,	//{"RH_mk14","weapo
-			0.02,	//{"RH_mk14aim","we
-			0.02,	//{"RH_mk14eotech",
-			0.02,	//{"RH_mk14sd","wea
-			0.01,	//{"RH_mk14sdaim","
-			0.01,	//{"RH_mk14sdeotechh"
+			//0.03,	//{"RH_mk14","weapo
+			//0.02,	//{"RH_mk14aim","we
+			//0.02,	//{"RH_mk14eotech",
+			//0.02,	//{"RH_mk14sd","wea
+			//0.01,	//{"RH_mk14sdaim","
+			//0.01,	//{"RH_mk14sdeotechh"
 			0.01,	//{"RH_m60e4eotech"
 			0.01,	//{"RH_mk43","weapo
 			0.03,	//{"RH_m4cmkacog","
@@ -1099,9 +1099,9 @@ class Hunting: Default {
 		{"RH_p226s","weapon"}, //Pistol
 		{"RH_g17sd","weapon"}, //Pistol
 		{"M1014","weapon"}, 
-		{"FN_FAL","weapon"}, 
+		//{"FN_FAL","weapon"}, 
 		{"RH_mp5kpdwRFX","weapon"}, 	//HK
-		{"FN_FAL_ANPVS4","weapon"}, 	//NVG FAL
+		//{"FN_FAL_ANPVS4","weapon"}, 	//NVG FAL
 		{"MG36","weapon"},
 		{"BAF_L85A2_UGL_Holo","weapon"}, 	
 		{"BAF_L86A2_ACOG","weapon"}, 
@@ -1132,9 +1132,9 @@ class Hunting: Default {
 			0.10,	//RH_p226s
 			0.02,	//RH_g17sd 
 			0.06,  	//M1014
-			0.08, 	//FN_FAL
+			//0.08, 	//FN_FAL
 			0.07, 	//RH_mp5kpdwRFX
-			0.03,	//FN_FAL_ANPVS4
+			//0.03,	//FN_FAL_ANPVS4
 			0.05, 	//MG36
 			0.05, 	//BAF_L85A2_UGL_H
 			0.03,	//BAF_L86A2_ACOG
@@ -1181,7 +1181,7 @@ class Hunting: Default {
 		{"RH_SCARL_AIM","weapon"}, 
 		{"RH_SCARLB_AIM","weapon"}, 
 		{"M4SPR","weapon"},
-		{"RH_M14EBRSP","weapon"},	
+		//{"RH_M14EBRSP","weapon"},	
 		{"M40A3","weapon"},
 		{"RH_SCARL_MK4","weapon"},				//Scar
 		{"Mk_48_DZ","weapon"}, 
@@ -1215,7 +1215,7 @@ class Hunting: Default {
 		0.05,	//RH_SCARL_AIM
 		0.05,   //RH_SCARLB_AIM
 		0.03,   //M4SPR
-		0.04,   //RH_M14EBRSP
+		//0.04,   //RH_M14EBRSP
 		0.02,   //M40A3
 		0.01,   //RH_SCARL_MK4
 		0.01,   //Mk_48_DZ
