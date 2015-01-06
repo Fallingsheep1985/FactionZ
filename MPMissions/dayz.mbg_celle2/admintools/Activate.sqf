@@ -9,15 +9,6 @@ if ((getPlayerUID player) in AdminList || (getPlayerUID player) in ModList) then
 	// Wait for the character to load all required items
 	waitUntil {!isNil "dayz_animalCheck"}; 
 
-	// Load key macros
-	[]execVM "admintools\KeyBindings\FunctionKeys.sqf";
-	[]execVM "admintools\KeyBindings\NumberKeys.sqf";
-	
-	// Tool use logger
-	if(logMajorTool || logMinorTool) then {
-		usageLogger = format["%1 %2 -- has logged on",name player,getPlayerUID player];
-		[] spawn {publicVariable "usageLogger";};
-	};
 
 	while {alive player} do
 	{
