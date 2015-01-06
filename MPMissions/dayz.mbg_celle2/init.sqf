@@ -63,9 +63,6 @@ if ((!isServer) && (player != player)) then {
 
 if (isServer) then {
 	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
-	//Lights
-	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
-    "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};	
 	//Sheeps Kill Pit
 	//execVM "Custombases\sheepkillpit.sqf";
 	//Bases
@@ -90,8 +87,7 @@ if (!isDedicated) then {
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "player_monitor.sqf";
-	//StreetLights
-	[] execVM "lights\street_lights.sqf";	
+
 };
 //Custom Loadout
 //[] execVM "CustomLoadout\Loadout.sqf"; //also call intro music so it only happens on new spawns
@@ -101,6 +97,14 @@ execVM "custombases\CAGN\initiate.sqf";
 //Sheeps Tools
 [] execVM "admintools\Activate.sqf";
 
-
+	if (!isDedicated) then {
+	//Lights
+	DZ_RequireGenerator = false;
+	DZ_StreetLights = true;
+	DZ_HouseLights = true;
+	DZ_TowerLights = true;
+	DZ_LightChance = 42;
+	[] execVM "lights\local_lights_init.sqf";
+	};
 
 
