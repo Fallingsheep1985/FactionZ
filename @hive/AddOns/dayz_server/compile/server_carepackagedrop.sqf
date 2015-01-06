@@ -48,13 +48,6 @@ _lootRadius = 1;
 	_smoke = createVehicle ["SmokeShellred",_pos,[],0,"CAN_COLLIDE"];
 	_smoke setVariable["Sarge",1];
 	
-	_carepackageMarker = createMarker ["carepackageMarker", [getpos _bam select 0, getpos _bam select 1]];
-	_carepackageMarker setMarkerText "UN Carepackage";
-	_carepackageMarker setMarkerType "DOT";
-	_carepackageMarker setMarkerColor "ColorBlack";
-	_carepackageMarker setMarkerBrush "Solid";
-	_carepackageMarker setMarkerSize [1, 1];
-	carepackageMarker = _carepackageMarker;
 	
 	_flare = "F_40mm_white" createVehicle [getPos _bam select 0, getPos _bam select 1, (getPos _bam select 2) +150];
 	_flare setVariable["Sarge",1];
@@ -93,3 +86,27 @@ _lootRadius = 1;
 				_x setVariable ["permaLoot",true];
 			} forEach _nearBy;
 		};
+//Marker
+	_run = true;
+	while {_run} do
+	{
+		_carepackageMarker = createMarker ["carepackageMarker", [getpos _bam select 0, getpos _bam select 1]];
+		_carepackageMarker setMarkerText "UN Carepackage";
+		_carepackageMarker setMarkerType "DOT";
+		_carepackageMarker setMarkerColor "ColorBlack";
+		_carepackageMarker setMarkerBrush "Solid";
+		_carepackageMarker setMarkerSize [1, 1];
+		carepackageMarker = _carepackageMarker;
+		//JIPS Fix
+		sleep 25; // wait 25 seconds
+		//delete markers
+		deleteMarker "carepackageMarker";
+	};
+	
+	sleep 3;
+	systemChat("The UN have dropped Supplies! Check your map for location!");
+	//wait 5min
+	sleep 300;
+	//stop marker showing up and delete it
+	_run = false;
+	deleteMarker "carepackageMarker";
