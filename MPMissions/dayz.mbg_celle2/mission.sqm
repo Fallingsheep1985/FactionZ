@@ -9729,7 +9729,7 @@ class Mission
 			azimut=-224.80659;
 			id=796;
 			side="EMPTY";
-			vehicle="AN2_DZ";
+			vehicle="Land_Misc_deerstand";
 			skill=1;
 		};
 		class Item964
