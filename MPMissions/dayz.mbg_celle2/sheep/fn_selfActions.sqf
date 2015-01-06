@@ -567,7 +567,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 
 // ----------------------------- / Drink water \ ----------------------
 private["_playerPos","canDrink","_isPond","_isWell","_pondPos","_objectsWell","_objectsPond","_display"];
- 
+canDrink = false;// spawn fix
 _playerPos = getPosATL player;
 canDrink = count nearestObjects [_playerPos, ["Land_pumpa","Land_water_tank"], 4] > 0;
 _isPond = false;
