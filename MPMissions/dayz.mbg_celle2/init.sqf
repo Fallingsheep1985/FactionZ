@@ -68,6 +68,9 @@ if (isServer) then {
 	//Bases
 	execVM "Custombases\puntest.sqf";
 	//Extra street lights
+	//Lights
+	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
+    "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};
 	execVM "Custombases\extrastreetlights.sqf";
 	//Doctor Trader
 	execVM "trader\doctortrader.sqf";
@@ -87,7 +90,13 @@ if (!isDedicated) then {
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "player_monitor.sqf";
-
+	//StreetLights
+		//Lights
+	DZ_HouseLights = true;
+	DZ_TowerLights = true;
+	DZ_LightChance = 42;
+	[] execVM "lights\local_lights_init.sqf";
+	[] execVM "lights\street_lights.sqf";
 };
 //Custom Loadout
 //[] execVM "CustomLoadout\Loadout.sqf"; //also call intro music so it only happens on new spawns
@@ -97,14 +106,5 @@ execVM "custombases\CAGN\initiate.sqf";
 //Sheeps Tools
 [] execVM "admintools\Activate.sqf";
 
-	if (!isDedicated) then {
-	//Lights
-	DZ_RequireGenerator = false;
-	DZ_StreetLights = true;
-	DZ_HouseLights = true;
-	DZ_TowerLights = true;
-	DZ_LightChance = 42;
-	[] execVM "lights\local_lights_init.sqf";
-	};
 
 
