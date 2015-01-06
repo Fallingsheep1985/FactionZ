@@ -1,6 +1,7 @@
 private ["_number","_step","_stepLocal","_result","_numberLocal","_add"];
 
-_number = [_this,0,0,[0]] call bis_fnc_param;
+//_number = [_this,0,0,[0]] call bis_fnc_param;
+_number = _this select 0;
 
 if (_number < 10) then {
 

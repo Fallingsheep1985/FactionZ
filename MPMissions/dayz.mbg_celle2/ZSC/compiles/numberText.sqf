@@ -1,7 +1,9 @@
 private ["_number","_mod","_digots","_digitsCount","_modBase","_numberText"];
 
-_number = [_this,0,0,[0, ""]] call bis_fnc_param;
-_mod = [_this,1,3,[0]] call bis_fnc_param;
+//_number = [_this,0,0,[0, ""]] call bis_fnc_param;
+_number = _this select 0;
+//_mod = [_this,1,3,[0]] call bis_fnc_param;
+_mod = _this select 1;
 
 if (typeName _number == "STRING") then {
 	_number = parseNumber _number;
