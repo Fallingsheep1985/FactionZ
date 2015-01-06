@@ -29,8 +29,8 @@ BankDialogUpdateAmounts = {
 		_displayName = getText  (configFile >> "CfgVehicles" >> _vehicleType >> "displayName");		
 		_sizeOfMoney = _vehicleMagazines * ZSC_MaxMoneyInStorageMultiplier;		
 		ctrlSetText [2701, format["%1", _displayName]];
-		ctrlSetText [BankDialogPlayerBalance, format["%1 %2", [player getVariable ['cashMoney', 0]], CurrencyName]];
-		ctrlSetText [BankDialogBankBalance, format["%1 / %3 %2", [ZSC_CurrentStorage getVariable ['bankMoney', 0]], CurrencyName, [_sizeOfMoney]]];
+		ctrlSetText [BankDialogPlayerBalance, format["%1 %2", [player getVariable ['cashMoney', 0]] call BIS_fnc_numberText, CurrencyName]];
+		ctrlSetText [BankDialogBankBalance, format["%1 / %3 %2", [ZSC_CurrentStorage getVariable ['bankMoney', 0]] call BIS_fnc_numberText, CurrencyName, [_sizeOfMoney] call BIS_fnc_numberText]];
 	}else{
 		ctrlSetText [BankDialogPlayerBalance, format["Can not get vehicle capacity!","test"]];
 		ctrlSetText [BankDialogBankBalance, format["Can not get vehicle capacity!","test"]];
@@ -39,7 +39,7 @@ BankDialogUpdateAmounts = {
 };
 
 GivePlayerDialogAmounts = {
-	ctrlSetText [GivePlayerDialogPlayerBalance, format["%1 %2", [player getVariable ['cashMoney', 0]], CurrencyName]];
+	ctrlSetText [GivePlayerDialogPlayerBalance, format["%1 %2", [player getVariable ['cashMoney', 0]] call BIS_fnc_numberText, CurrencyName]];
 	ctrlSetText [14003, format["%1", (name ZSC_GiveMoneyTarget)]];
 };
 
@@ -65,7 +65,7 @@ BankDialogWithdrawAmount = {
 	PVDZE_veh_Update = [ZSC_CurrentStorage,"gear"];
 	publicVariableServer "PVDZE_veh_Update";
 
-	cutText [format["You have withdrawn %1 %2 out of the %3", [_amount], CurrencyName,_displayName], "PLAIN DOWN"];
+	cutText [format["You have withdrawn %1 %2 out of the %3", [_amount] call BIS_fnc_numberText, CurrencyName,_displayName], "PLAIN DOWN"];
 };
 
 BankDialogDepositAmount = {
@@ -90,11 +90,11 @@ BankDialogDepositAmount = {
 	};
 
 	if( ((_bank + _amount ) >  _maxCap)) then{		
-			cutText [format["You can only store a max of %1 %2 in this %3.", [_maxCap],CurrencyName,_displayName], "PLAIN DOWN"];
+			cutText [format["You can only store a max of %1 %2 in this %3.", [_maxCap] call BIS_fnc_numberText,CurrencyName,_displayName], "PLAIN DOWN"];
 	}else{	
 		player setVariable["cashMoney",(_wealth - _amount),true];
 		ZSC_CurrentStorage setVariable["bankMoney",(_bank + _amount),true];
-		cutText [format["You have deposited %1 %2 in the %3.", [_amount], CurrencyName,_displayName], "PLAIN DOWN"];
+		cutText [format["You have deposited %1 %2 in the %3.", [_amount] call BIS_fnc_numberText, CurrencyName,_displayName], "PLAIN DOWN"];
 	};
 	dayzPlayerSave = [player,(magazines player),true,true] ;
 	publicVariableServer "dayzPlayerSave";
