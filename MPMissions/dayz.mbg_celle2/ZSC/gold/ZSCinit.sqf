@@ -59,8 +59,8 @@ BankDialogWithdrawAmount = {
 	player setVariable["cashMoney",(_wealth + _amount),true];
 	ZSC_CurrentStorage setVariable["bankMoney",(_bank - _amount),true];
 
-	PVDZE_plr_Save = [player,(magazines player),true,true] ;
-	publicVariableServer "PVDZE_plr_Save";
+	dayzPlayerSave = [player,(magazines player),true,true] ;
+	publicVariableServer "dayzPlayerSave";
 	
 	PVDZE_veh_Update = [ZSC_CurrentStorage,"gear"];
 	publicVariableServer "PVDZE_veh_Update";
@@ -96,8 +96,8 @@ BankDialogDepositAmount = {
 		ZSC_CurrentStorage setVariable["bankMoney",(_bank + _amount),true];
 		cutText [format["You have deposited %1 %2 in the %3.", [_amount] call BIS_fnc_numberText, CurrencyName,_displayName], "PLAIN DOWN"];
 	};
-	PVDZE_plr_Save = [player,(magazines player),true,true] ;
-	publicVariableServer "PVDZE_plr_Save";
+	dayzPlayerSave = [player,(magazines player),true,true] ;
+	publicVariableServer "dayzPlayerSave";
 	
 	PVDZE_veh_Update = [ZSC_CurrentStorage,"gear"];
 	publicVariableServer "PVDZE_veh_Update";
@@ -123,10 +123,10 @@ GivePlayerAmount = {
 
 	_target setVariable["cashMoney",_twealth + _amount, true];
 
-	PVDZE_plr_Save = [player,(magazines player),true,true] ;
-	publicVariableServer "PVDZE_plr_Save";
-	PVDZE_plr_Save = [_target,(magazines _target),true,true] ;
-	publicVariableServer "PVDZE_plr_Save";
+	dayzPlayerSave = [player,(magazines player),true,true] ;
+	publicVariableServer "dayzPlayerSave";
+	dayzPlayerSave = [_target,(magazines _target),true,true] ;
+	publicVariableServer "dayzPlayerSave";
 
 	cutText [format["You gave %1 %2.", _amount, CurrencyName], "PLAIN DOWN"];
 };
