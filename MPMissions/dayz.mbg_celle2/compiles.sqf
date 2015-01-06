@@ -416,8 +416,7 @@ if (!isDedicated) then {
 	player_humanityChange =		compile preprocessFileLineNumbers "player_humanityChange.sqf";
 	spawn_loot =				compile preprocessFileLineNumbers "CustomLoot\spawn_loot.sqf";
 	player_projectileNear = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_projectileNear.sqf";
-	fnc_veh_ResetEH = 			compile preprocessFileLineNumbers "sheep\veh_ResetEH.sqf";			//Initialize vehicle
-	
+
 	player_sumMedical = {
 		private["_character","_wounds","_legs","_arms","_medical"];
 		_character = 	_this;

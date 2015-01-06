@@ -23,7 +23,6 @@ server_spawnAN2 = compile preprocessFileLineNumbers "\z\addons\dayz_server\compi
 server_carepackagedrop = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_carepackagedrop.sqf";
 spawn_carePackages = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fnc_carePkgs.sqf";
 fnc_plyrHit   = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fnc_plyrHit.sqf";
-server_publishVeh2 = 			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_publishVehicle2.sqf";
 //Get instance name (e.g. dayz_1.chernarus)
 fnc_instanceName = {
 	"dayz_" + str(dayz_instance) + "." + worldName
