@@ -276,17 +276,6 @@ class DayZ_loadingScreen
 };
 class CfgSounds
 {	
-	class nitro  {
-		 name="nitro";
-		 sound[]={sheep\NOS\nitro.ogg,0.9,1};
-		 titles[] = {};
-	};
-	class siren
-    {
-		name="siren";
-		sound[]={sheep\sirens\siren.ogg,0.9,1};
-		titles[] = {};
-	};
 	class deathscreen
     {
 		name="deathscreen";
@@ -296,7 +285,7 @@ class CfgSounds
 	class introSong
     {
 		name="introSong";
-		sound[]={sheep\introSong.ogg,0.9,1};
+		sound[]={sheep\introSong.ogg,0.4,1};
 		titles[] = {};
     };
 	class drink_water
