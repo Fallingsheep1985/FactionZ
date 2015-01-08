@@ -9,6 +9,14 @@ Bandage_Cost = 10;
 HeatPack_Cost = 15;
 Antibiotic_Cost = 350;
 Painkiller_Cost = 25;
+//Medical sell
+Morphine_Sell = 5;
+Bloodbag_Sell = 10;
+Epipen_Sell = 1;
+Bandage_Sell = 10;
+HeatPack_Sell = 15;
+Antibiotic_Sell = 15;
+Painkiller_Sell = 1;
 
 //Hunter costs
 Rawbeef_Cost = 250;
@@ -19,6 +27,15 @@ Beartrap_Cost = 450;
 Compass_Cost = 150;
 Map_Cost = 200;
 Matches_Cost = 50;
+//Hunter sell
+Rawbeef_Sell = 10;
+Cooked_Beef = 20;
+Knife_Sell = 1;
+Axe_Sell = 5;
+Beartrap_Sell = 20;
+Compass_Sell = 5;
+Map_Sell = 10;
+Matches_Sell = 1;
 
 //Mechanic costs
 Wheel_Cost = 150;
@@ -29,6 +46,15 @@ Rotor_Cost = 300;
 Glass_Cost = 20;
 Jerrycan_Cost = 20;
 Toolbox_Cost = 10;
+//Mechanic sell
+Wheel_Sell = 5;
+Fueltank_Sell = 1;
+Scrap_Sell = 1;
+Engine_Sell = 10;
+Rotor_Sell = 15;
+Glass_Sell = 1;
+Jerrycan_Sell = 1;
+Toolbox_Sell = 1;
 
 //Ammo
 RH_7Rnd_50_AE_Cost = 250;
@@ -66,37 +92,6 @@ A_15Rnd_W1866_Slug_Cost = 250;
 A_2Rnd_shotgun_74Slug_Cost = 250;
 A_8Rnd_B_Beneli_74Pellets_Cost = 250;
 A_8Rnd_B_Beneli_74Slug_Cost = 250;
-
-
-//Sell Price
-//Medical sell
-Morphine_Sell = 5;
-Bloodbag_Sell = 10;
-Epipen_Sell = 1;
-Bandage_Sell = 10;
-HeatPack_Sell = 15;
-Antibiotic_Sell = 15;
-Painkiller_Sell = 1;
-
-//Hunter sell
-Rawbeef_Sell = 10;
-Cooked_Beef = 20;
-Knife_Sell = 1;
-Axe_Sell = 5;
-Beartrap_Sell = 20;
-Compass_Sell = 5;
-Map_Sell = 10;
-Matches_Sell = 1;
-
-//Mechanic sell
-Wheel_Sell = 5;
-Fueltank_Sell = 1;
-Scrap_Sell = 1;
-Engine_Sell = 10;
-Rotor_Sell = 15;
-Glass_Sell = 1;
-Jerrycan_Sell = 1;
-Toolbox_Sell = 1;
 
 //Do not change!
 DoctorTrader = ["Doctor_DZC"];

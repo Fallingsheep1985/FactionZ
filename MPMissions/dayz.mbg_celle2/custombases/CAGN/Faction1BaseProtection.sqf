@@ -24,6 +24,7 @@ _thePlayer = player;
 _playerUID = getPlayerUID player;
 
 while {true} do {
+if (Faction1BaseGodmode) then {
 	if ((_playerUID in FactionLoadout1)||(_playerUID in AdminUidLoadout)) then{
 		waitUntil { !canBuild };
 		_inSafezoneFinished = false;
@@ -75,4 +76,5 @@ systemChat ("[AGN] Exiting Base Area");
 		};
 	_inSafezoneFinished = true;
 	};
+};
 };

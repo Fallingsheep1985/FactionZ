@@ -1,4 +1,5 @@
 _playerUID = getPlayerUID player;
+if (Faction5BaseProtection) then {
 if ((_playerUID in FactionLoadout5)||(_playerUID in AdminUidLoadout)) exitWith { 
 titleText ["Welcome home.", "PLAIN DOWN", 3]; //or,\\ titleText [format ["Welcome, %1", name player], "PLAIN DOWN"]; // welcomes you with your name
 };
@@ -14,3 +15,4 @@ sleep 5;
 titleText ["You were warned!.", "PLAIN DOWN", 3];
 sleep 2;
 player setDamage 1;
+};

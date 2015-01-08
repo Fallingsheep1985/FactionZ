@@ -5,11 +5,6 @@ startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
 
-//How many Vigils to gain from killing a zombie
-Zed_Vigil_Amount = 1;
-//How much humanity to gain from killing a zed
-Zed_Humanity_Amount = 1;
-
 //REALLY IMPORTANT VALUES
 dayZ_instance = 35380;
 dayzHiveRequest = [];
