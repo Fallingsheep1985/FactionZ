@@ -88,8 +88,8 @@ FactionLoadout7 = ["76561198038049741","76561197979297873","76561198045763029","
 	Faction7Perk7 = false; // Toolbox
 	//Perks
 	Faction7Perk8 = false; // DeployBike
-//FACTION 8
-FactionLoadout8 = ["","","",""];//
+//FACTION 8 - Solo player
+FactionLoadout8 = ["76561198043981499","","",""];//RavenKinomoto
 	Faction8Perk1 = false; //Binocs
 	Faction8Perk2 = false; //Rangefinder
 	Faction8Perk3 = false; //Pistol
@@ -99,7 +99,7 @@ FactionLoadout8 = ["","","",""];//
 	Faction8Perk7 = false; // Toolbox
 	//Perks
 	Faction8Perk8 = false; // DeployBike
-//FACTION 9
+//FACTION 9 -
 FactionLoadout9 = ["","","",""];//
 	Faction9Perk1 = false; //Binocs
 	Faction9Perk2 = false; //Rangefinder
