@@ -290,7 +290,7 @@ class CfgLoot {
 			0.05,  //"ItemBandage",
 			0.02,  //"ItemPainkiller",
 			0.04,  //"15Rnd_9x19_M9",
-			0.04 //"30Rnd_9x19_MP5",
+			0.04, //"30Rnd_9x19_MP5",
 			0.04,  //"20Rnd_556x45_Stanag",
 			0.04,  //"30Rnd_556x45_Stanag",
 			0.03,  //"RH_57x28mm_50RND_Mag",
