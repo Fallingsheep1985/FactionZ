@@ -23,7 +23,7 @@ FactionLoadout1 = ["76561198039003844","76561198086577639","76561197970346406","
 	//Perks
 	Faction1Perk8 = false; //Deploy Bike
 //FACTION 2 - [DZZ] D'zz Nutzz
-FactionLoadout2 = ["76561197965905796","76561198076115834","76561198068127556",""]; //Cerberuscx - Ozzyosbone - BigDaddy
+FactionLoadout2 = ["76561197965905796","76561198076115834","76561198068127556","76561198042363732"]; //Cerberuscx - Ozzyosbone - BigDaddy - Zhecky
 	Faction2Perk1 = false; //Binocs
 	Faction2Perk2 = false; //Rangefinder
 	Faction2Perk3 = false; //Pistol
@@ -34,7 +34,7 @@ FactionLoadout2 = ["76561197965905796","76561198076115834","76561198068127556","
 	//Perks
 	Faction2Perk8 = false; //Deploy Bike
 //FACTION 3 - [GH] Gewekt Heren
-FactionLoadout3 = ["76561197961056736","","",""];//TheBS
+FactionLoadout3 = ["76561197961056736","76561198002245705","",""];//TheBS - Bigfootscock
 	Faction3Perk1 = false; //Binocs
 	Faction3Perk2 = false; //Rangefinder
 	Faction3Perk3 = false; //Pistol
@@ -67,7 +67,7 @@ FactionLoadout5 = ["76561198058236054","76561198046229170","",""];//kicks - dowk
 	//Perks
 	Faction5Perk8 = false; // DeployBike
 //FACTION 6 - [Sup] Supreme
-FactionLoadout6 = ["76561198027622133","76561198079231362","",""];//2Lou2 - Voracious 
+FactionLoadout6 = ["76561198027622133","76561198079231362","76561198068033323","76561198074308170"];//2Lou2 - Voracious - CowboyCam (CEOBrien) - GrozaV91 
 	Faction6Perk1 = false; //Binocs
 	Faction6Perk2 = false; //Rangefinder
 	Faction6Perk3 = false; //Pistol
@@ -77,8 +77,8 @@ FactionLoadout6 = ["76561198027622133","76561198079231362","",""];//2Lou2 - Vora
 	Faction6Perk7 = false; // Toolbox
 	//Perks
 	Faction6Perk8 = false; // DeployBike
-//FACTION 7
-FactionLoadout7 = ["","","",""];//
+//FACTION 7 - [G] Gents
+FactionLoadout7 = ["76561198038049741","76561197979297873","76561198045763029",""];// Dorkis - Ghosty - Duke
 	Faction7Perk1 = false; //Binocs
 	Faction7Perk2 = false; //Rangefinder
 	Faction7Perk3 = false; //Pistol
