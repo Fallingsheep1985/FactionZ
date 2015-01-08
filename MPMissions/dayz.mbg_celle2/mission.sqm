@@ -26002,8 +26002,8 @@ class Mission
 		class Item0
 		{
 			position[]={6459,0,9037};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26019,8 +26019,8 @@ class Mission
 		class Item1
 		{
 			position[]={212,0,1769};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26036,8 +26036,8 @@ class Mission
 		class Item2
 		{
 			position[]={1136,0,8885};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26053,8 +26053,8 @@ class Mission
 		class Item3
 		{
 			position[]={11169,0,7757};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26070,8 +26070,8 @@ class Mission
 		class Item4
 		{
 			position[]={1692,0,530};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26087,8 +26087,8 @@ class Mission
 		class Item5
 		{
 			position[]={9172,0,11553};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26104,8 +26104,8 @@ class Mission
 		class Item6
 		{
 			position[]={860,0,5239};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26121,8 +26121,8 @@ class Mission
 		class Item7
 		{
 			position[]={8699,0,10175};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26138,8 +26138,8 @@ class Mission
 		class Item8
 		{
 			position[]={2969,0,9162};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
@@ -26155,8 +26155,8 @@ class Mission
 		class Item9
 		{
 			position[]={0,0,0};
-			a=20;
-			b=20;
+			a=10;
+			b=10;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
