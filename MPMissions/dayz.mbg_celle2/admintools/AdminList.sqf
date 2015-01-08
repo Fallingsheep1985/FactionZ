@@ -27,6 +27,6 @@ broadcastToolUse = false;
 	logMinorTool = false;
 
 tempList = [];
-
+if (isNil "toolsAreActive") then {toolsAreActive = true;};
 adminListLoaded = true;
 diag_log("Admin Tools: AdminList.sqf loaded");
