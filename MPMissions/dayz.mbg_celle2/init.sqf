@@ -66,7 +66,17 @@ if (isServer) then {
 	//Sheeps Kill Pit
 	//execVM "Custombases\sheepkillpit.sqf";
 	//Bases
-	execVM "Custombases\puntest.sqf";
+	execVM "Custombases\base1.sqf";
+	execVM "Custombases\base2.sqf";
+	execVM "Custombases\base3.sqf";
+	execVM "Custombases\base4.sqf";
+	execVM "Custombases\base5.sqf";
+	execVM "Custombases\base6.sqf";
+	execVM "Custombases\base7.sqf";
+	execVM "Custombases\base8.sqf";
+	execVM "Custombases\base9.sqf";
+	execVM "Custombases\base10.sqf";
+	execVM "Custombases\base11.sqf";
 	//Extra street lights
 	//Lights
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";

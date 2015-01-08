@@ -99,8 +99,8 @@ FactionLoadout8 = ["76561198043981499","","",""];//RavenKinomoto
 	Faction8Perk7 = false; // Toolbox
 	//Perks
 	Faction8Perk8 = false; // DeployBike
-//FACTION 9 -
-FactionLoadout9 = ["","","",""];//
+//FACTION 9 - Solo player
+FactionLoadout9 = ["76561198002068242","","",""];//Pathy
 	Faction9Perk1 = false; //Binocs
 	Faction9Perk2 = false; //Rangefinder
 	Faction9Perk3 = false; //Pistol
