@@ -1244,68 +1244,68 @@ class Hunting: Default {
 		maxRoaming = 8;
 		lootPos[] = {};
 		itemType[] =	{
-			{"","military"}, 
-			//{"","trash"}, 
-			//{"", "medical"}, 
-			{"ItemMap","weapon"}, 
-			{"ItemCompass", "generic"}, 
-			{"RH_g19t","weapon"}, 
-			{"RH_uspm","weapon"}, //Pistol
-			{"RH_tt33","weapon"}, //Pistol
-			{"Remington870_lamp","weapon"}, 
-			{"RH_mp7aim","weapon"},
-			{"G36K","weapon"}, 
-			{"RH_ump","weapon"},	
-			//{"RH_xm8dc","weapon"},
-			{"G36a_CAMO","weapon"}, 
-			{"RH_mp7RFX","weapon"}, 		
-			{"RH_mp7sdeot","weapon"}, 
-			{//"RH_MK43","weapon"},	
-			{"WeaponHolder_PartGeneric", "object"}, 
-			{"WeaponHolder_PartVRotor", "object"}, 
-			{"RH_g19","weapon"}, 
-			{"ItemGPS","weapon"}, 
-			{"Skin_CIV_Pilot1_DZC","magazine"},
-			{"Skin_Snow_Trooper1_DZC","magazine"},
-			{"Skin_Snow_Trooper2_DZC","magazine"}, 
-			{"Skin_GER_Officer1_DZC","magazine"},	
-			{"Skin_HazmatVest_Black_DZC","magazine"},
-			{"Skin_Soldier1_GL_DZC","magazine"}, 
-			{"Skin_Soldier2_GL_DZC","magazine"},	
-			{"DZ_Czech_Vest_Pouch","object"}, //Vest Pouch
-			{"DZ_CivilBackpack_EP1","object"} //Backpack
+		{"","military"}, 
+		//{"","trash"}, 
+		//{"", "medical"}, 
+		{"ItemMap","weapon"}, 
+		{"ItemCompass", "generic"}, 
+		{"RH_g19t","weapon"}, 
+		{"RH_uspm","weapon"}, //Pistol
+		{"RH_tt33","weapon"}, //Pistol
+		{"Remington870_lamp","weapon"}, 
+		{"RH_mp7aim","weapon"},
+		{"G36K","weapon"}, 
+		{"RH_ump","weapon"},	
+		//{"RH_xm8dc","weapon"},
+		{"G36a_CAMO","weapon"}, 
+		{"RH_mp7RFX","weapon"}, 		
+		{"RH_mp7sdeot","weapon"}, 
+		{//"RH_MK43","weapon"},	
+		{"WeaponHolder_PartGeneric", "object"}, 
+		{"WeaponHolder_PartVRotor", "object"}, 
+		{"RH_g19","weapon"}, 
+		{"ItemGPS","weapon"}, 
+		{"Skin_CIV_Pilot1_DZC","magazine"},
+		{"Skin_Snow_Trooper1_DZC","magazine"},
+		{"Skin_Snow_Trooper2_DZC","magazine"}, 
+		{"Skin_GER_Officer1_DZC","magazine"},	
+		{"Skin_HazmatVest_Black_DZC","magazine"},
+		{"Skin_Soldier1_GL_DZC","magazine"}, 
+		{"Skin_Soldier2_GL_DZC","magazine"},	
+		{"DZ_Czech_Vest_Pouch","object"}, //Vest Pouch
+		{"DZ_CivilBackpack_EP1","object"} //Backpack
 		};
 		itemChance[] =	{
-			1.00,	//military
-			//0.40,	//trash
-			//0.20,	//medical
-			0.10,	//ItemMap
-			0.15,	//ItemCompass
-			0.15,	//RH_g19t
-			0.05,	//RH_uspm
-			0.10,	//RH_tt33
-			0.02,   //Remington870_lamp
-			0.05,   //RH_mp7aim
-			0.05,   //G36K
-			0.04,	//RH_ump
-			//0.04,   //RH_xm8dc
-			0.05,   //G36a_CAMO
-			0.04,   //RH_mp7RFX"
-			0.02,   //RH_mp7sdeot
-			//0.02,   //RH_MK43
-			0.10,	//Scrap
-			0.03,	//Rotor
-			0.04,
-			0.05,
-			0.03,
-			0.01,
-			0.01,
-			0.04,
-			0.01,
-			0.03,
-			0.03,
-			0.06,
-			0.01	//Equals 1.0
+		1.00,	//military
+		//0.40,	//trash
+		//0.20,	//medical
+		0.10,	//ItemMap
+		0.15,	//ItemCompass
+		0.15,	//RH_g19t
+		0.05,	//RH_uspm
+		0.10,	//RH_tt33
+		0.02,   //Remington870_lamp
+		0.05,   //RH_mp7aim
+		0.05,   //G36K
+		0.04,	//RH_ump
+		//0.04,   //RH_xm8dc
+		0.05,   //G36a_CAMO
+		0.04,   //RH_mp7RFX"
+		0.02,   //RH_mp7sdeot
+		//0.02,   //RH_MK43
+		0.10,	//Scrap
+		0.03,	//Rotor
+		0.04,
+		0.05,
+		0.03,
+		0.01,
+		0.01,
+		0.04,
+		0.01,
+		0.03,
+		0.03,
+		0.06,
+		0.01	//Equals 1.0
 		};
 	};
 
