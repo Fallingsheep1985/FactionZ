@@ -4047,7 +4047,7 @@ publicVariable '"+_randvar28+"';
 						<t size='0.8' font='Bitstream' align='Center' >Players Online: %12</t><br/>
 						<img size='4.75' image='%4'/><br/>
 						<t size='1' font='Bitstream' align='left' color='#CC0000'>Blood: </t><t size='1' font='Bitstream' align='right'>%2</t><br/>
-						<t size='1' font='Bitstream' align='left' color='#0066CC'>Humanity: </t><t size='1' font='Bitstream' align='right'>%3</t><br/>
+						<t size='1' font='Bitstream' align='left' color='#0066CC'>Experience: </t><t size='1' font='Bitstream' align='right'>%3</t><br/>
 						<br/>
 						<t size='1' font='Bitstream' align='left' color='#FFBF00'>Zombie Kills: </t><t size='1' font='Bitstream' align='right'>%9</t><br/>
 						<t size='1' font='Bitstream' align='left' color='#FFBF00'>Murders: </t><t size='1' font='Bitstream' align='right'>%10</t><br/>
