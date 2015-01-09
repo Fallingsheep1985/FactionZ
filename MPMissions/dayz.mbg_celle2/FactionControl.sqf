@@ -157,6 +157,7 @@ Faction10BaseGodmode = true;
 //																		//
 ////////////////////////////////////////////////////////////////////////////////////
 Zed_Humanity_Amount = 5;//How much humanity to gain from killing a zed
+Player_Humanity_Amount = 1000;//How much humanity to gain from killing a player
 
 PRESESAONWINNERS = ["76561198039003844","76561198000962997"]; //ignores humanity check for deploy bike
 Deploybike = 2500; //Humanity needed to use/unlock
@@ -167,4 +168,4 @@ Deploybike = 2500; //Humanity needed to use/unlock
 //																		//
 ////////////////////////////////////////////////////////////////////////////////////
 Zed_Vigil_Amount = 1;//How many Vigils to gain from killing a zombie
-Player_Vigil_Amount = 1000;//How many Vigils to gain from killing a player
+Player_Vigil_Amount = 100;//How many Vigils to gain from killing a player

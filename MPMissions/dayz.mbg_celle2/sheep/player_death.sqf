@@ -44,10 +44,19 @@ if (count _array > 0) then {
 			_myKills = 		((player getVariable ["humanKills",0]) / 30) * 1000;
 			if (!_canHitFree and !_isBandit) then {
 				//Process Morality Hit
-				_humanity = -(2000 - _myKills);
+				_humanity = (_humanity + Player_Humanity_Amount);
 				_kills = 		_source getVariable ["humanKills",0];
 				_source setVariable ["humanKills",(_kills + 1),true];
+				//Vigils
+				_wealth = _source getVariable["cashMoney",0];
+				_newwealth = _wealth + Player_Vigil_Amount;
+				_source setVariable["cashMoney",_newwealth, true];
+				_source setVariable ["moneychanged",1,true];
+				dayzPlayerSave = [_source,(magazines _source),true,true] ;
+				publicVariableServer "dayzPlayerSave";
+				
 				_wait = 300;
+				
 			} else {
 				//Process Morality Hit
 				//_humanity = _myKills * 100;
@@ -62,6 +71,8 @@ if (count _array > 0) then {
 				//["dayzHumanity",[_source,_humanity,_wait]] call broadcastRpcCallAll;
 				dayzHumanity = [_source,_humanity,_wait];
 				publicVariable "dayzHumanity";
+				dayzPlayerSave = [_source,(magazines _source),true,true] ;
+				publicVariableServer "dayzPlayerSave";
 			};
 		};
 	};
