@@ -72,6 +72,8 @@ if (isServer) then {
 	execVM "Custombases\base9.sqf";
 	execVM "Custombases\base10.sqf";
 	execVM "Custombases\base11.sqf";
+	//doctor trader
+	execVM "Custombases\doctortrader.sqf";
 	//Extra street lights
 	//Lights
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
