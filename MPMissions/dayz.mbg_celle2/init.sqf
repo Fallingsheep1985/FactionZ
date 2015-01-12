@@ -18,6 +18,8 @@ dayz_paraSpawn = false;
 //Load faction stuff
 execVM "FactionControl.sqf";
 execVM "TraderControl.sqf";
+//Base protection set up
+canBuild = true;
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "sheep\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
@@ -31,19 +33,11 @@ progressLoadingScreen 0.7;
 call compile preprocessFileLineNumbers "compiles.sqf";				//Compile regular functions
 //Sheeps Tools
 call compile preprocessFileLineNumbers "admintools\AdminList.sqf";
+//Custom Right Click Actions
+call compile preprocessFileLineNumbers "click_actions\init.sqf";
 progressLoadingScreen 1.0;
 
 "filmic" setToneMappingParams [0.153, 0.357, 0.231, 0.1573, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
-
-// Overwrites
-player_humanityChange 			= compile preprocessFileLineNumbers "player_humanityChange.sqf"; //dgx
-player_spawn_2 			= compile preprocessFileLineNumbers "player_spawn_2.sqf"; //dgx
-
-//Base protection set up
-canBuild = true;
-
-//Custom Right Click Actions
-call compile preprocessFileLineNumbers "click_actions\init.sqf";
 
 if ((!isServer) && (isNull player) ) then
 {
@@ -96,8 +90,7 @@ if (!isDedicated) then {
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "player_monitor.sqf";
-	//StreetLights
-		//Lights
+	//Lights
 	DZ_HouseLights = true;
 	DZ_TowerLights = true;
 	DZ_LightChance = 42;
@@ -108,7 +101,6 @@ if (!isDedicated) then {
 //[] execVM "CustomLoadout\Loadout.sqf"; //also call intro music so it only happens on new spawns
 //Base Safe zones
 execVM "custombases\CAGN\initiate.sqf";	
-
 //Sheeps Tools
 [] execVM "admintools\Activate.sqf";
 
