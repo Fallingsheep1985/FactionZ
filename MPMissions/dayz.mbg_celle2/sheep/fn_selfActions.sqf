@@ -32,6 +32,7 @@ _playerUID = getPlayerUID player;
 
 _hasKnife = 	"ItemKnife" in weapons player;
 _hasToolbox = 	"ItemToolbox" in weapons player;
+_hasMatches = "ItemMatchbox" in items player;
 //_hasTent = 		"ItemTent" in weapons player;
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _nearLight = 	nearestObject [player,"LitObject"];
@@ -208,7 +209,15 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_fireout;
 		s_player_fireout = -1;
 	};
-	
+	  //Allow player to set tent on fire
+    if(_isTent and _hasMatches and _canDo and !_isMan) then {
+        if (s_player_igniteTent < 0) then {
+            s_player_igniteTent = player addAction [format["Burn down Tent."], "sheep\tent_ignite.sqf",cursorTarget, 1, true, true, "", ""];
+        };
+    } else {
+        player removeAction s_player_igniteTent;
+        s_player_igniteTent = -1;
+    };
 	//Packing my tent
 	if(cursorTarget isKindOf "TentStorage" and _canDo and _ownerID == dayz_characterID) then {
 		if ((s_player_packtent < 0) and (player distance cursorTarget < 3)) then {
@@ -563,6 +572,9 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_player_buy3 = -1;
 	player removeAction s_player_buy4;
 	s_player_buy4 = -1;
+	player removeAction s_player_igniteTent;
+	s_player_igniteTent = -1;
+	
 };
 
 // ----------------------------- / Drink water \ ----------------------
