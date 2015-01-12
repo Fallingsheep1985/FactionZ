@@ -816,6 +816,17 @@ class AdminDialog
 		};
 	};
 };
+
+class CfgFunctions {
+    class DZN {
+        class Functions {
+            class snowfall {
+                description = "Simple snowfall script";
+                file = "sheep\fn_dzn_snowfall.sqf";
+            };
+        };
+    };
+};
 #include "ZSC\config\ZSCdefines.hpp"
 #include "ZSC\config\ZSCdialogs.hpp"
 //Trade
