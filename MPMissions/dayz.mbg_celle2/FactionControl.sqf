@@ -123,12 +123,14 @@ FactionLoadout10 = ["","","",""];//
 	DefaultPerk5 = false; // medical supplies in backpack
 	DefaultPerk6 = true; //backpack
 	DefaultPerk7 = false; // Toolbox
+	
 /////////////////////////////////////////////////////////////////////////////////////
 //																		//
-//					BASE PROTECTION /BASE GOD MODE SYSTEM					//
+//							BASE  SYSTEM									//
 //																		//
 ////////////////////////////////////////////////////////////////////////////////////
-//Domes locations set in mission.SQM under Sensors
+
+//Domes locations are set in MISSION.SQM under Sensors!!!
 Faction1BaseProtection = true;
 Faction2BaseProtection = true;
 Faction3BaseProtection = true;
@@ -150,7 +152,33 @@ Faction6BaseGodmode = true;
 Faction7BaseGodmode = true;
 Faction8BaseGodmode = true;
 Faction9BaseGodmode = true;
-Faction10BaseGodmode = true;	
+Faction10BaseGodmode = true;
+
+//faction base locations
+faction1basepos = base7pos;
+faction2basepos = base2pos;
+faction3basepos = base4pos;
+faction4basepos = base11pos;
+faction5basepos = base1pos;
+faction6basepos = base9pos;
+faction7basepos = base3pos;
+faction8basepos = base8pos;
+faction9basepos = base5pos;
+faction10basepos = nobase;
+
+//base locations
+base1pos = [1692, 530];
+base2pos = [212, 1769];
+base3pos = [860, 5239];
+base4pos = [1136, 8885];
+base5pos = [2969, 9162];
+base6pos = [4299, 10447];
+base7pos = [6459, 9037];
+base8pos = [8699, 10175];
+base9pos = [9172, 11553];
+base10pos = [10796, 9112];
+base11pos = [11169, 7757];	
+nobase =[0,0];
 /////////////////////////////////////////////////////////////////////////////////////
 //																		//
 //								PERK SYSTEM								//
@@ -162,6 +190,8 @@ Player_Humanity_Amount = 1000;//How much humanity to gain from killing a player
 PRESESAONWINNERS = ["76561198039003844","76561198000962997"]; //ignores humanity check for deploy bike
 Deploybike = 2500; //Humanity needed to use/unlock
 
+basespawn_cost = 250; //cost to spawn at base
+
 /////////////////////////////////////////////////////////////////////////////////////
 //																		//
 //							  VIGIL SYSTEM								//
@@ -169,3 +199,8 @@ Deploybike = 2500; //Humanity needed to use/unlock
 ////////////////////////////////////////////////////////////////////////////////////
 Zed_Vigil_Amount = 1;//How many Vigils to gain from killing a zombie
 Player_Vigil_Amount = 100;//How many Vigils to gain from killing a player
+
+
+//DO NOT EDIT!!
+//All faction UIDs
+IsInAFaction = FactionLoadout1+FactionLoadout2+FactionLoadout3+FactionLoadout4+FactionLoadout5+FactionLoadout6+FactionLoadout7+FactionLoadout8+FactionLoadout9+FactionLoadout10;
