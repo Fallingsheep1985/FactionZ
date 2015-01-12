@@ -73,20 +73,19 @@ if (isServer) then {
 	execVM "Custombases\base10.sqf";
 	execVM "Custombases\base11.sqf";
 	//doctor trader
-	execVM "Custombases\doctortrader.sqf";
+	execVM "Custombases\doctortrader.sqf";// base around trader
+	execVM "trader\doctortrader.sqf"; // the trader 
 	//Extra street lights
 	//Lights
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
     "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};
 	execVM "Custombases\extrastreetlights.sqf";
-	//Doctor Trader
-	execVM "trader\doctortrader.sqf";
 	//Hunter Trader
-	execVM "trader\huntertrader.sqf";
+	//execVM "trader\huntertrader.sqf";
 	//Mechanic Trader
-	execVM "trader\mechanictrader.sqf";
+	//execVM "trader\mechanictrader.sqf";
 	//Ammo Trader
-	execVM "trader\ammotrader.sqf";
+	//execVM "trader\ammotrader.sqf";
 };
 
 if (!isDedicated) then {
