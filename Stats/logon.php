@@ -88,61 +88,81 @@ while ($row2 = mysql_fetch_array($result7)) {
 	$totaldeadplayers += 1;
 }
 //Highest Zombie kills
-$sql8="SELECT * FROM character_data WHERE KillsZ =(SELECT Max(KillsZ) FROM character_data)";	
+$sql8="SELECT * FROM character_data LEFT JOIN player_data ON character_data.playerUID = player_data.playerUID WHERE KillsZ =(SELECT Max(KillsZ) FROM character_data)
+";	
 $result8 = mysql_query($sql8, $con);
 while ($row2 = mysql_fetch_array($result8)) {
 	$hkz2 = (array_slice($row2, 29, 1));
 	$highestkillsZ = implode(',',$hkz2);
+		$name1 =(array_slice($row2, 52, 1));
+	$kzname = implode(',',$name1);
 }
 //Highest Murders
-$sql9="SELECT * FROM character_data WHERE KillsH =(SELECT Max(KillsH) FROM character_data)";	
+$sql9="SELECT * FROM character_data LEFT JOIN player_data ON character_data.playerUID = player_data.playerUID WHERE KillsH =(SELECT Max(KillsH) FROM character_data)";	
 $result9 = mysql_query($sql9, $con);
 while ($row2 = mysql_fetch_array($result9)) {
 	$hkz2 = (array_slice($row2, 38, 1));
 	$highestkillsH = implode(',',$hkz2);
+		$name1 =(array_slice($row2, 52, 1));
+	$khname = implode(',',$name1);
 }
 //Highest Bandit (AI) kills
-$sql10="SELECT * FROM character_data WHERE KillsB =(SELECT Max(KillsB) FROM character_data)";	
+$sql10="SELECT * FROM character_data LEFT JOIN player_data ON character_data.playerUID = player_data.playerUID WHERE KillsB =(SELECT Max(KillsB) FROM character_data)";	
 $result10 = mysql_query($sql10, $con);
 while ($row2 = mysql_fetch_array($result10)) {
 	$hkz2 = (array_slice($row2, 42, 1));
 	$highestkillsB = implode(',',$hkz2);
+		$name1 =(array_slice($row2, 52, 1));
+	$kbname = implode(',',$name1);
 }
 //Highest distance travelled
-$sql11="SELECT * FROM character_data WHERE distanceFoot =(SELECT Max(distanceFoot) FROM character_data)";	
+$sql11="SELECT * FROM character_data LEFT JOIN player_data ON character_data.playerUID = player_data.playerUID WHERE distanceFoot =(SELECT Max(distanceFoot) FROM character_data)";	
 $result11 = mysql_query($sql11, $con);
 while ($row2 = mysql_fetch_array($result11)) {
 	$hkz2 = (array_slice($row2, 32, 1));
 	$highestdistance = implode(',',$hkz2);
+		$name1 =(array_slice($row2, 52, 1));
+	$hdname = implode(',',$name1);
 }
 //Longest survived
-$sql12="SELECT * FROM character_data WHERE duration =(SELECT Max(duration) FROM character_data)";	
+$sql12="SELECT * FROM character_data LEFT JOIN player_data ON character_data.playerUID = player_data.playerUID WHERE duration =(SELECT Max(duration) FROM character_data)
+";	
 $result12 = mysql_query($sql12, $con);
 while ($row2 = mysql_fetch_array($result12)) {
 	$hkz22 = (array_slice($row2, 34, 1));
+	$name1 =(array_slice($row2, 52, 1));
+	$lsname = implode(',',$name1);
 	$longest = implode(',',$hkz22);
 }
 //Most Deaths
-$sql13="SELECT playerUID FROM character_dead"; 
+$sql13="SELECT playerUID AS UID, COUNT(playerUID) AS count  FROM character_dead GROUP BY playerUID ORDER BY count DESC LIMIT 1"; 
 $result13 = mysql_query($sql13, $con);
 while ($row2 = mysql_fetch_array($result13)) {
-$row3 = $row2["playerUID"];
-$row4 = array_count_values($row3);
-$value = implode('',$row3);
-echo $value;
+	$hkz22 = (array_slice($row2, 3, 1));	
+	$mostdeaths = implode('',$hkz22);
+	$deathid = (array_slice($row2, 1, 1));	
+	$did = implode('',$deathid);
+	//get name
+	$sql14="SELECT playerName FROM player_data WHERE  playerUID = '$did'"; 
+	$result14 = mysql_query($sql14, $con);
+	while ($row2 = mysql_fetch_array($result14)) {
+	$dth = (array_slice($row2, 0, -1));
+	$dthname = implode('',$dth);
+	}
 }
-$mostdeaths = $value;
+
+
 
 
 //Write highest stats to file
 fwrite($myfile, $spacerline);
 fwrite($myfile, $spacer);
-fwrite($myfile, "Highest Zombie Kills: ".$highestkillsZ."\n");
-fwrite($myfile, "Highest Murders: ".$highestkillsH."\n");
-fwrite($myfile, "Highest Bandit Kills: ".$highestkillsB."\n");
-fwrite($myfile, "Highest Distance Travelled: ".$highestdistance."\n");
-fwrite($myfile, "Survived Longest: ".$longest."\n");
-fwrite($myfile, "Most deaths: ".$mostdeaths."\n");
+fwrite($myfile, "Highest Zombie Kills: ".$kzname." - ".$highestkillsZ."\n");
+fwrite($myfile, "Highest Murders: ".$khname." - ".$highestkillsH."\n");
+fwrite($myfile, "Highest Bandit Kills: ".$kbname." - ".$highestkillsB."\n");
+fwrite($myfile, "Highest Distance Travelled: ".$hdname." - ".$highestdistance."\n");
+fwrite($myfile, "Survived Longest: ".$lsname." - ".$longest."\n");
+fwrite($myfile, "Most deaths: ".$dthname." - ".$mostdeaths."\n");
 fwrite($myfile, $spacerline);
 fwrite($myfile, $spacer);
 echo "Global stats: completed <br>";
