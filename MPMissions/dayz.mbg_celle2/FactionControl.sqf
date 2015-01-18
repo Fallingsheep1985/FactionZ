@@ -190,7 +190,7 @@ Player_Humanity_Amount = 1000;//How much humanity to gain from killing a player
 PRESESAONWINNERS = ["76561198039003844","76561198000962997"]; //ignores humanity check for deploy bike
 Deploybike = 2500; //Humanity needed to use/unlock
 
-basespawn_cost = 250; //cost to spawn at base
+basespawn_cost = 0; //cost to spawn at base
 
 /////////////////////////////////////////////////////////////////////////////////////
 //																		//
