@@ -16,7 +16,7 @@ _nearSpawnPos = ((dayz_spawnPos distance _charPos) < 100);
 _xCoord = _charPos select 0;
 _yCoord = _charPos select 1;
 
-if ((_xCoord > 15360 or _xCoord < 0 or _yCoord > 15360 or _yCoord < 0) and !_nearDebug and !_nearSpawnPos) then {	
+if ((_xCoord > MAP_MAX_x or _xCoord < MAP_MIN_x or _yCoord > MAP_MAX_y or _yCoord < MAP_MIN_y) and !_nearDebug and !_nearSpawnPos) then {	
 	systemChat ("OUTOFBOUNDS: You are OUTOFBOUNDS! \n  You have 10 seconds to go back or die!"); 
 	sleep 5;
 	systemChat ("OUTOFBOUNDS: 5 seconds to go back!"); 

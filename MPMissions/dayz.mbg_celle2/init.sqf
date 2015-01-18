@@ -13,8 +13,12 @@ dayz_previousID = 0;
 dayz_antihack = 0;
 dayz_REsec = 0;
 dayz_spawnselection = 0;
-dayz_spawnselection = 0;
 dayz_paraSpawn = false;
+//Map size
+MAP_MAX_x = 15360;
+MAP_MIN_x = 0;
+MAP_MAX_y = 15360;
+MAP_MIN_y = 0;
 //Load faction stuff
 execVM "FactionControl.sqf";
 execVM "TraderControl.sqf";
