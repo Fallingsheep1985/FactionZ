@@ -184,19 +184,6 @@ Faction7BaseGodmode = true;
 Faction8BaseGodmode = true;
 Faction9BaseGodmode = true;
 Faction10BaseGodmode = true;
-
-//faction base locations
-faction1basepos = base7pos;
-faction2basepos = base2pos;
-faction3basepos = base4pos;
-faction4basepos = base11pos;
-faction5basepos = base1pos;
-faction6basepos = base9pos;
-faction7basepos = base3pos;
-faction8basepos = base8pos;
-faction9basepos = base5pos;
-faction10basepos = nobase;
-
 //base locations
 base1pos = [1692, 530];
 base2pos = [212, 1769];
@@ -210,6 +197,20 @@ base9pos = [9172, 11553];
 base10pos = [10796, 9112];
 base11pos = [11169, 7757];	
 nobase =[0,0];
+
+//faction base locations
+faction1basepos = base7pos;
+faction2basepos = base2pos;
+faction3basepos = base4pos;
+faction4basepos = base11pos;
+faction5basepos = base1pos;
+faction6basepos = base9pos;
+faction7basepos = base3pos;
+faction8basepos = base8pos;
+faction9basepos = base5pos;
+faction10basepos = nobase;
+
+
 //////////////////////////////////////////////////////////////////////////
 //																		//
 //								PERK SYSTEM								//
