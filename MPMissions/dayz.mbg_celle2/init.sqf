@@ -96,6 +96,8 @@ if (!isDedicated) then {
 	DZ_LightChance = 42;
 	[] execVM "lights\local_lights_init.sqf";
 	[] execVM "lights\street_lights.sqf";
+	//outofboundscheck
+	[] execVM "custombases\CAGN\outofbounds.sqf";
 };
 //Custom Loadout
 //[] execVM "CustomLoadout\Loadout.sqf"; //also call intro music so it only happens on new spawns
