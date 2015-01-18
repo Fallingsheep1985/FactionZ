@@ -441,7 +441,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 /////////////////////////////////////
 //		FLAGPOLE	
 /////////////////////////////////////
-	if(cursorTarget isKindOf "FlagPole_EP1")then {
+	if((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in AdminUidLoadout) && AdminPerk9)||(((getPlayerUID player) in FactionLoadout1) && Faction1Perk9)||(((getPlayerUID player) in FactionLoadout2) && Faction2Perk9)||(((getPlayerUID player) in FactionLoadout3) && Faction3Perk9)||(((getPlayerUID player) in FactionLoadout4) && Faction4Perk9)||(((getPlayerUID player) in FactionLoadout5) && Faction5Perk9)||(((getPlayerUID player) in FactionLoadout6) && Faction6Perk9)||(((getPlayerUID player) in FactionLoadout7) && Faction7Perk9)||(((getPlayerUID player) in FactionLoadout8) && Faction8Perk9)||(((getPlayerUID player) in FactionLoadout9) && Faction9Perk9)||(((getPlayerUID player) in FactionLoadout10) && Faction10Perk9)) then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [format[("<t color=""#007ab7"">" + ("Scan Area") +"</t>"),Bloodbag_Cost], "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
 		};

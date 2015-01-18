@@ -236,3 +236,5 @@ Player_Vigil_Amount = 100;//How many Vigils to gain from killing a player
 //DO NOT EDIT!!
 //All faction UIDs
 IsInAFaction = FactionLoadout1+FactionLoadout2+FactionLoadout3+FactionLoadout4+FactionLoadout5+FactionLoadout6+FactionLoadout7+FactionLoadout8+FactionLoadout9+FactionLoadout10;
+
+
