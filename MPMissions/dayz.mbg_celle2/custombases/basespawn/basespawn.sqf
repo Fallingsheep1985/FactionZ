@@ -1,4 +1,9 @@
-
+//ADMIN
+if ((getPlayerUID player) in AdminUIDLoadout) then {
+	factionspawnlocation = faction1basepos;
+	execVM "custombases\basespawn\spawnplayer.sqf";
+};
+//FACTIONS
 if ((getPlayerUID player) in FactionLoadout1) then {
 	factionspawnlocation = faction1basepos;
 	execVM "custombases\basespawn\spawnplayer.sqf";
