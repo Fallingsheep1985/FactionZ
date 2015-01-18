@@ -15,10 +15,6 @@ dayz_REsec = 0;
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 //Map size
-MAP_MAX_x = 15360;
-MAP_MIN_x = 0;
-MAP_MAX_y = 15360;
-MAP_MIN_y = 0;
 //Load faction stuff
 execVM "FactionControl.sqf";
 execVM "TraderControl.sqf";
@@ -100,8 +96,6 @@ if (!isDedicated) then {
 	DZ_LightChance = 42;
 	[] execVM "lights\local_lights_init.sqf";
 	[] execVM "lights\street_lights.sqf";
-	//outofboundscheck
-	[] execVM "custombases\CAGN\outofbounds.sqf";
 };
 //Custom Loadout
 //[] execVM "CustomLoadout\Loadout.sqf"; //also call intro music so it only happens on new spawns
