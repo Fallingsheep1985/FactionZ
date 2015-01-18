@@ -437,6 +437,20 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_buy4;
 		s_player_buy4 = -1;
 	};
+	
+/////////////////////////////////////
+//		FLAGPOLE	
+/////////////////////////////////////
+	if(cursorTarget isKindOf "FlagPole_EP1")then {
+		if (s_player_flag < 0) then {
+			s_player_flag = player addAction [format[("<t color=""#007ab7"">" + ("Scan Area") +"</t>"),Bloodbag_Cost], "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_flag;
+		s_player_flag = -1;
+	};
+/////////////////////////////////////
+
 	//Dog
 	if (_isDog and _isAlive and (_hasRawMeat) and _canDo and _ownerID == "0" and player getVariable ["dogID", 0] == 0) then {
 		if (s_player_tamedog < 0) then {
@@ -574,6 +588,8 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_player_buy4 = -1;
 	player removeAction s_player_igniteTent;
 	s_player_igniteTent = -1;
+	player removeAction s_player_flag;
+	s_player_flag = -1;
 	
 };
 
