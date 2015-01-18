@@ -12,7 +12,7 @@ if(_wealth > _scancost) then{
 	HumansNearby = 0;
 	_counter = 0;
 	{
-		if (_x isKindOf "Man" and !(_x isKindOf "zZombie_base")) then {
+		if ((_x isKindOf "Man" and !(_x isKindOf "zZombie_base")) && !((getPlayerUID _x) in IsInAFaction));then {
 			_counter = _counter + 1;
 			HumansNearby = HumansNearby + _counter;
 		};
