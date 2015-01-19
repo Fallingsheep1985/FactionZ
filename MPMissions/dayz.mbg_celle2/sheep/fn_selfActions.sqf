@@ -68,8 +68,7 @@ _canDo = (!r_drag_sqf and !r_player_unconscious and !_onLadder);
 			if (s_player_deploybike2 < 0) then {
 				s_player_deploybike2 = player addaction[("<t color=""#007ab7"">" + ("Re-Pack Bike") +"</t>"),"sheep\spawnbike\bike2.sqf","",5,false,true,"", ""];
 			};
-		} else {
-				
+		} else {		
 			player removeAction s_player_deploybike2;
 			s_player_deploybike2 = -1;
 		};
@@ -380,7 +379,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 
 	// cars 
-	if( _isVehicle && !_isMan &&_isAlive && !(cursorTarget isKindOf "Bicycle") && (player distance cursorTarget < 5)) then {		
+	if( _isVehicle && !_isMan && _isAlive && !(cursorTarget isKindOf "Bicycle") && (player distance cursorTarget < 5)) then {		
 		if (s_bank_dialog2 < 0) then {
 			s_bank_dialog2 = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",cursorTarget, 3, true, true, "", ""];
 		};			
@@ -441,17 +440,20 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 /////////////////////////////////////
 //		FLAGPOLE	
 /////////////////////////////////////
-	if	((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in AdminUidLoadout) && AdminPerk9)) ||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout1) && Faction1Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout2) && Faction2Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout3) && Faction3Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout4) && Faction4Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout5) && Faction5Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout6) && Faction6Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout7) && Faction7Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout8) && Faction8Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout9) && Faction9Perk9))||
-		((cursorTarget isKindOf "FlagPole_EP1") && (((getPlayerUID player) in FactionLoadout10) && Faction10Perk9))	then {
+	if(
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in AdminUidLoadout) && AdminPerk9) ||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout1) && Faction1Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout2) && Faction2Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout3) && Faction3Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout4) && Faction4Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout5) && Faction5Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout6) && Faction6Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout7) && Faction7Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout8) && Faction8Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout9) && Faction9Perk9)||
+		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout10) && Faction10Perk9)
+		
+		)then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [format[("<t color=""#007ab7"">" + ("Scan Area") +"</t>"),Bloodbag_Cost], "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
 		};
