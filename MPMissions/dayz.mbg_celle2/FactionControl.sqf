@@ -218,7 +218,7 @@ faction10basepos = nobase;
 //////////////////////////////////////////////////////////////////////////
 Zed_Humanity_Amount = 5;//How much humanity to gain from killing a zed
 Player_Humanity_Amount = 1000;//How much humanity to gain from killing a player
-
+SAR_band_kill_value = 100;//How much humanity to gain from killing a bandit AI
 PRESESAONWINNERS = ["76561198039003844","76561198000962997"]; //ignores humanity check for deploy bike
 Deploybike = 2500; //Humanity needed to use/unlock
 
