@@ -68,8 +68,10 @@ DZAI_findKiller = true;
 DZAI_tempNVGs = false;	
 
 //Amount of humanity to reward player for killing an AI unit (Default: 0)									
-DZAI_humanityGain = 100;										
+DZAI_humanityGain = 100;
 
+//Amount of vigils to reward player for killing AI unit (Default: 25)										
+DZAI_vigilGain = 25;
 //If enabled, players with radios will be given text warnings if they are being pursued by AI groups. (Default: true)
 DZAI_radioMsgs = true;
 
