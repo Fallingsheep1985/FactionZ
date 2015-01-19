@@ -50,16 +50,6 @@ if ((!isServer) && (player != player)) then {
   waitUntil {time > 3};
 };
 
-
-//Sarge AI
-call compile preprocessFileLineNumbers "addons\UPSMON\scripts\Init_UPSMON.sqf";
-if (isServer) then {
-	"SAR_savebuilding"		addPublicVariableEventHandler {(_this select 1) spawn SAR_save2hive};  
-	"atp"				    addPublicVariableEventHandler {};
-	call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
-};
-[] execVM "addons\SARGE\SAR_AI_init.sqf";
-
 if (isServer) then {
 	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 	//Sheeps Kill Pit
@@ -90,9 +80,6 @@ if (isServer) then {
 	//execVM "trader\mechanictrader.sqf";
 	//Ammo Trader
 	//execVM "trader\ammotrader.sqf";
-	
-
-	
 };
 
 if (!isDedicated) then {

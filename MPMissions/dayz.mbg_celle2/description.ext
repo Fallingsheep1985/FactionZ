@@ -835,7 +835,5 @@ class CfgFunctions {
 #include "trader\hunter\hunter.hpp"
 #include "trader\ammo\ammo1.hpp"
 
-//SARGE AI
-#include "addons\SARGE\SAR_define.hpp"
 // Right click - NOT WORKING YET
 #include "sheep\extra_rc.hpp"
