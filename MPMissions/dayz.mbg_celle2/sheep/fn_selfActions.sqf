@@ -437,36 +437,21 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		s_player_buy4 = -1;
 	};
 	
-/////////////////////////////////////
-//		FLAGPOLE	
-/////////////////////////////////////
-	if(
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in AdminUidLoadout) && AdminPerk9) ||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout1) && Faction1Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout2) && Faction2Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout3) && Faction3Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout4) && Faction4Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout5) && Faction5Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout6) && Faction6Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout7) && Faction7Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout8) && Faction8Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout9) && Faction9Perk9)||
-		((cursorTarget isKindOf "FlagPole_EP1") && ((getPlayerUID player) in FactionLoadout10) && Faction10Perk9)
-		
-		)then {
+//////////////////////////////////////
+//		FLAGPOLE					//
+//////////////////////////////////////
+_isFlag = cursorTarget isKindOf "FlagPole_EP1";
+
+	if ( _isFlag && ((getPlayerUID player) in AdminUidLoadout) && AdminPerk9) then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [format[("<t color=""#007ab7"">" + ("Scan Area") +"</t>"),Bloodbag_Cost], "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
 		};
-	} else {	
-		player removeAction s_player_flag;
-		s_player_flag = -1;
-	};
-	
-	if(getPlayerUID player) in AdminUidLoadout)then {
 		if (s_player_bank< 0) then {
 			s_player_bank = player addAction [format[("<t color=""#007ab7"">" + ("Bank Check") +"</t>"),Bloodbag_Cost], "ZSC\bankcheck.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 	} else {	
+		player removeAction s_player_flag;
+		s_player_flag = -1;
 		player removeAction s_player_bank;
 		s_player_bank = -1;
 	};
