@@ -1,4 +1,4 @@
-_pathtosheep = "\custombases\scan";
+_pathtosheep = "\custombases\scan\";
 _EXECscript9 = 'player execVM "'+_pathtosheep+'%1"';
 
 	ScanMenu =
