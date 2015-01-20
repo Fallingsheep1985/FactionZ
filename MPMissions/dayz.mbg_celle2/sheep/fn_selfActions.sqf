@@ -452,7 +452,7 @@ adminscan = true;
 			s_player_bank = player addAction [("<t color=""#c30000"">" + ("Bank Check") +"</t>"), "ZSC\bankcheck.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 		if (s_player_gamble < 0) then {
-            s_player_gamble = player addAction [("<t color='#c30000'>")+("Play Slots")+("</t>"), "scripts\gambling\slotmachine\open_dialog.sqf","",5,false,true,"",""];
+            s_player_gamble = player addAction [("<t color='#c30000'>")+("Play Slots")+("</t>"), "gambling\slotmachine\open_dialog.sqf","",5,false,true,"",""];
 		};
 	} else {	
 		player removeAction s_player_flag;
