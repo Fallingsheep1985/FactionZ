@@ -442,19 +442,24 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 //////////////////////////////////////
 typeofflag = ["FlagCarrierBIS_EP1","FlagPole_EP1","FlagCarrierBAF","FlagCarrierBIS_EP1","FlagCarrierBLUFOR_EP1","FlagCarrierCDF_EP1","FlagCarrierCDFEnsign_EP1","FlagCarrierCzechRepublic_EP1","FlagCarrierGermany_EP1","FlagCarrierINDFOR_EP1","FlagCarrierUSA_EP1"];
 _isFlag = nearestObject [player, Typeofflag];
-
-	if ( (_isFlag distance player < 5)  && ((getPlayerUID player) in AdminUidLoadout) && AdminPerk9) then {
+_playerUID = getPlayerUID player;
+	if ((_isFlag distance player < 5)  && (_playerUID in AdminUidLoadout) && AdminPerk9) then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [format[("<t color=""#007ab7"">" + ("Scan Area") +"</t>"),Bloodbag_Cost], "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
 		};
-		if (s_player_bank< 0) then {
+		if (s_player_bank < 0) then {
 			s_player_bank = player addAction [format[("<t color=""#007ab7"">" + ("Bank Check") +"</t>"),Bloodbag_Cost], "ZSC\bankcheck.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+		if (s_player_gamble < 0) then {
+            s_player_gamble = player addAction [("<t color='#c30000'>")+("Play Slots")+("</t>"), "scripts\gambling\slotmachine\open_dialog.sqf","",5,false,true,"",""];
 		};
 	} else {	
 		player removeAction s_player_flag;
 		s_player_flag = -1;
 		player removeAction s_player_bank;
 		s_player_bank = -1;
+		player removeAction s_player_gamble;
+		s_player_gamble = -1;
 	};
 	
 /////////////////////////////////////
@@ -600,6 +605,8 @@ _isFlag = nearestObject [player, Typeofflag];
 	s_player_flag = -1;
 	player removeAction s_player_bank;
 	s_player_bank = -1;
+	player removeAction s_player_gamble;
+	s_player_gamble = -1;
 	
 };
 
