@@ -461,6 +461,16 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_flag;
 		s_player_flag = -1;
 	};
+	
+	if(getPlayerUID player) in AdminUidLoadout)then {
+		if (s_player_bank< 0) then {
+			s_player_bank = player addAction [format[("<t color=""#007ab7"">" + ("Bank Check") +"</t>"),Bloodbag_Cost], "ZSC\bankcheck.sqf", cursorTarget, 1, true, true, "", ""];
+		};
+	} else {	
+		player removeAction s_player_bank;
+		s_player_bank = -1;
+	};
+	
 /////////////////////////////////////
 
 	//Dog
@@ -602,6 +612,8 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_player_igniteTent = -1;
 	player removeAction s_player_flag;
 	s_player_flag = -1;
+	player removeAction s_player_bank;
+	s_player_bank = -1;
 	
 };
 
