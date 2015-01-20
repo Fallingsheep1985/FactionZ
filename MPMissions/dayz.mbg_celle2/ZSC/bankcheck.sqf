@@ -4,37 +4,37 @@ DebugBanks = true;
 _key = "";
 _playerUID = getPlayerUID player;
 
-if (_playerUID in in AdminUidLoadout) then{
+if (_playerUID in AdminUidLoadout) then{
 	_bankID = 0;
 }; 
-if (_playerUID in in FactionLoadout1)  then{
+if (_playerUID in FactionLoadout1)  then{
 	_bankID = 1;
 };
-if (_playerUID in in FactionLoadout2)  then{
+if (_playerUID in FactionLoadout2)  then{
 	_bankID = 2;
 };
-if (_playerUID in in FactionLoadout3)  then{
+if (_playerUID in FactionLoadout3)  then{
 	_bankID = 3;
 };
-if (_playerUID in in FactionLoadout4) then{
+if (_playerUID in FactionLoadout4) then{
 	_bankID = 4;
 }; 
-if (_playerUID in in FactionLoadout5) then{
+if (_playerUID in FactionLoadout5) then{
 	_bankID = 5;
 }; 
-if (_playerUID in in FactionLoadout6) then{
+if (_playerUID in FactionLoadout6) then{
 	_bankID = 6;
 }; 
-if (_playerUID in in FactionLoadout7) then{
+if (_playerUID in FactionLoadout7) then{
 	_bankID = 7;
 }; 
-if (_playerUID in in FactionLoadout8) then{
+if (_playerUID in FactionLoadout8) then{
 	_bankID = 8;
 }; 
-if (_playerUID in in FactionLoadout9) then{
+if (_playerUID in FactionLoadout9) then{
 	_bankID = 9;
 }; 
-if (_playerUID in in FactionLoadout10) then{
+if (_playerUID in FactionLoadout10) then{
 	_bankID = 10;
 };
 
