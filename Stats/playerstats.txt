@@ -1,0 +1,44 @@
+---------------------------------------------------------
+Highest Zombie Kills: Tester - 4000
+Highest Murders: Tester - 66
+Highest Bandit Kills: Tester - 5
+Highest Distance Travelled: Tester - 50000
+Survived Longest: FallingSheep - 74
+Most deaths: Tester - 6
+---------------------------------------------------------
+Player Name: FallingSheep
+PlayerUID: 76561198087015545
+Vigils: 111
+Generation: 21
+Zombie Kills: 99
+Headshots: 2
+Murders: 0
+Bandit Kills: 0
+Distance Travelled: 13509
+Minutes Survived: 74
+Experience: 2557
+Total Playtime: 18 days, 1 hours, 44 minutes and 57 seconds
+
+Player Name: Tester
+PlayerUID: 76561198087777777
+Vigils: 111
+Generation: 4
+Zombie Kills: 4000
+Headshots: 1000
+Murders: 66
+Bandit Kills: 5
+Distance Travelled: 50000
+Minutes Survived: 2
+Experience: -500
+Total Playtime: 371 days, 5 hours, 31 minutes and 29 seconds
+
+---------------------------------------------------------
+Total Alive Players: 2
+Total Player Deaths: 8
+38
+4099
+5
+66
+1002
+Global Playtime: 389 days, 7 hours, 16 minutes and 26 seconds
+---------------------------------------------------------

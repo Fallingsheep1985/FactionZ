@@ -243,6 +243,9 @@ $totaltimeplayed = secondsToTime($totaltime);
 </div>
 <br>
 <div id="playerstats">
+<center>
+<br>
+<b>Player Stats</b>
 <?php
 //Database Details
 $servername = "localhost";
@@ -350,6 +353,7 @@ echo "<br>";
 	}
 }
 ?>
+</center>
 </div>
 </body>
 </html>
