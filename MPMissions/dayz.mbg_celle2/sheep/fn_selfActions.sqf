@@ -238,13 +238,13 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	};
 	
 		// Remove Parts from Vehicles - By SilverShot.
-	if( !_isMan and _canDo and _hasToolbox and (silver_myCursorTarget != cursorTarget) and cursorTarget isKindOf "AllVehicles" and (getDammage cursorTarget < 0.95) ) then {
+	if( !_isMan and _canDo and _hasToolbox and (dayz_myCursorTarget != cursorTarget) and cursorTarget isKindOf "AllVehicles" and (getDammage cursorTarget < 0.95) ) then {
 		_vehicle = cursorTarget;
 		_invalidVehicle = (_vehicle isKindOf "Motorcycle") || (_vehicle isKindOf "Tractor") || (_vehicle isKindOf "Old_bike_TK_CIV_EP1"); //or (_vehicle isKindOf "ATV_US_EP1") or (_vehicle isKindOf "ATV_CZ_EP1"); 
 		if( !_invalidVehicle ) then {
-			{silver_myCursorTarget removeAction _x} forEach s_player_removeActions;
+			{dayz_myCursorTarget removeAction _x} forEach s_player_removeActions;
 			s_player_removeActions = [];
-			silver_myCursorTarget = _vehicle;
+			dayz_myCursorTarget = _vehicle;
 
 			_hitpoints = _vehicle call vehicle_getHitpoints;
 
@@ -277,7 +277,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 
 					if (!_skip ) then {
 						_string = format["<t color='#0096ff'>Remove%1</t>",_cmpt,_color]; //Remove - Part
-						_handle = silver_myCursorTarget addAction [_string, "sheep\ss_remove.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
+						_handle = dayz_myCursorTarget addAction [_string, "sheep\ss_remove.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
 						s_player_removeActions set [count s_player_removeActions,_handle];
 					};
 				};
