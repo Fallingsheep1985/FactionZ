@@ -440,11 +440,10 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 //////////////////////////////////////
 //		FLAGPOLE					//
 //////////////////////////////////////
-if (_playerUID in AdminUidLoadout && AdminPerk9)then{
+if ((_playerUID in AdminUidLoadout) && AdminPerk9)then{
 adminscan = true;
 };
-	//if ((_isFlag distance player < 5)  && (_playerUID in AdminUidLoadout) && AdminPerk9) then {
-	if (!canBuild && adminscan && _canDo && !_isZombie && !_isAnimal)then {
+	if (adminscan)then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [("<t color=""#c30000"">" + ("Scan Area") +"</t>"), "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
 		};
@@ -452,7 +451,7 @@ adminscan = true;
 			s_player_bank = player addAction [("<t color=""#c30000"">" + ("Bank Check") +"</t>"), "ZSC\bankcheck.sqf", cursorTarget, 1, true, true, "", ""];
 		};
 		if (s_player_gamble < 0) then {
-            s_player_gamble = player addAction [("<t color='#c30000'>")+("Play Slots")+("</t>"), "gambling\slotmachine\open_dialog.sqf","",5,false,true,"",""];
+            s_player_gamble = player addAction [("<t color='#c30000'>")+("Play Slots")+("</t>"), "slotmachine\open_dialog.sqf","",5,false,true,"",""];
 		};
 	} else {	
 		player removeAction s_player_flag;
