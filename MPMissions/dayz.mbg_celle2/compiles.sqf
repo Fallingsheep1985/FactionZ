@@ -65,7 +65,7 @@ if (!isDedicated) then {
 	dog_findTargetAgent =   compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\dog_findTargetAgent.sqf";
 	
 	// Vehicle damage fix
-	vehicle_handleDamage    = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleDamage.sqf";
+	vehicle_handleDamage    = compile preprocessFileLineNumbers "sheep\vehicle_handleDamage.sqf";
 	vehicle_handleKilled    = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleKilled.sqf";
 
 	//actions
@@ -381,7 +381,7 @@ if (!isDedicated) then {
 	//Both
 	BIS_fnc_selectRandom =		compile preprocessFileLineNumbers "sheep\fn_selectRandom.sqf";		//Checks which actions for nearby casualty
 	fnc_buildWeightedArray = 	compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_buildWeightedArray.sqf";		//Checks which actions for nearby casualty
-	fnc_usec_damageVehicle =	compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageHandlerVehicle.sqf";		//Event handler run on damage
+	fnc_usec_damageVehicle =	compile preprocessFileLineNumbers "sheep\fn_damageHandlerVehicle.sqf";		//Event handler run on damage
 	zombie_initialize = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\init\zombie_init.sqf";
 	object_vehicleKilled =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\object_vehicleKilled.sqf";		//Event handler run on damage
 	object_setHitServer =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\object_setHitServer.sqf";	//process the hit as a NORMAL damage (useful for persistent vehicles)
