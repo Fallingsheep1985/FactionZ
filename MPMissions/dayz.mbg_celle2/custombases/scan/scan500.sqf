@@ -17,6 +17,7 @@ if(_wealth > _scancost) then{
 			HumansNearby = HumansNearby + _counter;
 		};
 	} forEach _closePeople;
+	titleText [format[("There are %1 players nearby."),_counter], "PLAIN DOWN"];
 }else{
 	titleText [format[("You need %1 vigils to buy this!"),_scancost], "PLAIN DOWN"];
 };
