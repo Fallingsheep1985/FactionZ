@@ -264,6 +264,10 @@ dayz_resetSelfActions = {
 	s_player_buy13 = -1;
 	s_player_buy14 = -1;
 	s_player_buy15 = -1;
+	s_player_ignitetent = -1;
+	s_player_flag = -1;
+	s_player_tamedog = -1;
+	s_player_repair_crtl = [];
 	s_player_removeactions = [];
 };
 call dayz_resetSelfActions;

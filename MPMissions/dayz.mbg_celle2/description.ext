@@ -834,6 +834,6 @@ class CfgFunctions {
 #include "trader\mechanic\mechanic.hpp"
 #include "trader\hunter\hunter.hpp"
 #include "trader\ammo\ammo1.hpp"
-
+#include "slotmachine\slots.hpp"
 // Right click - NOT WORKING YET
 #include "sheep\extra_rc.hpp"

@@ -18,6 +18,8 @@ dayz_paraSpawn = false;
 //Load faction stuff
 execVM "FactionControl.sqf";
 execVM "TraderControl.sqf";
+//Load slot machine functions
+[]execVM "slotmachine\slots.sqf";
 //Base protection set up
 canBuild = true;
 
