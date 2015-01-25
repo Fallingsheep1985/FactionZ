@@ -4,9 +4,9 @@ _wealth = player getVariable["cashMoney",0];
 
 if(_wealth > _scancost) then{
 	_newwealth = _wealth - _scancost;
-	_player setVariable["cashMoney",_newwealth, true];
-	_player setVariable ["moneychanged",1,true]; 
-	dayzPlayerSave = [_player,(magazines _player),true,true];
+	player setVariable["cashMoney",_newwealth, true];
+	player setVariable ["moneychanged",1,true]; 
+	dayzPlayerSave = [player,(magazines player),true,true];
 	publicVariableServer "dayzPlayerSave"; 
 	_closePeople = player nearEntities ["CAManBase", _scanArea];
 	HumansNearby = 0;
