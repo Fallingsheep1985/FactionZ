@@ -10,7 +10,8 @@ diag_log ( "[AGN] Starting Base Protection!" );
 [] execVM 'custombases\CAGN\Faction8BaseProtection.sqf';
 [] execVM 'custombases\CAGN\Faction9BaseProtection.sqf';
 [] execVM 'custombases\CAGN\Faction10BaseProtection.sqf';
-
+//Vehicle godmode
+[] execVM 'custombases\CAGN\basevehicle.sqf';
 //Outofbounds
 [] execVM 'custombases\CAGN\outofbounds.sqf';
 
