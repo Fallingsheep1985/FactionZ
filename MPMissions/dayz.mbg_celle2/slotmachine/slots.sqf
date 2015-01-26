@@ -47,7 +47,7 @@ if(IsSpinning)then{
 		 //Update credits display
 		 ctrlSetText[1001, format ["%1" ,SlotsPlayerCredits]];
 	   }else{
-		 titleText ["You need 1x 10oz Goldbar to add 10 credits!","PLAIN DOWN"]; titleFadeOut 3;
+		 titleText ["You need 100 Vigils to add 10 credits!","PLAIN DOWN"]; titleFadeOut 3;
 	   };
    };
 };

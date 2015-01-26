@@ -436,7 +436,14 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_buy4;
 		s_player_buy4 = -1;
 	};
-	
+	if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in GambleTrader)) then {
+		if (s_player_gamble < 0) then {
+            s_player_gamble = player addAction [("<t color='#c30000'>")+("Play Slots")+("</t>"), "slotmachine\open_dialog.sqf","",5,false,true,"",""];
+		};
+	}else{
+		player removeAction s_player_gamble;
+		s_player_gamble = -1;
+	};
 //////////////////////////////////////
 //		FLAGPOLE					//
 //////////////////////////////////////
@@ -444,15 +451,10 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	if (AdminPerk9 || (Faction1Perk9 && Faction1AtBase) || (Faction2Perk9&& Faction2AtBase) || (Faction3Perk9&& Faction3AtBase) || (Faction4Perk9&& Faction4AtBase) || (Faction5Perk9&& Faction5AtBase) || (Faction6Perk9&& Faction6AtBase) || (Faction7Perk9&& Faction7AtBase) || (Faction8Perk9&& Faction8AtBase) || (Faction9Perk9&& Faction9AtBase) || (Faction10Perk9&& Faction10AtBase))then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [("<t color=""#c30000"">" + ("Scan Area") +"</t>"), "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
-		};
-		if (s_player_gamble < 0) then {
-            s_player_gamble = player addAction [("<t color='#c30000'>")+("Play Slots")+("</t>"), "slotmachine\open_dialog.sqf","",5,false,true,"",""];
-		};
+		};	
 	} else {	
 		player removeAction s_player_flag;
 		s_player_flag = -1;
-		player removeAction s_player_gamble;
-		s_player_gamble = -1;
 	};
 	
 /////////////////////////////////////

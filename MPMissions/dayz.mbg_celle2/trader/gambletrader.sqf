@@ -1,8 +1,8 @@
-//Hunter Trader test
+//Gamble Trader test
 _vehicle_1001 = objNull;
 if (true) then
 {
-  _this = createAgent ["Camo3_DZC", [7140.8608, 2133.1089, -0.2498024], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["CIV_Pilot1_DZC", [8926.4814, 2119.6824, 5.7220459e-006], [], 0, "CAN_COLLIDE"];
   _vehicle_1001 = _this;
   _this setDir 84.416573;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";

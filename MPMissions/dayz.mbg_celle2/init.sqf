@@ -15,14 +15,12 @@ dayz_REsec = 0;
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 //Map size
-//Load faction stuff
-execVM "FactionControl.sqf";
-execVM "TraderControl.sqf";
-//Load slot machine functions
-[]execVM "slotmachine\slots.sqf";
+
 //Base protection set up
 canBuild = true;
-
+//Load faction stuff
+call compile preprocessFileLineNumbers "FactionControl.sqf";
+call compile preprocessFileLineNumbers "TraderControl.sqf";
 //Load in compiled functions
 call compile preprocessFileLineNumbers "sheep\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
@@ -54,6 +52,9 @@ if ((!isServer) && (player != player)) then {
 
 if (isServer) then {
 	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
+
+	//Load slot machine functions
+	[]execVM "slotmachine\slots.sqf";
 	//Sheeps Kill Pit
 	//execVM "Custombases\sheepkillpit.sqf";
 	//Bases
@@ -69,17 +70,22 @@ if (isServer) then {
 	execVM "Custombases\base10.sqf";
 	execVM "Custombases\base11.sqf";
 	//doctor trader
-	execVM "Custombases\doctortrader.sqf";// base around trader
+	execVM "trader\doctortraderCamp.sqf";// base around trader
 	execVM "trader\doctortrader.sqf"; // the trader 
+	//Hunter trader
+	execVM "trader\huntertraderCamp.sqf";// base around trader
+	execVM "trader\huntertrader.sqf"; // the trader
+	//Mechanic Trader
+	execVM "trader\mechanictraderCamp.sqf";
+	execVM "trader\mechanictrader.sqf";
+	//Gamble trader
+	execVM "trader\gambletrader.sqf"; // the trader 
 	//Extra street lights
 	//Lights
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
     "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};
 	execVM "Custombases\extrastreetlights.sqf";
-	//Hunter Trader
-	//execVM "trader\huntertrader.sqf";
-	//Mechanic Trader
-	//execVM "trader\mechanictrader.sqf";
+	
 	//Ammo Trader
 	//execVM "trader\ammotrader.sqf";
 };

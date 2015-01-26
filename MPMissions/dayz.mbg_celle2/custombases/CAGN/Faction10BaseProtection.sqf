@@ -48,7 +48,7 @@ systemChat ("[AGN] Antispam - You must wait 2 minutes for god mode to become act
 				};
 			};		
 		};
-	If ( LAC_safeZone_Vehicle_God) then
+	If ( LAC_safeZone_Vehicle_God) then{
 		fnc_usec_damageVehicle ={};
 		vehicle_handleDamage ={};
 		vehicle_handleKilled ={};

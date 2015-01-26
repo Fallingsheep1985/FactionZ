@@ -11,7 +11,7 @@ diag_log ( "[AGN] Starting Base Protection!" );
 [] execVM 'custombases\CAGN\Faction9BaseProtection.sqf';
 [] execVM 'custombases\CAGN\Faction10BaseProtection.sqf';
 //Remove AI from bases
-[] execVM "scripts\CAGN\SafeZonesAI.sqf";
+[] execVM "custombases\CAGN\SafeZonesAI.sqf";
 //Outofbounds
 [] execVM 'custombases\CAGN\outofbounds.sqf';
 

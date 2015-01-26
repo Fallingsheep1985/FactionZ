@@ -994,7 +994,7 @@ class Hunting: Default {
 			{"DZ_British_ACU","object"},	
 			{"DZ_Backpack_EP1","object"},
 			{"PipeBomb","magazine"},
-			{"Skin_CIV_Pilot1_DZC","magazine"},
+			//{"Skin_CIV_Pilot1_DZC","magazine"},
 			{"Skin_Soldier1_DZC","magazine"}, 
 			{"Skin_Soldier2_DZC","magazine"}, 
 			{"Skin_Soldier3_DZC","magazine"},	
@@ -1065,7 +1065,7 @@ class Hunting: Default {
 			0.05,
 			0.01,
 			0.001,	//Pipebomb
-			0.02,
+			//0.02,
 			0.01,
 			0.01,
 			0.01,
@@ -1265,7 +1265,7 @@ class Hunting: Default {
 			{"WeaponHolder_PartVRotor", "object"}, 
 			{"RH_g19","weapon"}, 
 			{"ItemGPS","weapon"}, 
-			{"Skin_CIV_Pilot1_DZC","magazine"},
+			//{"Skin_CIV_Pilot1_DZC","magazine"},
 			{"Skin_Snow_Trooper1_DZC","magazine"},
 			{"Skin_Snow_Trooper2_DZC","magazine"}, 
 			{"Skin_GER_Officer1_DZC","magazine"},	
@@ -1295,9 +1295,9 @@ class Hunting: Default {
 			//0.02,   //RH_MK43
 			0.10,	//Scrap
 			0.03,	//Rotor
-			0.04,
-			0.05,
-			0.03,
+			0.04,	//RH_g19
+			0.05,	//GPS
+			//0.03,
 			0.01,
 			0.01,
 			0.04,

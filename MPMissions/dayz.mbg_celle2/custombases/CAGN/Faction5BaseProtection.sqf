@@ -10,7 +10,7 @@ Private ["_EH_Fired", "_ehID", "_fix","_inVehicle","_inVehicleLast","_EH_Fired_V
 AGN_safeZoneAntispam = true;								// puts a time limit on God mode when trying to leave and enter a safe zone rapidly
 AGN_safeZone_Players_RemoveZombies = true;                	// delete zombies near  safe zone			
 AGN_safeZoneGodmode = true; 								//Should safezone God mode be enabled?
-
+LAC_safeZone_Vehicle_God = true;                            //Vehicle Godmode
 disableSerialization;
 
 waitUntil {!isNil "dayz_animalCheck"};
@@ -45,7 +45,7 @@ systemChat ("[AGN] Antispam - You must wait 2 minutes for god mode to become act
 				};
 			};		
 		};
-	If ( LAC_safeZone_Vehicle_God) then
+	If ( LAC_safeZone_Vehicle_God) then{
 		fnc_usec_damageVehicle ={};
 		vehicle_handleDamage ={};
 		vehicle_handleKilled ={};
