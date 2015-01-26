@@ -8,7 +8,7 @@ _playerUID = getPlayerUID player;
 
 //Admin Perks/Loadout
 AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","0"];
-if (_playerUID in FactionLoadout1) then {
+if (_playerUID in AdminUidLoadout) then {
 	//Loadout
 	AdminPerk1 = true; //Binocs
 	AdminPerk2 = true; //Rangefinder
@@ -20,7 +20,7 @@ if (_playerUID in FactionLoadout1) then {
 	
 	AdminPerk8 = true; //BASESPAWN
 	AdminPerk9 = true; //ScanArea
-	
+};	
 //FACTION 1 - [MTG] Me and the guys
 FactionLoadout1 = ["76561198039003844","76561198086577639","76561197970346406","76561198073564733"];//Comicware - Manglar - Necrouk - Jensfuntimes
 if (_playerUID in FactionLoadout1) then {
@@ -253,12 +253,12 @@ safezoneList = [
 //								PERK SYSTEM								//
 //																		//
 //////////////////////////////////////////////////////////////////////////
-Zed_Humanity_Amount = 5;//How much humanity to gain from killing a zed
-Player_Humanity_Amount = 1000;//How much humanity to gain from killing a player
+Zed_Humanity_Amount = 5;//How much XP to gain from killing a zed
+Player_Humanity_Amount = 1000;//How much XP to gain from killing a player
 
-PRESESAONWINNERS = ["76561198039003844","76561198000962997"]; //ignores humanity check for deploy bike
-Deploybike = 2500; //Humanity needed to use/unlock
-
+PRESESAONWINNERS = ["76561198039003844","76561198000962997"]; //ignores XP check for deploy bike
+Deploybike = 2500; //XP needed to use/unlock
+BaseScan = 5000; //XP needed to use/unlock
 
 basespawn_cost = 0; //cost to spawn at base
 

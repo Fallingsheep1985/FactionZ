@@ -9,6 +9,35 @@ private['_dstring','_cconfig','_OpenMenuKey','_LAdmins','_NAdmins','_SAdmins','_
 '_UAT','_UCS','_UDC','_RAI','_CHB','_MCC','_CUD','_RCK','_CCM','_BCM','_CSA','_FTG','_ALLOWED_Dialogs','_ForbiddenWeapons','_ALLOWED_Vehicles',
 '_FORBIDDEN_Vehicles','_cMenu','_dayzActions','_UDP','_URG','_UAL','_ALV'];
 #include "AHconfig.sqf"
+MDC_fnc_numberToString = {
+	_number = _this;
+	_str = "";
+	if (_number == 0) then {
+		_str = "0";
+	} else {
+		_negative = false;
+		if (_number < 0) then {
+			_number = abs _number;
+			_negative = true;
+		};
+		if (_number % 1 == 0) then {
+			while { _number > 0 } do {
+				_digit = floor (_number % 10);
+				_str = (str _digit) + _str;
+				_number = floor (_number / 10);
+			};
+		} else {
+			_decimals = _number % 1;
+			_decimals = _decimals * 1000000;
+			_number = floor _number;
+			_str = _number call MDC_fnc_numberToString;
+			_str = _str + "." + str _decimals;
+		};
+		if (_negative) then { _str = "-" + _str; };
+	};
+	_str;
+};
+
 if (!isNil "infiSTAR_LoadStatus1") exitWith {diag_log ("infiSTAR.de - infiSTAR_LoadStatus1: infiSTAR is already loaded!");};
 infiSTAR_LoadStatus1 = true;
 diag_log ("infiSTAR.de - Waiting for BIS_fnc_init...");
@@ -4033,6 +4062,7 @@ publicVariable '"+_randvar28+"';
 						} forEach ([0,0,0] nearEntities ['AllVehicles', 10000000]);
 						_pOn = count _pOn;
 						_Money = player getVariable['cashMoney',0];
+						_MoneyStr = _Money call MDC_fnc_numberToString;
 						_humanity = player getVariable['humanity',0];
 						if (_humanity > 999999) then
 						{
@@ -4070,7 +4100,7 @@ publicVariable '"+_randvar28+"';
 						(player getVariable['humanKills', 0]),
 						(player getVariable['banditKills', 0]),
 						_pOn,
-						_Money
+						_MoneyStr
 						];
 						uiSleep 1;
 					};
