@@ -17,20 +17,7 @@ _plotDonators = ["76561198101253426","505"]; // PUID's of poeple who donated for
 
 // Chernarus safezone area's - change these to other coordinates for other maps. ( You can also add specific locations on the map.
 
-//Basegode mode setup
-_safezones = [ 
-[[1692, 530],100,"Base1"]
-,[[212, 1769],100,"Base2"]
-,[[860, 5239],100,"Base3"]
-,[[1136, 8885],100,"Base4"]
-,[[2969, 9162],100,"Base5"]
-//,[[4299, 10447],100,"Base6"]
-,[[6459, 9037],100,"Base7"]
-,[[8699, 10175],100,"Base8"]
-,[[9172, 11553],100,"Base9"]
-//,[[10796, 9112],100,"Base10"]
-,[[11169, 7757],100,"Base11"]
-];
+
 
 //***END Config ****//
 
@@ -69,7 +56,7 @@ if((locked _unit && _godmodeVechilesEverywhere  && (count (crew _unit)) < 1))the
 if(_state)then{
 if(_safeZoneGodVehicle )then{
 {if ((_unit distance (_x select 0)) < (_x select 1)) then {_state = false;
-};} forEach _safezones;
+};} forEach safezoneList;
 };
 };
 
