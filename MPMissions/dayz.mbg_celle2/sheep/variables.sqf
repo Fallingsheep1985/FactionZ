@@ -267,7 +267,7 @@ dayz_resetSelfActions = {
 	s_player_ignitetent = -1;
 	s_player_flag = -1;
 	s_player_tamedog = -1;
-	s_player_repair_crtl = [];
+	s_player_repair_crtl = -1;
 	s_player_removeactions = [];
 };
 call dayz_resetSelfActions;
