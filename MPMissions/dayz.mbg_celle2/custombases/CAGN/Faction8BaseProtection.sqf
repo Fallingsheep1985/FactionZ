@@ -27,6 +27,7 @@ while {true} do {
 if (Faction8BaseGodmode) then {
 	if ((_playerUID in FactionLoadout8)||(_playerUID in AdminUidLoadout)) then{
 		waitUntil { !canBuild };
+		Faction8AtBase = true;
 		_inSafezoneFinished = false;
 		if ( AGN_safeZoneGodmode ) then{
 			if (AGN_safeZoneAntispam )then{

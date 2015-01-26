@@ -29,7 +29,7 @@ while {true} do {
 if (Faction10BaseGodmode) then {
 	if ((_playerUID in FactionLoadout10) ||(_playerUID in AdminUidLoadout))then{
 		waitUntil { !canBuild };
-		
+		Faction10AtBase = true;
 		
 		_inSafezoneFinished = false;
 		if ( AGN_safeZoneGodmode ) then{

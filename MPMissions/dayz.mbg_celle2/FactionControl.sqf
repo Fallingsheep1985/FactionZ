@@ -3,9 +3,12 @@
 //					FACTION/CUSTOM LOADOUT SYSTEM						//
 //																		//
 //////////////////////////////////////////////////////////////////////////
+_playerUID = getPlayerUID player;
+
 
 //Admin Perks/Loadout
 AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","0"];
+if (_playerUID in FactionLoadout1) then {
 	//Loadout
 	AdminPerk1 = true; //Binocs
 	AdminPerk2 = true; //Rangefinder
@@ -20,6 +23,7 @@ AdminUidLoadout = ["76561197960475835","76561198046457653","76561198087015545","
 	
 //FACTION 1 - [MTG] Me and the guys
 FactionLoadout1 = ["76561198039003844","76561198086577639","76561197970346406","76561198073564733"];//Comicware - Manglar - Necrouk - Jensfuntimes
+if (_playerUID in FactionLoadout1) then {
 	Faction1Perk1 = false; //Binocs
 	Faction1Perk2 = false; //Rangefinder
 	Faction1Perk3 = false; //Pistol
@@ -30,8 +34,10 @@ FactionLoadout1 = ["76561198039003844","76561198086577639","76561197970346406","
 	
 	Faction1Perk8 = false; //BASESPAWN
     Faction1Perk9 = false; //ScanArea
+};
 //FACTION 2 - [DZZ] D'zz Nutzz
 FactionLoadout2 = ["76561197965905796","76561198076115834","76561198068127556","76561198042363732"]; //Cerberuscx - Ozzyosbone - BigDaddy - Zhecky
+if (_playerUID in FactionLoadout2) then {
 	Faction2Perk1 = false; //Binocs
 	Faction2Perk2 = false; //Rangefinder
 	Faction2Perk3 = false; //Pistol
@@ -42,9 +48,11 @@ FactionLoadout2 = ["76561197965905796","76561198076115834","76561198068127556","
 	
 	Faction2Perk8 = false; //BASESPAWN
     Faction2Perk9 = false; //ScanArea
+};
 
 //FACTION 3 - [GH] Gewekt Heren
 FactionLoadout3 = ["76561197961056736","76561198002245705","",""];//TheBS - Bigfootscock
+if (_playerUID in FactionLoadout3) then {
 	Faction3Perk1 = false; //Binocs
 	Faction3Perk2 = false; //Rangefinder
 	Faction3Perk3 = false; //Pistol
@@ -55,9 +63,11 @@ FactionLoadout3 = ["76561197961056736","76561198002245705","",""];//TheBS - Bigf
 	
 	Faction3Perk8 = false; //BASESPAWN
     Faction3Perk9 = false; //ScanArea
+};
 
 //FACTION 4 - [S] Stalkers
 FactionLoadout4 = ["76561198064062090","76561198000962997","76561198043385263","76561198037425757"];//Razzle - Lyran Draconis - Thorax - Jesse
+if (_playerUID in FactionLoadout4) then {
 	Faction4Perk1 = false; //Binocs
 	Faction4Perk2 = false; //Rangefinder
 	Faction4Perk3 = false; //Pistol
@@ -68,9 +78,11 @@ FactionLoadout4 = ["76561198064062090","76561198000962997","76561198043385263","
 	
 	Faction4Perk8 = false; //BASESPAWN
     Faction4Perk9 = false; //ScanArea
+};
 
 //FACTION 5 - [SL] SherLock
 FactionLoadout5 = ["76561198058236054","76561198046229170","",""];//kicks - dowker1988 
+if (_playerUID in FactionLoadout5) then {
 	Faction5Perk1 = false; //Binocs
 	Faction5Perk2 = false; //Rangefinder
 	Faction5Perk3 = false; //Pistol
@@ -81,9 +93,11 @@ FactionLoadout5 = ["76561198058236054","76561198046229170","",""];//kicks - dowk
 	
 	Faction5Perk8 = false; //BASESPAWN
     Faction5Perk9 = false; //ScanArea
+};
 
 //FACTION 6 - [Sup] Supreme
 FactionLoadout6 = ["76561198027622133","76561198079231362","76561198068033323","76561198074308170"];//2Lou2 - Voracious - CowboyCam (CEOBrien) - GrozaV91 
+if (_playerUID in FactionLoadout6) then {
 	Faction6Perk1 = false; //Binocs
 	Faction6Perk2 = false; //Rangefinder
 	Faction6Perk3 = false; //Pistol
@@ -93,9 +107,11 @@ FactionLoadout6 = ["76561198027622133","76561198079231362","76561198068033323","
 	Faction6Perk7 = false; // Toolbox
 	Faction6Perk8 = false; //BASESPAWN
     Faction6Perk9 = false; //ScanArea
+};
 
 //FACTION 7 - [G] Gents
 FactionLoadout7 = ["76561198038049741","76561197979297873","76561198045763029",""];// Dorkis - Ghosty - Duke
+if (_playerUID in FactionLoadout7) then {
 	Faction7Perk1 = false; //Binocs
 	Faction7Perk2 = false; //Rangefinder
 	Faction7Perk3 = false; //Pistol
@@ -106,9 +122,11 @@ FactionLoadout7 = ["76561198038049741","76561197979297873","76561198045763029","
 	
 	Faction7Perk8 = false; //BASESPAWN
     Faction7Perk9 = false; //ScanArea
+};
 
 //FACTION 8 - Solo player
 FactionLoadout8 = ["76561198043981499","","",""];//RavenKinomoto
+if (_playerUID in FactionLoadout8) then {
 	Faction8Perk1 = false; //Binocs
 	Faction8Perk2 = false; //Rangefinder
 	Faction8Perk3 = false; //Pistol
@@ -119,9 +137,11 @@ FactionLoadout8 = ["76561198043981499","","",""];//RavenKinomoto
 	
 	Faction8Perk8 = false; //BASESPAWN
     Faction8Perk9 = false; //ScanArea
+};
 
 //FACTION 9 - Solo player
 FactionLoadout9 = ["76561198002068242","","",""];//Pathy
+if (_playerUID in FactionLoadout9) then {
 	Faction9Perk1 = false; //Binocs
 	Faction9Perk2 = false; //Rangefinder
 	Faction9Perk3 = false; //Pistol
@@ -132,9 +152,11 @@ FactionLoadout9 = ["76561198002068242","","",""];//Pathy
 	
 	Faction9Perk8 = false; //BASESPAWN
     Faction9Perk9 = false; //ScanArea
+};
 
 //FACTION 10
 FactionLoadout10 = ["","","",""];//
+if (_playerUID in FactionLoadout10) then {
 	Faction10Perk1 = false; //Binocs
 	Faction10Perk2 = false; //Rangefinder
 	Faction10Perk3 = false; //Pistol
@@ -145,6 +167,7 @@ FactionLoadout10 = ["","","",""];//
 	
 	Faction10Perk8 = false; //BASESPAWN
     Faction10Perk9 = false; //ScanArea
+};
 	
 //Default Loadout
 	DefaultPerk1 = false; //Binocs

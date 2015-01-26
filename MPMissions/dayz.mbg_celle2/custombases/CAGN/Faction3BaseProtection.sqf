@@ -27,6 +27,7 @@ while {true} do {
 if (Faction3BaseGodmode) then {
 	if ((_playerUID in FactionLoadout3)||(_playerUID in AdminUidLoadout)) then{
 		waitUntil { !canBuild };
+		Faction3AtBase = true;
 		_inSafezoneFinished = false;
 		if ( AGN_safeZoneGodmode ) then{
 			if (AGN_safeZoneAntispam )then{
