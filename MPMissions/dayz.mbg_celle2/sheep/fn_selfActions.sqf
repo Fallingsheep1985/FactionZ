@@ -448,7 +448,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 //		FLAGPOLE					//
 //////////////////////////////////////
 
-	if (AdminPerk9 || (Faction1Perk9 && Faction1AtBase) || (Faction2Perk9&& Faction2AtBase) || (Faction3Perk9&& Faction3AtBase) || (Faction4Perk9&& Faction4AtBase) || (Faction5Perk9&& Faction5AtBase) || (Faction6Perk9&& Faction6AtBase) || (Faction7Perk9&& Faction7AtBase) || (Faction8Perk9&& Faction8AtBase) || (Faction9Perk9&& Faction9AtBase) || (Faction10Perk9&& Faction10AtBase))then {
+	if (AdminPerk9 || Faction1Perk9 || Faction2Perk9 || Faction3Perk9 || Faction4Perk9 || Faction5Perk9 || Faction6Perk9 || Faction7Perk9 || Faction8Perk9 || Faction9Perk9 || Faction10Perk9)then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [("<t color=""#c30000"">" + ("Scan Area") +"</t>"), "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
 		};	
