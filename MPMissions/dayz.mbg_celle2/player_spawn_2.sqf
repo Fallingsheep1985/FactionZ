@@ -60,12 +60,12 @@ while {true} do {
 		player setVariable ["temperature",dayz_temperatur,true];
 		_lastTemp = dayz_temperatur;
 	};
-	
+	_tempPos = getPosATL player;
 	//can get nearby infection
 	if (!r_player_infected) then {
 		//	Infectionriskstart
 		if (dayz_temperatur < ((80 / 100) * (dayz_temperaturnormal - dayz_temperaturmin) + dayz_temperaturmin)) then {	//TeeChange
-			_listTalk = _mylastPos nearEntities ["CAManBase",8];
+			_listTalk = _tempPos nearEntities ["CAManBase",8];
 			{
 				if (_x getVariable["USEC_infected",false]) then {
 					_rnd = (random 1) * (((dayz_temperaturnormal - dayz_temperatur) * (100 /(dayz_temperaturnormal - dayz_temperaturmin)))/ 50);	//TeeChange
