@@ -13,7 +13,7 @@ if (DZAI_humanityGain != 0) then {
 };
 
 if (DZAI_vigilGain != 0) then {
-		_wealth = player getVariable["cashMoney",0];
+		_wealth = _killer getVariable["cashMoney",0];
 		_newwealth = _wealth + DZAI_vigilGain;
 		_killer setVariable["cashMoney",_newwealth, true];
 		_killer setVariable ["moneychanged",1,true]; 
