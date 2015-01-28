@@ -1,0 +1,23 @@
+//INIT
+[] execVM "nitro\nitro.sqf";
+
+
+//DESCRIPTTION
+
+class CfgSounds {
+    class nitro  {
+        name="nitro";
+        sound[]={NOS\nitro.ogg,0.9,1};
+        titles[] = {};
+    };
+    class suction  {
+        name="suction";
+        sound[]={NOS\suction.ogg,0.1,1};
+        titles[] = {};
+    };
+    class exhaustor  {
+        name="exhaustor";
+        sound[]={NOS\exhaustor.ogg,1,1};
+        titles[] = {};
+    };
+};

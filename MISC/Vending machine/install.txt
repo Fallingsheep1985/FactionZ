@@ -1,0 +1,60 @@
+Hi all! Thought I would share a simple little script I put together. I am by no means a professional and this probably could be cleaner and better written but it works and is a cool little addition. This script is also a simple example of what can be accomplished with your server. Start with small scripting projects and have fun learning. So here it is. I studied the code from a few others and threw this together..
+ 
+Add this code to your fn_selfactions.sqf at the very bottom...
+//------------------------------------------------ Vending Machine --------------------------------//
+private["_playerPos","_nearVend"];
+
+_playerPos = getPosATL player;
+_nearVend = count nearestObjects [_playerPos, ["MAP_vending_machine"], 4] > 0;
+ 
+if (_nearVend) then {
+        if (s_player_buySoda < 0) then {
+            s_player_buySoda = player addaction[("<t color=""#00C732"">" + ("Buy Soda") +"</t>"),"Vending\venddrink.sqf"];
+        };
+    } else {
+        player removeAction s_player_buySoda;
+        s_player_buySoda = -1;
+    };
+ 
+//--------------------------------------------- Vending Machine End ---------------------------//
+Make a folder in your root of your mission file called "Vending" and make a empty file named "venddrink.sqf", then copy and paste this...
+//by ZeroK00L
+private["_playerPos","_canVend"];
+
+call gear_ui_init;
+_playerPos = getPosATL player;
+_canVend = count nearestObjects [_playerPos, ["MAP_vending_machine"], 4] > 0;
+_soda = ["ItemSodaRabbit","ItemSodaOrangeSherbet","ItemSodaLvg","ItemSodaClays","ItemSodaSmasht","ItemSodaPepsi","ItemSodaMdew","ItemSodaCoke","ItemSodaLemonade"];
+
+if (_canVend) then {
+			
+			playsound "vendingmachine";
+			sleep 2;
+			player playActionNow "PutDown";
+			player addMagazine 'ItemSodaRabbit';
+			cutText ["You received a Soda from the Vending Machine!", "PLAIN DOWN"];
+};
+OPTIONAL IF YOU WANT THE SOUND!
+ 
+Open up description.ext and add this to your sounds class. If you dont already have one you can make one..
+class CfgSounds
+{
+    sounds[] ={vendingmachine};
+ 
+class vendingmachine
+    {
+    name="vendingmachine";
+    sound[]={\Vending\vendingmachine.ogg,0.9,1};
+    titles[] = {};
+    };
+	
+};
+Then add the attached sound file to your "Vending" folder. Voila!
+ 
+If you notice, in the venddrink.sqf I put an array for all the sodas & beer the game can use.
+_soda = ["ItemSodaRabbit","ItemSodaOrangeSherbet","ItemSodaLvg","ItemSodaClays","ItemSodaSmasht","ItemSodaPepsi","ItemSodaMdew","ItemSodaCoke","ItemSodaLemonade"];
+Maybe if I have time I will create a random chance for different sodas to come out. Also I might make it so it takes money from the player. If anyone wants to tackle those items and share please do. Have fun with it :) This script can even be modified and used on the Refrigerators to give the player canned foods.
+ 
+P.S You will need to place a vending machine somewhere on the map. Classname is "MAP_vending_machine". I have tried to use Raymix's Emerald tools but the script doesn't recognize the vending machine placed by that tool. Would be cool if it did...so use the editor for now. :)
+ 
+Zero

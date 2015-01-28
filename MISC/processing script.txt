@@ -1,0 +1,46 @@
+//FN SELF ACTIONS
+// Processing
+_processing = cursorTarget isKindOf "CHANGE ITEM HERE";
+if ((speed player <= 1) && _processing && (player distance cursorTarget < 5)) then {
+if (s_player_processing < 0) then {
+s_player_processing = player addAction ["Process Item","scripts\process.sqf",cursorTarget, 0, false, true, "",""];
+};
+} else {
+player removeAction s_player_processing;
+s_player_processing = -1;
+};
+
+
+//Engineering
+player removeAction s_player_processing;
+s_player_processing = -1;
+
+
+
+
+//SCRIPT
+private ["_ELItem","_ELEx","_ELLicense"];
+// Exchange Script
+// Configuration:
+_ELItem = "ITEM THAT WILL GET PROCESSED";
+_ELEx = "ITEM THAT WILL YOU WILL GET";
+_ELLicense = "LICENSE (TOOLBELT ITEM!!)";
+//
+
+
+if !(_ELItem in magazines player) exitwith {
+	hint format ["You don't have a %1", _ELItem];
+};
+if !(_ELLicense in weapons player) exitwith {
+	hint format ["You don't have a %1 (license)", _ELLicense];
+};
+
+if (_ELItem in magazines player) then {
+	if (_ELLicense in weapons player) then {
+		player removeMagazine _ELItem;
+		player playActionNow "Medic";
+		sleep 8;
+		player addMagazine _ELEx;
+		hint format ["You processed your '%1' into '%2'", _ELItem, _ELEx];
+};
+};
