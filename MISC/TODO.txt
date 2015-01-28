@@ -1,0 +1,13 @@
+Gambler NPC
+Vending machines
+Racetrack
+Nitro
+Rob bank
+expand celle
+Scientist NPC - trade dews/etc for vigils
+Nurse NPC - heals players (very expensive)
+out of bounds
+Car sales NPC - buy cars from
+self bloodbag
+vehicle godmode
+ammo trader - split into ammo types
