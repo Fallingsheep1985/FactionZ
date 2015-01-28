@@ -12,11 +12,11 @@ Painkiller_Cost = 25;
 //Medical sell
 Morphine_Sell = 5;
 Bloodbag_Sell = 10;
-Epipen_Sell = 1;
+Epipen_Sell = 5;
 Bandage_Sell = 10;
 HeatPack_Sell = 15;
 Antibiotic_Sell = 15;
-Painkiller_Sell = 1;
+Painkiller_Sell = 5;
 
 //Hunter costs
 Rawbeef_Cost = 250;
@@ -28,33 +28,33 @@ Compass_Cost = 150;
 Map_Cost = 200;
 Matches_Cost = 50;
 //Hunter sell
-Rawbeef_Sell = 10;
-Cooked_Beef = 20;
-Knife_Sell = 1;
+Rawbeef_Sell = 5;
+Cooked_Beef = 10;
+Knife_Sell = 5;
 Axe_Sell = 5;
-Beartrap_Sell = 20;
+Beartrap_Sell = 15;
 Compass_Sell = 5;
-Map_Sell = 10;
-Matches_Sell = 1;
+Map_Sell = 5;
+Matches_Sell = 5;
 
 //Mechanic costs
 Wheel_Cost = 150;
 Fueltank_Cost = 30;
-Scrap_Cost = 10;
+Scrap_Cost = 15;
 Engine_Cost = 250;
 Rotor_Cost = 300;
 Glass_Cost = 20;
 Jerrycan_Cost = 20;
-Toolbox_Cost = 10;
+Toolbox_Cost = 15;
 //Mechanic sell
 Wheel_Sell = 5;
-Fueltank_Sell = 1;
-Scrap_Sell = 1;
-Engine_Sell = 10;
+Fueltank_Sell = 5;
+Scrap_Sell = 5;
+Engine_Sell = 15;
 Rotor_Sell = 15;
-Glass_Sell = 1;
-Jerrycan_Sell = 1;
-Toolbox_Sell = 1;
+Glass_Sell = 5;
+Jerrycan_Sell = 5;
+Toolbox_Sell = 5;
 
 //Ammo
 RH_7Rnd_50_AE_Cost = 250;
