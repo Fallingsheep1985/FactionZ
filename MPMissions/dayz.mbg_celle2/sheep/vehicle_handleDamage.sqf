@@ -15,14 +15,19 @@ _donatorsPlots = false; // True = only godmode vehicles for donaters in the list
 _plotDonators = ["76561198101253426","505"]; // PUID's of poeple who donated for plotpole
 
 
-// Chernarus safezone area's - change these to other coordinates for other maps. ( You can also add specific locations on the map.
+// celle safezone area's - change these to other coordinates for other maps. ( You can also add specific locations on the map.
 _safezones = [ 
-    [[5070.75,9729.54],100,"Air"],
-    [[1606.6443,7803.5156],100,"Bandit"],
-    [[4063.4226,11664.19],100,"Bash"],
-    [[12944.227,12766.889],100,"Hero"],
-    [[11447.472,11364.504],100,"Klen"],
-    [[6315.88,7791.3],100,"Stary"] // [[x,y],distance,"just name"]
+[[1692, 530],100,"Base1"]
+,[[212, 1769],100,"Base2"]
+,[[860, 5239],100,"Base3"]
+,[[1136, 8885],100,"Base4"]
+,[[2969, 9162],100,"Base5"]
+//,[[4299, 10447],100,"Base6"]
+,[[6459, 9037],100,"Base7"]
+,[[8699, 10175],100,"Base8"]
+,[[9172, 11553],100,"Base9"]
+//,[[10796, 9112],100,"Base10"]
+,[[11169, 7757],100,"Base11"] // [[x,y],distance,"just name"]
 ];
 
 
