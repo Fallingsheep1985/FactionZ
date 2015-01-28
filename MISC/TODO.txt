@@ -1,9 +1,11 @@
-Gambler NPC
-Vending machines
+Gambler NPC - slotmachine & port guessing game to vigils
+Bartender NPC - sells nuts and drinks :)
+scan area base/flagpole
+Vending machines -0.1% chance of a dew
 Racetrack
 Nitro
 Rob bank
-expand celle
+expand celle add bank
 Scientist NPC - trade dews/etc for vigils
 Nurse NPC - heals players (very expensive)
 out of bounds
