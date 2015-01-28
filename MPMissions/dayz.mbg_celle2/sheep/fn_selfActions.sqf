@@ -44,6 +44,20 @@ if (!isNull _nearLight) then {
 	};
 };
 _canDo = (!r_drag_sqf and !r_player_unconscious and !_onLadder);
+
+    // Krixes Self Bloodbag
+    if ("ItemBloodbag" in _magazinesPlayer) then {
+        hasBagItem = true;
+    } else { hasBagItem = false;};
+    if((speed player <= 1) && hasBagItem && _canDo) then {
+        if (s_player_selfBloodbag < 0) then {
+            s_player_selfBloodbag = player addaction[("<t color=""#c70000"">" + ("Self Bloodbag") +"</t>"),"sheep\player_selfbloodbag.sqf","",5,false,true,"", ""];
+        };
+    } else {
+        player removeAction s_player_selfBloodbag;
+        s_player_selfBloodbag = -1;
+    };
+
 /////////////////////////////////////////////////////////////////////////////////////////////////DEPLOY BIKE START////////////////////////////////////////////////////////////////////////////////////////////////////
 //Only Allow if player has perk
 
@@ -444,6 +458,15 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_gamble;
 		s_player_gamble = -1;
 	};
+//Pay for healing
+	if(_typeOfCursorTarget in NurseTrader  and (player distance _cursorTarget < 3)) then {		
+		if (s_fast_med_dialog1 < 0) then {
+			s_fast_med_dialog1 = player addAction ["<t color='#0059FF'>Heal</t>", "sheep\payheal.sqf",_cursorTarget, 3, true, true, "", ""];
+		};
+	} else {		
+		player removeAction s_fast_med_dialog1;
+		s_fast_med_dialog1 = -1;
+	};
 //////////////////////////////////////
 //		FLAGPOLE					//
 //////////////////////////////////////
@@ -600,6 +623,10 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	s_player_flag = -1;
 	player removeAction s_player_gamble;
 	s_player_gamble = -1;
+	player removeAction s_player_selfBloodbag;
+    s_player_selfBloodbag = -1;
+	player removeAction s_fast_med_dialog1;
+	s_fast_med_dialog1 = -1;
 	
 };
 
