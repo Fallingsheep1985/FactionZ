@@ -10,7 +10,7 @@ Private ["_EH_Fired", "_ehID", "_fix","_inVehicle","_inVehicleLast","_EH_Fired_V
 AGN_safeZoneAntispam = true;								// puts a time limit on God mode when trying to leave and enter a safe zone rapidly
 AGN_safeZone_Players_RemoveZombies = true;                	// delete zombies near  safe zone			
 AGN_safeZoneGodmode = true; 								//Should safezone God mode be enabled?
-LAC_safeZone_Vehicle_God = true;                            //Vehicle Godmode
+
 disableSerialization;
 
 waitUntil {!isNil "dayz_animalCheck"};
@@ -18,8 +18,7 @@ waitUntil {!isNil "dayz_animalCheck"};
 
 AGN_enteredSafezone = false; //default value
 
-_inVehicle = objNull;
-_inVehicleLast = objNull;
+
 _thePlayer = player;
 _playerUID = getPlayerUID player;
 
@@ -45,14 +44,7 @@ systemChat ("[AGN] Antispam - You must wait 2 minutes for god mode to become act
 				};
 			};		
 		};
-	If ( LAC_safeZone_Vehicle_God) then{
-		fnc_usec_damageVehicle ={};
-		vehicle_handleDamage ={};
-		vehicle_handleKilled ={};
-		_inVehicleLast removeAllEventHandlers "handleDamage";
-		_inVehicleLast addEventHandler ["handleDamage", {false}];
-		_inVehicleLast allowDamage false;
-	};
+
 		//Remove Zombies
 		if ( AGN_safeZone_Players_RemoveZombies ) then{
 			_anti_zombie = [] spawn {
@@ -83,14 +75,7 @@ systemChat ("[AGN] Exiting Base Area");
 				};
 			};
 		};
-		If ( LAC_safeZone_Vehicle_God) then{
-			fnc_usec_damageVehicle = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageHandlerVehicle.sqf";
-			vehicle_handleDamage = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleDamage.sqf";
-			vehicle_handleKilled = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleKilled.sqf";
-			_inVehicleLast removeAllEventHandlers "handleDamage";
-			_inVehicleLast addEventHandler ["handleDamage", {_this select 2}];
-			_inVehicleLast allowDamage true;
-		};
+
 	_inSafezoneFinished = true;
 	};
 };
