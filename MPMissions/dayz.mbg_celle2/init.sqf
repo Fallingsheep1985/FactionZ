@@ -80,7 +80,8 @@ if (isServer) then {
 	execVM "trader\mechanictrader.sqf";
 	//Gamble trader
 	execVM "trader\gambletrader.sqf"; // the trader 
-	//Extra street lights
+	//City Upgrade
+	execVM "Custombases\CelleUpdate.sqf"
 	//Lights
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
     "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};
