@@ -16,8 +16,7 @@ if (_playerUID in AdminUidLoadout) then {
 	AdminPerk4 = true; //Tools
 	AdminPerk5 = true; // medical supplies in backpack
 	AdminPerk6 = true; //backpack
-	AdminPerk7 = true; //Toolbox
-	
+	AdminPerk7 = true; //Toolbox	
 	AdminPerk8 = true; //BASESPAWN
 	AdminPerk9 = true; //ScanArea
 };	
@@ -30,8 +29,7 @@ if (_playerUID in FactionLoadout1) then {
 	Faction1Perk4 = false; //Tools
 	Faction1Perk5 = false; // medical supplies in backpack
 	Faction1Perk6 = true; //backpack
-	Faction1Perk7 = false; // Toolbox
-	
+	Faction1Perk7 = false; // Toolbox	
 	Faction1Perk8 = false; //BASESPAWN
     Faction1Perk9 = false; //ScanArea
 };

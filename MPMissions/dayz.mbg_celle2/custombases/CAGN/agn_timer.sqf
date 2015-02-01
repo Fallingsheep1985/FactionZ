@@ -1,3 +1,4 @@
+AGN_safeZoneMessages = true;
 //antispam timer
 if ( AGN_safeZoneMessages ) then { systemChat ("[AGN] Antispam - You must wait 2 Minutes before godmode is reapplied!.");};
 	sleep 60;
