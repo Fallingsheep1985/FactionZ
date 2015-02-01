@@ -100,3 +100,5 @@ MechanicTrader = ["Soldier3_SL_DZC"];
 AmmoTrader = ["CZ_Heavy2_DZC"];
 GambleTrader = ["CIV_Pilot1_DZC"];
 NurseTrader = ["HazmatVest_Red_DZC"];
+
+ALLTRADERS = DoctorTrader + HunterTrader + MechanicTrader + AmmoTrader + GambleTrader + NurseTrader;
