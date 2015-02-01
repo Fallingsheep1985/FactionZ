@@ -173,3 +173,35 @@ dayz_recordLogin = {
 };
 
 execVM "\z\addons\dayz_server\init\broadcaster.sqf";
+	//Sheeps Kill Pit
+	//execVM "\z\addons\dayz_server\custombuildings\sheepkillpit.sqf";
+	//Bases
+	execVM "\z\addons\dayz_server\custombuildings\base1.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base2.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base3.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base4.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base5.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base6.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base7.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base8.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base9.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base10.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\base11.sqf";
+	//doctor trader
+	execVM "\z\addons\dayz_server\custombuildings\doctortraderCamp.sqf";// base around trader
+	execVM "\z\addons\dayz_server\custombuildings\doctortrader.sqf"; // the trader 
+	//Hunter trader
+	execVM "\z\addons\dayz_server\custombuildings\huntertraderCamp.sqf";// base around trader
+	execVM "\z\addons\dayz_server\custombuildings\huntertrader.sqf"; // the trader
+	//Mechanic Trader
+	execVM "\z\addons\dayz_server\custombuildings\mechanictraderCamp.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\mechanictrader.sqf";
+	//Gamble trader
+	execVM "\z\addons\dayz_server\custombuildings\gambletrader.sqf"; // the trader 
+	//Nurse trader
+	execVM "\z\addons\dayz_server\custombuildings\nursetrader.sqf"; // the trader 
+	//City Upgrade
+	execVM "\z\addons\dayz_server\custombuildings\CelleUpdate.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\CelleBank.sqf";
+	//Extra Street lights
+	execVM "\z\addons\dayz_server\custombuildings\extrastreetlights.sqf";
