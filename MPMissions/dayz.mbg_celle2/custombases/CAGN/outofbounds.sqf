@@ -1,7 +1,7 @@
 private["_debug","_distance"];
 while {alive player} do {
 _character = player;
-_charPos =            getPosATL (vehicle player);
+_charPos = getPosATL player;
 _nearSpawnPos = ((dayz_spawnPos distance _charPos) < 100);
 _xCoord = _charPos select 0;
 _yCoord = _charPos select 1;
