@@ -126,59 +126,6 @@ if (true) then
   _this setPos [8923.1104, 2669.0432, 1.4843348];
 };
 
-_vehicle_39 = objNull;
-if (true) then
-{
-  _this = createVehicle ["EvKobalt", [8922.6387, 2669.2031, 1.4951892], [], 0, "CAN_COLLIDE"];
-  _vehicle_39 = _this;
-  _this setDir 3.749295;
-  _this setPos [8922.6387, 2669.2031, 1.4951892];
-};
-
-_vehicle_40 = objNull;
-if (true) then
-{
-  _this = createVehicle ["EvMoscow", [8922.4678, 2669.0078, 1.4848988], [], 0, "CAN_COLLIDE"];
-  _vehicle_40 = _this;
-  _this setDir -24.926544;
-  _this setPos [8922.4678, 2669.0078, 1.4848988];
-};
-
-_vehicle_43 = objNull;
-if (true) then
-{
-  _this = createVehicle ["EvPhoto", [8922.7471, 2668.929, 1.4840641], [], 0, "CAN_COLLIDE"];
-  _vehicle_43 = _this;
-  _this setDir 2.1863859;
-  _this setPos [8922.7471, 2668.929, 1.4840641];
-};
-
-_vehicle_44 = objNull;
-if (true) then
-{
-  _this = createVehicle ["EvMap", [8922.3994, 2669.332, 1.4920139], [], 0, "CAN_COLLIDE"];
-  _vehicle_44 = _this;
-  _this setDir 3.749295;
-  _this setPos [8922.3994, 2669.332, 1.4920139];
-};
-
-_vehicle_45 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Can_small", [8922.7881, 2669.1897, 1.4889169], [], 0, "CAN_COLLIDE"];
-  _vehicle_45 = _this;
-  _this setDir 3.749295;
-  _this setPos [8922.7881, 2669.1897, 1.4889169];
-};
-
-_vehicle_46 = objNull;
-if (true) then
-{
-  _this = createVehicle ["Baseball", [8923.8076, 2669.6609, 1.4659811], [], 0, "CAN_COLLIDE"];
-  _vehicle_46 = _this;
-  _this setDir -2.141427;
-  _this setPos [8923.8076, 2669.6609, 1.4659811];
-};
 
 _vehicle_48 = objNull;
 if (true) then

@@ -2,7 +2,15 @@
 canBuild = true;
 canscan = false;
 
-ALLTRADERS = [];
+ALLTRADERS =[];
+DoctorTrader = ["Doctor_DZC"];
+HunterTrader = ["Camo3_DZC"];
+MechanicTrader = ["Soldier3_SL_DZC"]; 
+AmmoTrader = ["CZ_Heavy2_DZC"];
+GambleTrader = ["CIV_Pilot1_DZC"];
+NurseTrader = ["HazmatVest_Red_DZC"];
+
+ALLTRADERS = ALLTRADERS + DoctorTrader + HunterTrader + MechanicTrader + AmmoTrader + GambleTrader + NurseTrader;
 
 Faction1Perk1 = false;
 Faction1Perk2 = false;

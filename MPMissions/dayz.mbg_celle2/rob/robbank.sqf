@@ -30,22 +30,29 @@ script_in_progress = true;
 
 	sleep 30;
 	cutText [format["4 minutes left..."], "PLAIN DOWN"];
-	sleep 60;
+	sleep 30;
+	cutText [format["3:30 minutes left..."], "PLAIN DOWN"];
+	sleep 30;
 	cutText [format["3 minutes left..."], "PLAIN DOWN"];
-	sleep 60;
+	sleep 30;
+	cutText [format["2:30 minutes left..."], "PLAIN DOWN"];
+	sleep 30;
 	cutText [format["2 minutes left..."], "PLAIN DOWN"];
-	sleep 60;
+	sleep 30;
+	cutText [format["1:30 minute left..."], "PLAIN DOWN"];
+	sleep 30;
 	cutText [format["1 minute left..."], "PLAIN DOWN"];
-	sleep 60;
-	player playActionNow "Medic";
-	sleep 8;
-	if (failRob == 1)exitWith{
-	titleText [format[("You failed to rob the bank!"),bankloot1], "PLAIN DOWN"];
-	} else {
-	_robComplete = 1;
-	};
+	sleep 30;
+	cutText [format["30 Seconds left..."], "PLAIN DOWN"];
+	sleep 30;
 
-if (_robComplete == 1) then {
+if (failRob == 1)exitWith{
+	titleText [format[("You failed to rob the bank!"),bankloot1], "PLAIN DOWN"];
+} else {
+	robComplete = 1;
+};
+
+if (robComplete == 1) then {
 
 
 	_loot=floor(random 6);
