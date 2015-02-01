@@ -16,8 +16,6 @@ dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 //Map size
 
-//Base protection set up
-canBuild = true;
 //Load faction stuff
 []execVM  "custombases\CAGN\variables.sqf"// Faction Variable defaults
 call compile preprocessFileLineNumbers "FactionControl.sqf";
