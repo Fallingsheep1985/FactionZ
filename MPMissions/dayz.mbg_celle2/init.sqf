@@ -57,39 +57,11 @@ if (isServer) then {
 
 	//Load slot machine functions
 	[]execVM "slotmachine\slots.sqf";
-	//Sheeps Kill Pit
-	//execVM "Custombases\sheepkillpit.sqf";
-	//Bases
-	execVM "Custombases\base1.sqf";
-	execVM "Custombases\base2.sqf";
-	execVM "Custombases\base3.sqf";
-	execVM "Custombases\base4.sqf";
-	execVM "Custombases\base5.sqf";
-	execVM "Custombases\base6.sqf";
-	execVM "Custombases\base7.sqf";
-	execVM "Custombases\base8.sqf";
-	execVM "Custombases\base9.sqf";
-	execVM "Custombases\base10.sqf";
-	execVM "Custombases\base11.sqf";
-	//doctor trader
-	execVM "trader\doctortraderCamp.sqf";// base around trader
-	execVM "trader\doctortrader.sqf"; // the trader 
-	//Hunter trader
-	execVM "trader\huntertraderCamp.sqf";// base around trader
-	execVM "trader\huntertrader.sqf"; // the trader
-	//Mechanic Trader
-	execVM "trader\mechanictraderCamp.sqf";
-	execVM "trader\mechanictrader.sqf";
-	//Gamble trader
-	execVM "trader\gambletrader.sqf"; // the trader 
-	//Gamble trader
-	execVM "trader\nursetrader.sqf"; // the trader 
-	//City Upgrade
-	execVM "Custombases\CelleUpdate.sqf";
+
 	//Lights
 	axe_server_lampObjs =    compile preprocessFileLineNumbers "lights\fnc_returnLampWS.sqf";
     "axeLampObjects" addPublicVariableEventHandler {_id = (_this select 1) spawn axe_server_lampObjs};
-	execVM "Custombases\extrastreetlights.sqf";
+
 	
 	//Ammo Trader
 	//execVM "trader\ammotrader.sqf";
