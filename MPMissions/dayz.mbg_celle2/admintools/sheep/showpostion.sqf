@@ -1,2 +1,2 @@
 debugMonitor = false; // close debug if open
-hint format ["%1",getPos player];
+hint format ["Postion: %1 /n Direction: %2",getPos player,getDir player];
