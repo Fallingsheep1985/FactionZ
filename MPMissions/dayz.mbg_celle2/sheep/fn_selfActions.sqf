@@ -469,7 +469,7 @@ _bankrobbery = cursorTarget isKindOf "Laptop_EP1";
         s_player_bankrob = -1;
     };
 //Pay for healing
-	if(_typeOfCursorTarget in NurseTrader  and (player distance _cursorTarget < 3)) then {		
+if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in NurseTrader)) then {	
 		if (s_fast_med_dialog1 < 0) then {
 			s_fast_med_dialog1 = player addAction ["<t color='#0059FF'>Heal</t>", "sheep\payheal.sqf",_cursorTarget, 3, true, true, "", ""];
 		};
@@ -481,7 +481,7 @@ _bankrobbery = cursorTarget isKindOf "Laptop_EP1";
 //		FLAGPOLE					//
 //////////////////////////////////////
 
-	if (AdminPerk9 || Faction1Perk9 || Faction2Perk9 || Faction3Perk9 || Faction4Perk9 || Faction5Perk9 || Faction6Perk9 || Faction7Perk9 || Faction8Perk9 || Faction9Perk9 || Faction10Perk9)then {
+	if ((canscan) &&(AdminPerk9 || Faction1Perk9 || Faction2Perk9 || Faction3Perk9 || Faction4Perk9 || Faction5Perk9 || Faction6Perk9 || Faction7Perk9 || Faction8Perk9 || Faction9Perk9 || Faction10Perk9))then {
 		if (s_player_flag < 0) then {
 			s_player_flag = player addAction [("<t color=""#c30000"">" + ("Scan Area") +"</t>"), "custombases\scan\scanMenu.sqf", cursorTarget, 1, true, true, "", ""];
 		};	

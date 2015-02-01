@@ -99,4 +99,4 @@ HunterTrader = ["Camo3_DZC"];
 MechanicTrader = ["Soldier3_SL_DZC"]; 
 AmmoTrader = ["CZ_Heavy2_DZC"];
 GambleTrader = ["CIV_Pilot1_DZC"];
-NurseTrader = ["Dr_Annie_Baker_EP1"];
+NurseTrader = ["HazmatVest_Red_DZC"];
