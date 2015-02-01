@@ -6,8 +6,7 @@ _unit = _array select 0;
 _medic = _array select 1;
 _cost = 2000;
  
-if (_unit == player) then {
-	player playActionNow "Medic";					//Animation of action
+if (_unit == player) then {				//Animation of action
 	_cashMoney = player getVariable["cashMoney",0];
 //If player hasnt money
 		if (_cashmoney < _cost) then {
@@ -22,8 +21,8 @@ if (_unit == player) then {
 			dayzPlayerSave = [player,(magazines player),true,true] ;
 			publicVariableServer "dayzPlayerSave"; 
 			sleep 1;
-			cutText [format["You have been fully healed!",name player], "PLAIN DOWN"];
-//
+			//
+	player playActionNow "Medic";	
 //healing				
 				disableSerialization;
 				dayz_sourceBleeding = objNull;
@@ -78,6 +77,9 @@ if (_unit == player) then {
 				player setdamage 0;
 				0 fadeSound 1;
 				resetCamShake;
+				
+				cutText [format["You have been fully healed!",name player], "PLAIN DOWN"];
+
 //healing end
 		};
 

@@ -13,21 +13,17 @@ _aiGroup = createGroup east; //Creates a Group.
 EAST setFriend [WEST,0]; //Sets West (Survivors) as hostile.
 _target = [8910.88, 2671.77, 1.1120623]; //Waypoint to Bank.
 
-//Spawn 25 AI's.
+//Spawn 10 AI's.
 _squad1  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
 _squad2  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
 _squad3  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
-_squad4  = _aiGroup createUnit ["PrivateSec3_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
-_squad5  = _aiGroup createUnit ["PrivateSec3_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
-_squad6  = _aiGroup createUnit ["PrivateSec3_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
-_squad7  = _aiGroup createUnit ["PrivateSec2_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
-_squad8  = _aiGroup createUnit ["PrivateSec2_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
-_squad9  = _aiGroup createUnit ["PrivateSec2_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
+_squad4  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
+_squad5  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
+_squad6  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
+_squad7  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
+_squad8  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
+_squad9  = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
 _squad10 = _aiGroup createUnit ["PrivateSec1_DZC",[8955, 2682, 0], [], 10, "PRIVATE"];
-
-
-//Add everyone to a "master" group.
-[_squad1,_squad2,_squad3,_squad4,_squad5,_squad6,_squad7,_squad8,_squad9,_squad10] joinSilent _unitGroup;
 
 //Give everyone weapons.
 _squad1 addWeapon "M4A3_CCO_EP1";

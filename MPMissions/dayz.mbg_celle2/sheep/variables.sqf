@@ -272,6 +272,7 @@ dayz_resetSelfActions = {
 	s_player_selfBloodbag = -1;
 	s_fast_med_dialog1 = -1;
 	s_player_removeactions = [];
+	s_player_bankrob = -1;
 };
 call dayz_resetSelfActions;
 
