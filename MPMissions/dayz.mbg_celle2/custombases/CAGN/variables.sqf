@@ -1,5 +1,8 @@
 //Default Variables
+canBuild = true;
+canscan = false;
 
+ALLTRADERS = [];
 
 Faction1Perk1 = false;
 Faction1Perk2 = false;
