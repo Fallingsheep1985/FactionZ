@@ -1566,7 +1566,7 @@ class Mission
 			azimut=-114.5651;
 			id=132;
 			side="EMPTY";
-			vehicle="Land_MBG_GER_SUPERMARKET_3";
+			vehicle="";
 			skill=1;
 		};
 		class Item29
@@ -7289,7 +7289,7 @@ class Mission
 			azimut=60.711182;
 			id=544;
 			side="EMPTY";
-			vehicle="MAP_a_stationhouse";
+			vehicle="";
 			skill=1;
 		};
 		class Item712

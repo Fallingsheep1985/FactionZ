@@ -19,8 +19,10 @@ dayz_paraSpawn = false;
 //Base protection set up
 canBuild = true;
 //Load faction stuff
+[]execVM  "custombases\CAGN\variables.sqf"// Faction Variable defaults
 call compile preprocessFileLineNumbers "FactionControl.sqf";
 call compile preprocessFileLineNumbers "TraderControl.sqf";
+
 //Load in compiled functions
 call compile preprocessFileLineNumbers "sheep\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
@@ -80,6 +82,8 @@ if (isServer) then {
 	execVM "trader\mechanictrader.sqf";
 	//Gamble trader
 	execVM "trader\gambletrader.sqf"; // the trader 
+	//Gamble trader
+	execVM "trader\nursetrader.sqf"; // the trader 
 	//City Upgrade
 	execVM "Custombases\CelleUpdate.sqf";
 	//Lights
