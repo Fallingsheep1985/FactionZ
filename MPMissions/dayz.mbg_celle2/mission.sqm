@@ -1566,7 +1566,7 @@ class Mission
 			azimut=-114.5651;
 			id=132;
 			side="EMPTY";
-			vehicle="";
+			vehicle="ClutterCutter_EP1";
 			skill=1;
 		};
 		class Item29
@@ -7289,7 +7289,7 @@ class Mission
 			azimut=60.711182;
 			id=544;
 			side="EMPTY";
-			vehicle="";
+			vehicle="ClutterCutter_EP1";
 			skill=1;
 		};
 		class Item712
@@ -26010,8 +26010,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction1base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction1Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome1;canBuild = true;";
+			expActiv="dome1 = [] execVM ""custombases\CAGN\Faction1Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome1;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26027,8 +26027,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction2base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome2 = [] execVM ""custombases\CAGN\Faction2Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome2;canBuild = true;";
+			expActiv="dome2 = [] execVM ""custombases\CAGN\Faction2Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome2;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26044,8 +26044,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction3base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome3 = [] execVM ""custombases\CAGN\Faction3Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome3;canBuild = true;";
+			expActiv="dome3 = [] execVM ""custombases\CAGN\Faction3Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome3;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26061,8 +26061,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction4base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome4 = [] execVM ""custombases\CAGN\Faction4Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome4;canBuild = true;";
+			expActiv="dome4 = [] execVM ""custombases\CAGN\Faction4Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome4;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26078,8 +26078,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction20base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome5 = [] execVM ""custombases\CAGN\Faction5Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome5;canBuild = true;";
+			expActiv="dome5 = [] execVM ""custombases\CAGN\Faction5Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome5;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26095,8 +26095,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction6base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome6 = [] execVM ""custombases\CAGN\Faction6Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome6;canBuild = true;";
+			expActiv="dome6 = [] execVM ""custombases\CAGN\Faction6Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome6;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26112,8 +26112,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction7base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome7 = [] execVM ""custombases\CAGN\Faction7Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome7;canBuild = true;";
+			expActiv="dome7 = [] execVM ""custombases\CAGN\Faction7Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome7;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26129,8 +26129,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction8base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome8 = [] execVM ""custombases\CAGN\Faction8Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome8;canBuild = true;";
+			expActiv="dome8 = [] execVM ""custombases\CAGN\Faction8Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome8;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26146,8 +26146,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction9base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome9 = [] execVM ""custombases\CAGN\Faction9Dome.sqf"";canBuild = false;";
-			expDesactiv="terminate dome9;canBuild = true;";
+			expActiv="dome9 = [] execVM ""custombases\CAGN\Faction9Dome.sqf"";canBuild = false;canscan = true;";
+			expDesactiv="terminate dome9;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
@@ -26163,8 +26163,8 @@ class Mission
 			age="UNKNOWN";
 			name="faction10base";
 			expCond="(vehicle player) in thislist;";
-			expActiv="dome10 = [] execVM ""custombases\CAGN\Faction10Dome.sqf""; canBuild = false;";
-			expDesactiv="terminate dome10;canBuild = true;";
+			expActiv="dome10 = [] execVM ""custombases\CAGN\Faction10Dome.sqf""; canBuild = false;canscan = true;";
+			expDesactiv="terminate dome10;canBuild = true;canscan = false;";
 			class Effects
 			{
 			};
