@@ -39,7 +39,7 @@ script_in_progress = true;
 	sleep 60;
 	player playActionNow "Medic";
 	sleep 8;
-	if (_failRob == 1)exitWith{
+	if (failRob == 1)exitWith{
 	titleText [format[("You failed to rob the bank!"),bankloot1], "PLAIN DOWN"];
 	} else {
 	_robComplete = 1;

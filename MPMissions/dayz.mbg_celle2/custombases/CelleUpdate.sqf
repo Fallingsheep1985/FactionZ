@@ -4919,10 +4919,10 @@ if (true) then
 _vehicle_1483 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Laptop_EP1", [8921.2783, 2673.2639, 1.0910045], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Laptop_EP1", [8921.2783, 2673.2639, 1.1], [], 0, "CAN_COLLIDE"];
   _vehicle_1483 = _this;
   _this setDir -99.561302;
-  _this setPos [8921.2783, 2673.2639, 1.0910045];
+  _this setPos [8921.2783, 2673.2639, 1.1];
 };
 
 _vehicle_1484 = objNull;

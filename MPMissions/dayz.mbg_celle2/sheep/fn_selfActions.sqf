@@ -459,7 +459,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		s_player_gamble = -1;
 	};
 	// Bank Robbery
-_bankrobbery = cursorTarget isKindOf "Notebook";
+_bankrobbery = cursorTarget isKindOf "Laptop_EP1";
     if ((speed player <= 1) && _bankrobbery && (player distance cursorTarget < 5)) then {
         if (s_player_bankrob < 0) then {
             s_player_bankrob = player addAction ["Rob the bank","rob\robbank.sqf",cursorTarget, 0, false, true, "",""];
