@@ -23,7 +23,7 @@ script_in_progress = true;
 
 	execVM "rob\zone_check.sqf";
 
-	cutText [format["You are robbing the bank! Police have been alerted."], "PLAIN DOWN"];
+	cutText [format["You are robbing the bank! Security have been alerted."], "PLAIN DOWN"];
 	systemChat "The Bank is getting robbed!";
 	sleep 30;
 	execVM "rob\ai.sqf";
