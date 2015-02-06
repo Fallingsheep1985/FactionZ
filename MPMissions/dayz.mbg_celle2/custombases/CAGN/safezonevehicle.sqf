@@ -7,7 +7,17 @@ if (isNil "canbuild") then {
     canbuild = true;
 };
 while {true} do {
-     
+     if (isNil "fnc_vehicle_handleDamage") then {
+	fnc_vehicle_handleDamage = vehicle_handleDamage;
+};
+vehicle_handleDamage = {
+private["_unit","_result"];
+_unit = _this select 0;
+if (locked _unit) exitWith {_unit allowDamage false;};
+_unit allowDamage true;
+_result = _this call fnc_vehicle_handleDamage;
+_result
+};
         // Vehicle Godmode on.
     waitUntil { !canbuild };
     waitUntil { player != vehicle player };
@@ -19,6 +29,8 @@ while {true} do {
     vehicle_handleDamage ={};
     vehicle_handleKilled ={};
     hintSilent "Vehicle godmode ON"; // Uncomment this to help see when it turns on
+	
+	
     waitUntil { canbuild };
     // Vehicle Godmode off.
     theVehicle removeAllEventHandlers "handleDamage";
@@ -30,3 +42,4 @@ while {true} do {
     vehicle_handleKilled = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleKilled.sqf";
     hintSilent "Vehicle godmode OFF"; // Uncomment this to help see when it turns off
 };
+
