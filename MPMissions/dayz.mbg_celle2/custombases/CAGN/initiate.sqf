@@ -14,5 +14,7 @@ diag_log ( "[AGN] Starting Base Protection!" );
 [] execVM "custombases\CAGN\SafeZonesAI.sqf";
 //Outofbounds
 [] execVM 'custombases\CAGN\outofbounds.sqf';
+//Vehicle godmode
+[] execVM "custombases\CAGN\safezonevehicle.sqf";
 
 diag_log ( "[AGN] Base Protection Loaded!" );
