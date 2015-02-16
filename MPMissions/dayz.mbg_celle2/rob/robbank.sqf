@@ -21,13 +21,11 @@ if(script_in_progress)exitwith{
 script_in_progress = true;
 // End Checks if Script is active
 
-	execVM "rob\zone_check.sqf";
 
 	cutText [format["You are robbing the bank! Security have been alerted."], "PLAIN DOWN"];
 	systemChat "The Bank is getting robbed!";
 	sleep 30;
 	execVM "rob\ai.sqf";
-
 	sleep 30;
 	cutText [format["4 minutes left..."], "PLAIN DOWN"];
 	sleep 30;
@@ -45,11 +43,15 @@ script_in_progress = true;
 	sleep 30;
 	cutText [format["30 Seconds left..."], "PLAIN DOWN"];
 	sleep 30;
-
-if (failRob == 1)exitWith{
-	titleText [format[("You failed to rob the bank!"),bankloot1], "PLAIN DOWN"];
-} else {
+	_robchance = floor(random 100);
+if (_robchance > 50) then {	
 	robComplete = 1;
+} else {
+	failRob = 1; 
+};
+	
+if (failRob == 1) exitWith {
+	titleText [format[("You failed to rob the bank!"),bankloot1], "PLAIN DOWN"];
 };
 
 if (robComplete == 1) then {

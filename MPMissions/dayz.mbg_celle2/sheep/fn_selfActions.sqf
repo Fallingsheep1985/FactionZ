@@ -458,8 +458,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_gamble;
 		s_player_gamble = -1;
 	};
-/*	TEMP DISABLE UNTIL WORKS
-// Bank Robbery
+	// Bank Robbery
 _bankrobbery = cursorTarget isKindOf "Notebook";
     if ((speed player <= 1) && _bankrobbery && (player distance cursorTarget < 5)) then {
         if (s_player_bankrob < 0) then {
@@ -469,7 +468,6 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
         player removeAction s_player_bankrob;
         s_player_bankrob = -1;
     };
-*/
 //Pay for healing
 if (_isMan and _isAlive and !_isZombie and !_isAnimal and (_traderType in NurseTrader)) then {	
 		if (s_fast_med_dialog1 < 0) then {
