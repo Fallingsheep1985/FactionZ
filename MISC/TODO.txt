@@ -1,15 +1,11 @@
-Gambler NPC - slotmachine & port guessing game to vigils
-Bartender NPC - sells nuts and drinks :)
-scan area base/flagpole
-Vending machines -0.1% chance of a dew
-Racetrack
-Nitro
-Rob bank
-expand celle add bank
-Scientist NPC - trade dews/etc for vigils
-Nurse NPC - heals players (very expensive)
-out of bounds
-Car sales NPC - buy cars from
-self bloodbag
-vehicle godmode
-ammo trader - split into ammo types
+
+CLEAN UP LAST ADDTIONS
+SCRIPTS
+rob bank - gives vigils and spawns AI that attack - WIP
+vending machines - scattered around citys and in some buildings buy drinks using vigils (gives random can 0.01% chance of a dew) - READY
+Scientist trader - cash in dews for large vigil rewards - READY
+
+MAP ADDTIONS
+Garages/safe at faction bases (for storing vigils and equipment, will be vehicle that stores the most items) <--- waiting on base files
+race track - cars gain NOS option when on race track - WIP
+Industrial/Factory Area - READY
