@@ -204,4 +204,6 @@ execVM "\z\addons\dayz_server\init\broadcaster.sqf";
 	execVM "\z\addons\dayz_server\custombuildings\CelleUpdate.sqf";
 	execVM "\z\addons\dayz_server\custombuildings\CelleBank.sqf";
 	//Extra Street lights
-	execVM "\z\addons\dayz_server\custombuildings\extrastreetlights.sqf";
+	execVM "\z\addons\dayz_server\custombuildings\lumbermill.sqf";
+	//Lumber Mill
+	execVM "\z\addons\dayz_server\custombuildings\CelleBank.sqf";
